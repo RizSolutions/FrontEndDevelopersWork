@@ -163,56 +163,29 @@ body{
     color: #c12020;
     box-shadow: 1px 3px 6px 0 #e5c2c2;
 }
-.featureingdiv{
-    display: inline-flex;
-    justify-content: center;
-    text-align: center;
-}
-.featureingdiv ul{
+.featurediv{
     display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     display: inline-block;
-    display: inline-flex;
-    list-style-type: none;
 }
-.feature1 h1{
-    width: 200px;
+.feature1 p{
+   text-align: center;
+}
+.hubspotheading{
     text-align: center;
-    padding: 1px 9px 2px 5px;
-    color: #000;
-    right: 0;
-    opacity: 1;
-    top: 0;
-    font-size: 11px;
-    left: 0;
-    background: #fff5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.hubspotcrm h1{
-    font-size: 20px !important;
-    color: #3f4a4f;
-    padding: 10px 0 5px;
-    font-weight: 700;
-    position: relative;
-    max-width: 78%;
-    display: inline-flex;
+.hubspotheading img{
+    display: inline-block;
 }
-.leftimage{
-    width: 32px;
-}
-.rightimage{
-    width: 16px;
-    height: 16px;
-}
-.feature2{
-    width: 200px;
-    text-align: center;
-    padding: 1px 9px 2px 5px;
-    color: #000;
-    right: 0;
-    opacity: 1;
-    top: 0;
-    font-size: 11px;
-    left: 0;
-    background: #fff5f9;
+.rightheading{
+          width: 16px;
+          height: 16px;
 }
 
 
