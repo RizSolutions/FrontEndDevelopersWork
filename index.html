@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Xploria</title>
+    <link
+      rel="icon"
+      href="https://www.aixploria.com/wp-content/uploads/2023/11/faviconV22.webp"
+      type="image/webp"
+    />
+    <title>
+      AI Tools Directory & List of Best Free AI by Category (Top 10) | Aixploria
+    </title>
     <style>
       * {
         padding: 0;
@@ -442,10 +449,10 @@
         margin-left: 5px;
       }
       .selectionbar select {
-        width: 300px;
+        width: 280px;
         height: 40px;
-        border-radius: 3px;
-        border-color: #a2a2a2;
+        border-radius: 5px;
+        border-color: #8b8b8b;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
           helvetica neue, Arial, sans-serif;
         font-size: 15px;
@@ -453,13 +460,21 @@
       .Option1 {
         text-align: center;
       }
+      .category-slct {
+        border-radius: 10px;
+        box-shadow: 6px 2px 2px rgb(255, 250, 250);
+        border-color: 1px #e4e4e4;
+      }
       .glowing-buttons ul {
         text-decoration: none;
         list-style: none;
+        padding: 0;
       }
+
       .glowing-buttons li {
         display: inline-block;
       }
+
       .glowing-buttons a button {
         text-align: center;
         border-radius: 7px;
@@ -470,28 +485,68 @@
         padding: 5px 10px;
         cursor: pointer;
         margin-left: 5px;
-        background-color: white;
+        background-color: white; /* Default background color */
+        color: #338539; /* Default text color */
+        position: relative;
+        overflow: hidden;
+        transition: background 2s ease;
       }
-      .freeai a button {
+
+      /* Apply the background color from bottom-left on hover */
+      .glowing-buttons .freeai a button:hover {
+        background: linear-gradient(
+          to top right,
+          #c2e5ce 20%,
+          #c2e5ce 40%,
+          #c2e5ce 60%,
+          #c2e5ce 80%
+        );
+      }
+
+      .glowing-buttons .Freemium a button:hover {
+        background: linear-gradient(
+          to top right,
+          #e5d9c2 20%,
+          #e5d9c2 40%,
+          #e5d9c2 60%,
+          #e5d9c2 80%
+        );
+      }
+
+      .glowing-buttons .paid a button:hover {
+        background: linear-gradient(
+          to top right,
+          #e5c2c2 20%,
+          #e5c2c2 40%,
+          #e5c2c2 60%,
+          #e5c2c2 80%
+        );
+      }
+
+      .glowing-buttons .freeai a button {
         color: #338539;
-        box-shadow: 1px 2px 6px 0 #c2e5ce;
+        box-shadow: 1px 2px 6px 0 #69a27c;
       }
-      .Freemium a button {
+
+      .glowing-buttons .Freemium a button {
         color: #ad6301;
-        box-shadow: 1px 2px 6px 0 #e5d9c2;
+        box-shadow: 1px 2px 6px 0 #b89f71;
       }
-      .paid a button {
+
+      .glowing-buttons .paid a button {
         color: #c12020;
-        box-shadow: 1px 2px 6px 0 #e5c2c2;
+        box-shadow: 1px 2px 6px 0 #b27373;
       }
-      .button-fulllist {
-        font-size: 17px;
+
+      .button-full-list {
+        font-size: 15px;
         letter-spacing: 2px;
+        width: 350px;
         text-transform: uppercase;
         display: block;
         text-align: center;
         font-weight: bolder;
-        padding: 0.7em 2em;
+        padding: 15px 20px;
         border: 4px solid #000000;
         border-radius: 2px;
         position: relative;
@@ -500,10 +555,7 @@
         text-decoration: none;
         transition: 0.3s ease all;
         z-index: 1;
-        height: auto;
         background: #ffffff;
-        width: 370px;
-        height: 30px;
         margin-top: 60px;
         margin-left: auto;
         margin-right: auto;
@@ -519,6 +571,273 @@
         flex-wrap: wrap;
         align-content: center;
         justify-content: space-evenly;
+      }
+
+      .button-full-list:before {
+        transition: all 0.5s ease;
+        position: absolute;
+        top: 0;
+        left: 50%; /* Start at the middle */
+        right: 50%; /* Start at the middle */
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: #fff491;
+        z-index: -1;
+      }
+
+      .button-full-list:hover:before {
+        left: 0; /* Expand to the left */
+        right: 0; /* Expand to the right */
+        opacity: 1;
+      }
+
+      .button-full-list:active {
+        transform: scale(0.85); /* Scale down the button when clicked */
+        background-color: #f0f0f0; /* Optional: change background color on click */
+      }
+      .new-posts {
+        display: flex;
+        justify-content: center;
+        padding-top: 44px;
+        gap: 35px;
+        width: 100%;
+      }
+
+      .new-items {
+        width: 275px;
+        height: 260px;
+        border: 1px solid #f5f5f5;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        border-color: rgb(255 208 238);
+        border-style: solid;
+        border-width: 2px;
+      }
+      .new-items:hover {
+        box-shadow: 2px 1px 3px 3px rgb(255, 198, 234);
+      }
+
+      .Photoshop-AI,
+      .Descript,
+      .Hubspot-CRM,
+      .Interior-AI {
+        position: absolute;
+        padding: 1px 9px;
+        color: #000;
+        right: 0;
+        opacity: 1;
+        top: 0;
+        font-size: 13px;
+        left: 0;
+        background: #fff5f9;
+        text-align: center;
+        height: 25px;
+      }
+
+      .star {
+        color: #ffbc00;
+        font-size: 24px;
+        vertical-align: bottom;
+        background: linear-gradient(
+          89deg,
+          #a0dbfd 1%,
+          #947bed 15%,
+          #fb81b5 35%,
+          #ffbd75 60%,
+          #ffbd75 98%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: spin 13s linear infinite;
+        display: inline-block;
+        animation: pulseGradient 2s ease-in-out infinite !important;
+        vertical-align: sub !important;
+        font-size: 21px !important;
+      }
+
+      .text {
+        text-align: center;
+        padding: 10px;
+        font-size: 13px;
+      }
+
+      .visit-site-button4 {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        padding: 0.7em 2em;
+        border-radius: 2px;
+        position: relative;
+        box-shadow: 0 2px 10px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 10%);
+        color: #ffffff;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+        height: auto;
+        background: #337ab7;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        width: fit-content;
+      }
+
+      .visit-site-button4:before {
+        transition: 0.5s all ease;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: #548fc18f;
+        z-index: -1;
+      }
+
+      .visit-site-button4:hover:before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+      }
+
+      .post-title {
+        font-size: 22px !important;
+        margin-bottom: 10px;
+        color: #333;
+        text-decoration-color: #538ac6;
+        font-weight: 700;
+        margin-top: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 78%;
+        display: inline-flex;
+      }
+
+      .post-title a {
+        font-size: 20px !important;
+        color: #3f4a4f;
+        padding: 10px 0 5px;
+        position: relative;
+        text-decoration: none; /* Remove default underline */
+      }
+
+      .post-title a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          89deg,
+          #a0dbfd 1%,
+          #947bed 15%,
+          #fb81b5 35%,
+          #ffbd75 60%,
+          #ffbd75 98%
+        );
+        z-index: -1;
+      }
+
+      .verif-bluec {
+        width: 16px;
+        height: 16px;
+      }
+      .hr1 {
+        background-color: #d4d4d4;
+        height: 3px;
+        width: 91%;
+        float: right;
+        margin-right: 60px;
+      }
+      .grid-list {
+        display: flex;
+        justify-content: center;
+        padding-top: 44px;
+        gap: 45px;
+        width: 100%;
+      }
+
+      .grid-items {
+        width: 267px;
+        height: 430px;
+        border: 1px solid #f5f5f5;
+        box-shadow: 0 2px 10px rgba(193, 193, 193, 0.934);
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        border-color: rgb(211, 211, 211);
+        border-style: solid;
+        border-width: 2px;
+      }
+
+      .Latest-AI,
+      .AI-Selection,
+      .Super-Tools,
+      .AI-Chat {
+        position: absolute;
+        padding: 1px 9px;
+        color: #000;
+        right: 0;
+        opacity: 1;
+        top: 0;
+        font-size: 13px;
+        left: 0;
+        background: #f8efef;
+        text-align: center;
+        height: 50px;
+      }
+      .Latest-AI,
+      .AI-Selection,
+      .Super-Tools,
+      .AI-Chat {
+        background-color: #ffffff;
+        color: #2a2828;
+        border-bottom: 2px solid #24373e;
+        border-image: linear-gradient(
+            89deg,
+            #a0dbfd 1%,
+            #947bed 26%,
+            #fb81b5 51%,
+            #ffbd75 98%
+          )
+          1;
+      }
+      .Latest-AI,
+      .AI-Selection,
+      .Super-Tools,
+      .AI-Chat {
+        padding: 12px 0;
+        overflow: hidden;
+        text-rendering: optimizeSpeed;
+        -webkit-font-smoothing: antialiased;
+        font-size: 17px;
+        margin: 0;
+        position: relative;
+        font-weight: 600;
+        height: 30px;
+        line-height: 47px;
+        text-align: center;
+        display: flex;
+        display: -ms-flexbox;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
+          helvetica neue, Arial, sans-serif;
       }
     </style>
   </head>
@@ -629,8 +948,8 @@
         </ul>
       </div>
       <div class="selectionbar">
-        <select>
-          <option class="Option1">--Select your Country--</option>
+        <select class="category-slct">
+          <option class="Option1">--Select your Category--</option>
           <option>3D model (66)</option>
           <option>AI Agents (33)</option>
           <option>AI Chat Assistant (34)</option>
@@ -672,12 +991,248 @@
         </ul>
       </div>
     </div>
+    <div class="new-posts">
+      <div class="new-items">
+        <div class="Descript">
+          <p><span class="star">★</span> Featured</p>
+          <span class="post-title">
+            <img
+              src="https://logosandtypes.com/wp-content/uploads/2024/01/Descript.png"
+              alt=""
+              width="35px"
+              height="50px"
+            />
+            <a
+              class="dark-title"
+              id="specialButton"
+              data-postid="7505"
+              target="_blank"
+              href="https://get.descript.com/sx9ahgvct8j9"
+              rel="nofollow"
+              title="Descript"
+            >
+              Descript
+            </a>
+            <img
+              class="verification-icon verif-bluec"
+              src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp"
+              alt="Veriblue Verified Icon"
+            />
+          </span>
+          <p class="text">
+            « Edit and transform your images like a pro with a set of AI tools:
+            generative fill, generative expand, image creation from text and
+            more...
+          </p>
+          <br />
+          <a
+            rel="nofollow noopener"
+            target="_blank"
+            href="https://get.descript.com/sx9ahgvct8j9"
+            class="visit-site-button4"
+            id="specialButton"
+            data-postid="7505"
+          >
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
+              width="16"
+              height="16"
+              style="width: 16px; height: 16px; margin-right: 5px"
+            />
+            <span data-title="Visit"> Visit</span>
+          </a>
+        </div>
+      </div>
+      <div class="new-items">
+        <div class="Hubspot-CRM">
+          <p><span class="star">★</span> Featured</p>
+          <span class="post-title">
+            <img
+              src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg"
+              alt=""
+              width="35px"
+              height="50px"
+              style="margin-right: 5px"
+            />
+            <a
+              class="dark-title"
+              id="specialButton"
+              data-postid="28418"
+              target="_blank"
+              href="https://hubspot.sjv.io/c/5293708/1722021/12893"
+              rel="nofollow"
+              title="HubSpot CRM"
+              >HubSpot CRM
+            </a>
+            <img
+              class="verification-icon verif-bluec"
+              src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp"
+              alt="Gold Verified Icon"
+            />
+          </span>
+          <p class="text">
+            « Edit and transform your images like a pro with a set of AI tools:
+            generative fill, generative expand, image creation from text and
+            more...
+          </p>
+          <br />
+          <a
+            rel="nofollow noopener"
+            target="_blank"
+            href="https://get.descript.com/sx9ahgvct8j9"
+            class="visit-site-button4"
+            id="specialButton"
+            data-postid="7505"
+          >
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
+              width="16"
+              height="16"
+              style="width: 16px; height: 16px; margin-right: 5px"
+            />
+            <span data-title="Visit"> Visit</span>
+          </a>
+        </div>
+      </div>
+      <div class="new-items">
+        <div class="Interior-AI">
+          <p><span class="star">★</span> Featured</p>
+          <span class="post-title">
+            <img
+              src="https://findmyaitool-rh.s3.ap-southeast-2.amazonaws.com/images/ai-tool/logo/InteriorAI-1723792479544"
+              alt=""
+              width="35px"
+              height="20px"
+              style="margin-right: 5px"
+            />
+            <a
+              class="dark-title"
+              id="specialButton"
+              data-postid="7225"
+              target="_blank"
+              href="https://interiorai.com/?via=aixploria"
+              rel="nofollow"
+              title="Interior AI"
+              >Interior AI</a
+            >
+            <img
+              class="verification-icon verif-bluec"
+              src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp"
+              alt="Veriblue Verified Icon"
+            />
+          </span>
+          <p class="text">
+            « Edit and transform your images like a pro with a set of AI tools:
+            generative fill, generative expand, image creation from text and
+            more...
+          </p>
+          <br />
+          <a
+            rel="nofollow noopener"
+            target="_blank"
+            href="https://get.descript.com/sx9ahgvct8j9"
+            class="visit-site-button4"
+            id="specialButton"
+            data-postid="7505"
+          >
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
+              width="16"
+              height="16"
+              style="width: 16px; height: 16px; margin-right: 5px"
+            />
+            <span data-title="Visit"> Visit</span>
+          </a>
+        </div>
+      </div>
+      <div class="new-items">
+        <div class="Photoshop-AI">
+          <p><span class="star">★</span> Featured</p>
+          <span class="post-title">
+            <img
+              src="https://logodownload.org/wp-content/uploads/2019/10/adobe-photoshop-logo-2.png"
+              alt=""
+              width="40px"
+              height="30px"
+              style="margin-right: 5px"
+            />
+            <a
+              class="dark-title"
+              id="specialButton"
+              data-postid="30520"
+              target="_blank"
+              href="https://prf.hn/l/1eEeBol"
+              rel="nofollow"
+              title="Photoshop AI"
+              >Photoshop AI</a
+            >
+            <img
+              class="verification-icon verif-bluec"
+              src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp"
+              alt="Gold Verified Icon"
+            />
+          </span>
+          <p class="text">
+            « Edit and transform your images like a pro with a set of AI tools:
+            generative fill, generative expand, image creation from text and
+            more...
+          </p>
+          <br />
+          <a
+            rel="nofollow noopener"
+            target="_blank"
+            href="https://get.descript.com/sx9ahgvct8j9"
+            class="visit-site-button4"
+            id="specialButton"
+            data-postid="7505"
+          >
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
+              width="16"
+              height="16"
+              style="width: 16px; height: 16px; margin-right: 5px"
+            />
+            <span data-title="Visit"> Visit</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br />
+    <hr class="hr1" />
+    <div class="grid-list">
+      <div class="grid-items">
+        <div class="Latest-AI">
+          <span data-title="Latest AI">Latest AI</span>
+        </div>
+      </div>
+      <div class="grid-items">
+        <div class="AI-Selection">
+          <span data-title="AI-Selection">AIxploria Selection</span>
+        </div>
+      </div>
+      <div class="grid-items">
+        <div class="Super-Tools">
+          <span data-title="Super-Tools">Super-Tools</span>
+        </div>
+      </div>
+      <div class="grid-items">
+        <div class="AI-Chat">
+          <span data-title="Ai-Chat">AI-Chat & Assistant</span>
+        </div>
+      </div>
+    </div>
     <div>
-      <a class="button-fulllist" href="#" data-title=" See the full list of AI">
-        See the full list of AI
+      <a
+        class="button-full-list"
+        href="#"
+        data-title=" See the full list of AI"
+      >
+        See the full list of AI <span class="down-arrow">&#9660;</span>
         <div class="arrow-plus2"></div>
       </a>
     </div>
+    <br />
+    <br /><br />
     <div class="scroll-platform">
       <div class="scroll-header-platform">
         <a
