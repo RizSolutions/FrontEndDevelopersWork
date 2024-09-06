@@ -163,16 +163,16 @@ body{
     color: #c12020;
     box-shadow: 1px 3px 6px 0 #e5c2c2;
 }
-.featureingdiv{
+/*.featureingdiv{
     display: inline-flex;
     justify-content: center;
     text-align: center;
 }
-.featureingdiv ul{
+.featureingdiv li{
     display: flex;
     display: inline-block;
     display: inline-flex;
-    list-style-type: none;
+    list-style: none;
 }
 .feature1 h1{
     width: 200px;
@@ -213,7 +213,39 @@ body{
     font-size: 11px;
     left: 0;
     background: #fff5f9;
+}*/
+.features{
+    padding-top: 50px;
+    display:flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
 }
+.hubspot{
+    text-align: center;
+}
+.feature1{
+    padding: 1px 9px 2px 5px;
+    color: #000;
+    right: 0;
+    opacity: 1;
+    top: 0;
+    font-size: 11px;
+    left: 0;
+    background: #fff5f9;
+}
+.hubspotheading{
+    padding-top: 20px;
+    font-size: 20px !important;
+    color: #3f4a4f;
+}
+.hubspotheading span a{
+    padding-left: 20px;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+}
+
 
 
 
