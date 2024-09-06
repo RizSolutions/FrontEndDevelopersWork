@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIXPLORIA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(249, 252, 253);
+        }
+
+
+
+
+
+        header {
+            display: flex;
+            height: 55px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            box-shadow: 0px 4px 6px -1px rgba(56, 152, 207, 0.5); /* Blue shadow */
+        }
+
+        header:hover {
+            box-shadow: 0px 6px 8px -2px rgba(56, 152, 207, 0.5);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 100px;
+        }
+
+        .logo img {
+            height: 45px;
+            margin-right: 30px;
+        }
+
+
+        nav {
+            display: flex;
+            align-items: center;
+            margin-right: 100px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .more-button {
+            background-color: white;
+            display: inline-block;
+            text-align: center;
+            color: black;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 20px;
+            font-size: 16px;
+            position: relative;
+        }
+
+        
+        .nav-img1 {
+            height: 20px;
+            margin-left: 20px;
+        }
+
+        .nav-img2 {
+            height: 30px;
+            margin-left: 20px;
+        }
+
+
+
+
+
+        
+        .top-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the entire section horizontally */
+            margin-top: 20px; /* Adjust the top margin as needed */
+            text-align: center;
+        }
+
+        .heading-container {
+            display: flex;
+            align-items: center; /* Center the image and heading vertically */
+        }
+
+        .heading-container img {
+            height: 70px; /* Adjust the image height as needed */
+            margin-right: 10px; /* Space between image and heading */
+        }
+
+        .heading-container h1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, helvetica neue, Arial, sans-serif;
+            background: linear-gradient(to right, rgb(0, 0, 87), black 40%, rgb(0, 0, 90));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            
+        }
+
+        .heading-container h1::after {
+            content: '';
+            display: block;
+            width: 100%; /* Full width of the heading */
+            height: 2px; /* Thickness of the underline */
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Rainbow gradient */
+            margin-top: 5px; /* Space between text and underline */
+        }
+
+        .description p {
+            margin-top: 2px;
+            font-size: 20px;
+        }
+
+
+
+
+
+
+
+        .first-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers all elements horizontally */
+            margin-top: 20px;
+            gap: 80px; /* Adds spacing between elements */
+        }
+
+        .search-box {
+            height: 15px;
+            width: 250px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 10px 15px;
+            border: 2px solid #ccc;
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #eee;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-button img {
+            height: 15px;
+        }
+
+        .search-button:hover {
+            background-color: #ddd;
+        }
+
+        .media-icons img {
+            height: 18px; /* Adjust icon size */
+            margin: 0 4px; /* Adjust spacing between icons */
+            cursor: pointer;
+        }
+
+        .categories-options {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 270px; /* Adjust width as needed */
+        }
+
+        .categories-options:focus {
+            outline: none;
+            border-color: #888;
+        }
+
+        
+
+        .buttons {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .btn1 {
+            padding: 5px 8px;
+            color: darkgreen;
+            margin-right: 10px;
+            background: white;
+            border: 3px white ;
+            border-radius: 8px;
+        }
+
+        .btn2 {
+            padding: 5px 17px;
+            color: rgb(131, 59, 37);
+            margin-right: 10px; 
+            background: white;
+            border: 3px white ;
+            border-radius: 8px;
+        }
+
+        .btn3 {
+            padding: 5px 2px;
+            color: rgb(104, 0, 81);
+            background: white;
+            border: 3px white ;
+            border-radius: 8px;
+        } 
+
+
+
+
+
+
+
+        .icon-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0; /* Adjust the top and bottom margin as needed */
+        }
+
+        .icon-heading {
+            margin-right: 20px;
+            font-size: 18px;
+            font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+            text-decoration: none;
+            color: rgb(79, 79, 187);
+        }
+
+        .icon-heading:hover {
+            color: rgb(79, 162, 187);
+        }
+
+        .icons {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 800px;
+            position: relative;
+        }
+
+        .icons-slide {
+            display: inline-block;
+            animation: 10s slide infinite linear;
+        }
+
+        .icons-slide img {
+            height: 50px;
+            margin: 0 30px;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+
+
+
+
+
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 82%;
+            height: 540px;
+            margin-bottom: 100px;
+            border-radius: 50px;
+            position: relative;
+            display: flex;
+        }
+
+
+
+
+
+        .box .left-side,
+        .box .right-side {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        .left-side {
+            left: 0;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left-side img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 20px;
+        }
+
+        .right-side {
+            right: 0;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            color: black;
+            text-align: left;
+        }
+
+        .right-side h2 {
+            margin-bottom: 20px;
+        }
+
+        .heading1 {
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .heading3 {
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .heading5 {
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .right-side p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+
+
+
+
+
+
+        .box .left-side2,
+        .box .right-side2 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        .right-side2 {
+            left: 0;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            color: black;
+            text-align: left;
+        }
+
+        .left-side2 {
+            right: 0;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left-side2 img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 20px;
+        }
+
+        .left-side2 h2 {
+            margin-bottom: 20px;
+        }
+
+        .left-side2 p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .heading2 {
+            margin-left: 50px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .heading4 {
+            margin-left: 50px;
+            text-align: center;
+            font-size: 35px;
+        }
+        .heading6 {
+            margin-left: 50px;
+            font-size: 35px;
+            text-align: center;
+        }
+
+
+
+        
+
+        .box1 {
+            background-color: #f8f5ff;
+        }
+
+        .box2 {
+            background-color: #f6fbff;
+        }
+
+        .box3 {
+            background-color: #fffcf3;
+        }
+
+        .box4 {
+            background-color: #f7fdf6;
+        }
+
+        .box5 {
+            background-color: #fdf6ff; /* Initial color for the 5th box */
+        }
+
+        .box6 {
+            background-color: #f7fdf6; /* Initial color for the 6th box */
+        }
+        .thankyou-line {
+            text-align: center;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <header>
+        <div class="logo">
+            <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2024/01/logo-light-aixploria-2024.webp" alt="Logo"></a>
+        </div>
+        <nav>
+            <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2024/01/bookmark-saved-solid-icon-orange.webp" alt="Menu Image 1" class="nav-img1"></a>
+            <a href="#"><b>Full List</b></a>
+            <a href="#"><b>AI Categories</b></a>
+            <a href="#"><b>AI Tutorials</b></a>
+            <button class="more-button"><b>+ More</b></button>
+            <a href="#"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/language-translator-icon2.webp" alt="Menu Image 2" class="nav-img2"></a>
+        </nav>
+    </header>
+
+
+
+
+    <div class="top-section">
+        <div class="heading-container">
+            <a href=""><img src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-mascoot-2032.webp" alt="hundred"></a>
+            <h1><b>AI Tools Directory</b></h1>
+        </div>
+        <div class="description">
+            <p>Access the largest list of top-quality AI tools available on the web ★</p>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="first-bar">
+        <div class="search-container">
+            <input type="text" placeholder="       Search over 5000+ AI...   " class="search-box">
+            <button type="submit" class="search-button"> <img src="https://cdn.iconscout.com/icon/free/png-512/free-search-icon-download-in-svg-png-gif-file-formats--feather-version-11-pack-user-interface-icons-434390.png?f=webp&w=256" alt=""></button>
+        </div>
+
+        <div class="media-icons">
+            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/x-social-media-round-icon-ai.webp" alt="X">
+            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/facebook-share-ai.webp" alt="Facebook">
+            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/linkedin-round-color-icon-3.webp" alt="LinkedIn">
+            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/telegram-icon-ai.webp" alt="Telegram">
+            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/email-round-solid-icon.webp" alt="Email">
+        </div>
+
+        <div class="category-dropdown">
+            <select class="categories-options">
+                <option value="" disabled selected>   ---select a category---    </option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <button class="btn1"><b>Free</b></button>
+            <button class="btn2"><b>Freemium</b></button>
+            <button class="btn3"><b>Paid</b></button>
+        </div>
+    </div>
+
+
+
+    <div class="icon-section">
+        <a href="" class="icon-heading" id="popular platforms:" target="_blank"><b>Popular platforms:</b></a>
+        <div class="icons">
+            <div class="icons-slide">
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 1" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 2" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 3" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 4" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 5" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 6" >
+            </div>
+            <div class="icons-slide">
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 7" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 8" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 9" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 10" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 11" >
+                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 12" >
+            </div>
+        </div>
+        
+            
+        
+    </div>
+    
+
+
+    <div class="box-container">
+        <div class="box box1">
+            <div class="left-side">
+                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-ai-tools-directory-2024-ia.webp" alt="The World’s Best AI Tools Directory"></a>
+            </div>
+            <div class="right-side">
+                <h2 class="heading1">The World’s Best AI Tools Directory</h2>
+                <p>Aixploria is a website dedicated to artificial intelligence that allows you to discover the <b>best AI tools directory available online.</b> Our site features a selection of listings arranged in categories that make it easy for you to find AIs that meet your criteria. In fact, the largest list of sites using AI can be found on this page! Plus, this list is updated daily, so you can bookmark it so you don’t miss out on the latest news.</p>
+                <p>Lately, the site also posts articles that explain how each AI works. Found an AI tools that doesn’t appear in the list? From now on, it is possible to submit new AIs so that they can be added to the ranking or the top 10. Actually, Aixploria is a kind of directory and search engine dedicated to AI. With its simple and clean style, you easily search using keywords like on a search engine</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="box box2">
+            <div class="right-side2">
+                <h2 class="heading2">Aixploria: your guide to discovering the best AI</h2>
+                <p>Other than that, the site is neat and clear, with good ergonomics to ensure you get quick results. Obviously, the site is accessible for free, without registration and is compatible with computers, tablets and mobiles.</p>
+                <p>Whether you’re looking for a machine translation tool, an image generator, or any other AI app, Aixploria offers a variety of high-quality choices. With our intuitive search engine, you can easily find the right AI for your needs. Now, we also have articles written by AI experts to help you understand the latest trends and most popular applications.</p>
+            </div>
+            <div class="left-side2">
+                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/ai-assistant-guide-aixploria-2.webp" alt="Aixploria: your guide to discovering the best AI"></a>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="box box3">
+            <div class="left-side">
+                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/top10-best-ai-aixploria-3.webp" alt="Top 10 best AI tools on the Aixploria website"></a>
+            </div>
+            <div class="right-side">
+                <h2 class="heading3">Top 10 best AI</h2>
+                <p>We have compiled a list of the <b>top 10 best AI tools</b> on the Aixploria website, based on user reviews, ratings, and popularity. This list is updated regularly to ensure that you have access to the most relevant and effective AI tools on the market. Each tool is evaluated based on its features, ease of use, and overall performance, making it easier for you to choose the right tool for your needs.</p>
+                <p>So, whether you’re a beginner or an experienced AI user, this top 10 list will help you find the best tools to enhance your productivity and creativity.</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="box box4">
+            <div class="right-side2">
+                <h2 class="heading4">A website for all AI enthusiasts and aficionados</h2>
+                <p>In addition to our AI tools directory, Aixploria also offers a wide range of <b>articles and tutorials</b> to help you get the most out of your AI experience. Our team of experts regularly publishes content on the latest AI trends, tips for using specific tools, and step-by-step guides to help you master the technology.</p>
+                <p>Whether you’re interested in learning about AI image generation, natural language processing, or any other aspect of artificial intelligence, you’ll find valuable resources on Aixploria. Our goal is to empower you with the knowledge and skills to harness the full potential of AI.</p>
+            </div>
+            <div class="left-side2">
+                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/fan-ai-aixploria-3.webp" alt="Articles & Tutorials: Learn how to use AI tools"></a>
+            </div>
+        </div>
+        
+        
+        
+        <div class="box box5">
+            <div class="left-side">
+                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/aixploria-mascoot-ai-44.webp" alt="AI Technology Directory"></a>
+            </div>
+            <div class="right-side">
+                <h2 class="heading5">Why come to this AI tools directory?</h2>
+                <p>Aixploria’s AI Technology Directory provides an extensive database of AI tools, technologies, and platforms. Whether you’re searching for AI software for business automation, creative projects, or educational purposes, our directory offers an in-depth look at the most advanced solutions available.</p>
+                <p>Explore the AI Technology Directory to find the right tools for your projects, and stay ahead of the curve with the latest AI advancements. The directory is regularly updated to reflect the most recent developments in AI technology.</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="box box6">
+            <div class="right-side2">
+                <h2 class="heading6">Contribute to the community by sharing your findings on Aixploria</h2>
+                <p>Aixploria values the opinions of its users, and we encourage you to share your experiences with the AI tools listed in our directory. By leaving a review or rating, you can help others make informed decisions about which tools to use.</p>
+                <p>Read user reviews and ratings to gain insights into the pros and cons of each AI tool. This feedback system ensures that our directory remains a reliable resource for finding the best AI solutions for your needs.</p>
+                <p class="thankyou-line">Thank you for reading and for your support. See you on Aixploria!</p>
+            </div>
+            <div class="left-side2">
+                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/community-aixploria-share-ai-2.webp" alt="User Reviews and Ratings"></a>
+            </div>
+        </div>
+    
+    
+    </div>
+</body>
+</html>
