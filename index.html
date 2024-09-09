@@ -465,75 +465,114 @@
         box-shadow: 6px 2px 2px rgb(255, 250, 250);
         border-color: 1px #e4e4e4;
       }
-      .glowing-buttons ul {
-        text-decoration: none;
-        list-style: none;
-        padding: 0;
+      .glowing-buttons {
+        display: flex;
       }
-
-      .glowing-buttons li {
-        display: inline-block;
-      }
-
-      .glowing-buttons a button {
-        text-align: center;
-        border-radius: 7px;
-        font-weight: 600;
-        border: 2px solid #fff;
-        width: max-content;
-        font-size: 13px;
-        padding: 5px 10px;
+      .btn {
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 0.6em;
         cursor: pointer;
-        margin-left: 5px;
-        background-color: white; /* Default background color */
-        color: #338539; /* Default text color */
-        position: relative;
-        overflow: hidden;
-        transition: background 2s ease;
+        display: -webkit-box;
+        display: -webkit-flex;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        font-size: 12px;
+        line-height: 1;
+        margin: 5px;
+        text-decoration: none;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        align-items: center;
+        text-align: center;
       }
 
-      /* Apply the background color from bottom-left on hover */
-      .glowing-buttons .freeai a button:hover {
-        background: linear-gradient(
-          to top right,
-          #c2e5ce 20%,
-          #c2e5ce 40%,
-          #c2e5ce 60%,
-          #c2e5ce 80%
+      /* Light Green */
+      .first {
+        color: #338539; /* Light green text */
+        background-image: -webkit-linear-gradient(
+          45deg,
+          #a8d7bc 50%,
+          transparent 50%
         );
+        background-image: linear-gradient(45deg, #a3d5b8 50%, transparent 50%);
+        background-position: 100%;
+        background-size: 400%;
+        -webkit-transition: background 300ms ease-in-out;
+        transition: background 0.8s ease-in-out;
       }
 
-      .glowing-buttons .Freemium a button:hover {
-        background: linear-gradient(
-          to top right,
-          #e5d9c2 20%,
-          #e5d9c2 40%,
-          #e5d9c2 60%,
-          #e5d9c2 80%
+      .first:hover {
+        background-position: 0;
+        border-color: white; /* Maintain white border on hover */
+      }
+
+      /* Light Orange */
+      .second {
+        color: #ad6301; /* Light orange text */
+        background-image: -webkit-linear-gradient(
+          45deg,
+          #b57f1b52 50%,
+          transparent 50%
         );
-      }
-
-      .glowing-buttons .paid a button:hover {
-        background: linear-gradient(
-          to top right,
-          #e5c2c2 20%,
-          #e5c2c2 40%,
-          #e5c2c2 60%,
-          #e5c2c2 80%
+        background-image: linear-gradient(
+          45deg,
+          #b57f1b52 50%,
+          transparent 50%
         );
+        background-position: 100%;
+        background-size: 400%;
+        -webkit-transition: background 300ms ease-in-out;
+        transition: background 0.8s ease-in-out;
       }
 
-      .glowing-buttons .freeai a button {
+      .second:hover {
+        background-position: 0;
+        border-color: white; /* Maintain white border on hover */
+      }
+
+      /* Light Red */
+      .third {
+        color: #9f3a2f; /* Light red text */
+        background-image: -webkit-linear-gradient(
+          45deg,
+          #b51b1b52 50%,
+          transparent 50%
+        );
+        background-image: linear-gradient(
+          45deg,
+          #b51b1b52 50%,
+          transparent 50%
+        );
+        background-position: 100%;
+        background-size: 400%;
+        -webkit-transition: background 300ms ease-in-out;
+        transition: background 1s ease-in-out;
+      }
+
+      .third:hover {
+        background-position: 0;
+        border-color: white; /* Maintain white border on hover */
+      }
+
+      .first {
         color: #338539;
         box-shadow: 1px 2px 6px 0 #69a27c;
       }
 
-      .glowing-buttons .Freemium a button {
+      .second {
         color: #ad6301;
         box-shadow: 1px 2px 6px 0 #b89f71;
       }
 
-      .glowing-buttons .paid a button {
+      .third {
         color: #c12020;
         box-shadow: 1px 2px 6px 0 #b27373;
       }
@@ -1050,17 +1089,9 @@
         </select>
       </div>
       <div class="glowing-buttons">
-        <ul>
-          <li class="freeai">
-            <a href="#"><button>Free AI</button></a>
-          </li>
-          <li class="Freemium">
-            <a href="#"><button>Freemium</button></a>
-          </li>
-          <li class="paid">
-            <a href="#"><button>Paid</button></a>
-          </li>
-        </ul>
+        <button class="btn first">Free AI</button>
+        <button class="btn second">Freemium</button>
+        <button class="btn third">Paid</button>
       </div>
     </div>
     <div class="new-posts">
