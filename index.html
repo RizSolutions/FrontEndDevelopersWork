@@ -231,6 +231,118 @@
 
 
 
+        .boxy-container {
+            margin-top: 50px;
+            margin-bottom: 100px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: nowrap; /* Ensures the boxes stay in a single line */
+            overflow-x: auto; /* Allows horizontal scrolling if needed */
+        }
+        
+        .custom-box {
+            width: 260px;
+            height: 260px;
+            background-color: #fff;
+            border: 2px solid #ecb6d0;
+            box-shadow: 0 4px 8px #ecb6d0;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .boxy-header {
+            background-color: #ffcccb;
+            padding: 5px 0;
+            border-radius: 0px;
+            font-size: 14px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .boxy-header::before {
+            content: "★";
+            display: inline-block;
+            background: linear-gradient(to right, orange, pink, yellow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .boxy-header::after {
+            content: " Featured";
+        }
+
+        .custom-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px 0;
+        }
+        
+        .custom-box h3 {
+            margin: 10px 0 0;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        .blue-tick {
+            content: "";
+            font-size: 16px;
+            color: #1da1f2;
+            margin-left: 5px;
+        }
+        
+        .custom-underline {
+            width: 100%;
+            height: 2px;
+            margin: 5px 0;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+        
+        .custom-box p {
+            margin-top: 10px;
+            font-size: 15px;
+            color: #666;
+        }
+        
+        .custom-box button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .custom-box button img {
+            height: 20px;
+            width: 20px;
+        }
+
+        .custom-box button:hover {
+            background-color: #0056b3;
+        }
+
+
+
+
         .icon-section {
             display: flex;
             align-items: center;
@@ -526,6 +638,45 @@
             <button class="btn3"><b>Paid</b></button>
         </div>
     </div>
+
+    <div class="boxy-container">
+        <div class="custom-box">
+            <div class="boxy-header"></div>
+            <img src="https://www.aixploria.com/wp-content/uploads/2024/08/adobe-photoshop-icon-ai.png" alt="Profile Image">
+            <h3>Photoshop AI<span class="blue-tick">✔️</span></h3>
+            <div class="custom-underline"></div>
+            <p>« Edit and transform your images like a pro with a set of AI tools: generative fill, generative expand..</p>
+            <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
+        </div>
+        
+        <div class="custom-box">
+            <div class="boxy-header"></div>
+            <img src="https://www.aixploria.com/wp-content/uploads/favicons/interior-ai.png" alt="Profile Image">
+            <h3>Interior AI<span class="blue-tick">✔️</span></h3>
+            <div class="custom-underline"></div>
+            <p>« Transform your interior or change the design of any room using a simple photo</p>
+            <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
+        </div>
+        
+        <div class="custom-box">
+            <div class="boxy-header"></div>
+            <img src="https://www.aixploria.com/wp-content/uploads/2024/04/HubSpot-fav.png" alt="Profile Image">
+            <h3>HubSpot CRM<span class="blue-tick">✔️</span></h3>
+            <div class="custom-underline"></div>
+            <p>« Optimize your sales and marketing with a particularly intuitive, AI-driven professional CRM. Track you..</p>
+            <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
+        </div>
+        
+        <div class="custom-box">
+            <div class="boxy-header"></div>
+            <img src="https://www.aixploria.com/wp-content/uploads/favicons/vector-magic.png" alt="Profile Image">
+            <h3>Vector Magic<span class="blue-tick">✔️</span></h3>
+            <div class="custom-underline"></div>
+            <p>« An AI that automatically vectorizes your images and transforms them into high-quality vector graphics...</p>
+            <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
+        </div>
+    </div>
+
 
 
 
