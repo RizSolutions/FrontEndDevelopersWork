@@ -27,9 +27,13 @@
         left: 0;
         right: 0;
         display: flex;
-        height: 55px;
+        justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
+        height: 55px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
         background-color: white;
         color: black;
         border-bottom: 2px solid rgb(255, 255, 255);
@@ -38,33 +42,74 @@
         z-index: 1000;
       }
 
-      body {
-        font-family: Arial, sans-serif;
-        margin-top: 55px;
-      }
-
       header:hover {
         box-shadow: 0px 4px 16px rgba(41, 118, 163, 0.7);
       }
 
       img.icon {
-        margin-left: 70px;
+        margin-left: 70px; /* Initial margin */
       }
 
       img.bookmark {
-        margin-left: 335px;
+        margin-left: 210px;
+      }
+      .translate {
+        margin-left: 30px; /* Initial gap */
       }
 
       .navopt a {
         text-decoration: none;
-        margin-left: 30px;
+        margin-left: 30px; /* Initial gap between links */
         font-size: 16px;
         font-weight: bold;
         color: rgb(85, 79, 79);
       }
 
-      .translate {
-        margin-left: 45px;
+      /* Margin below header to prevent content overlap */
+      body {
+        margin-top: 150px; /* Adjust this value based on the header height and spacing */
+      }
+
+      /* Media query for smaller screens */
+      @media (max-width: 1280px) {
+        img.icon {
+          margin-left: 40px; /* Reduce margin on smaller screens */
+        }
+
+        img.bookmark,
+        .translate,
+        .navopt {
+          margin-left: 15px; /* Reduce spacing between elements */
+        }
+
+        .navopt a {
+          margin-left: 10px;
+          font-size: 14px;
+        }
+
+        header {
+          padding: 5px 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        img.bookmark,
+        .translate,
+        .navopt {
+          display: none;
+        }
+
+        header {
+          justify-content: center;
+        }
+
+        img.icon {
+          margin-left: 0;
+        }
+      }
+
+      main {
+        margin-top: 30px;
       }
 
       .title {
@@ -97,7 +142,6 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
           helvetica neue, Arial, sans-serif;
         text-align: center;
-        margin-top: 20px;
         margin-bottom: 20px;
       }
 
@@ -400,6 +444,7 @@
         height: 70px;
         align-items: center;
         gap: 70px;
+        margin-top: 80px;
       }
       .search-box {
         display: flex;
@@ -483,8 +528,9 @@
         -ms-flex-item-align: center;
         align-self: center;
         font-size: 12px;
+        font-weight: 780;
         line-height: 1;
-        margin: 5px;
+        margin: 3px;
         text-decoration: none;
         text-align: center;
         font-family: "Montserrat", sans-serif;
@@ -499,14 +545,14 @@
         color: #338539; /* Light green text */
         background-image: -webkit-linear-gradient(
           45deg,
-          #a8d7bc 50%,
+          #bce0a0 50%,
           transparent 50%
         );
-        background-image: linear-gradient(45deg, #a3d5b8 50%, transparent 50%);
+        background-image: linear-gradient(45deg, #bce0a0 50%, transparent 50%);
         background-position: 100%;
         background-size: 400%;
         -webkit-transition: background 300ms ease-in-out;
-        transition: background 0.8s ease-in-out;
+        transition: background 1.3s ease-in-out;
       }
 
       .first:hover {
@@ -530,7 +576,7 @@
         background-position: 100%;
         background-size: 400%;
         -webkit-transition: background 300ms ease-in-out;
-        transition: background 0.8s ease-in-out;
+        transition: background 1.3s ease-in-out;
       }
 
       .second:hover {
@@ -554,7 +600,7 @@
         background-position: 100%;
         background-size: 400%;
         -webkit-transition: background 300ms ease-in-out;
-        transition: background 1s ease-in-out;
+        transition: background 1.3s ease-in-out;
       }
 
       .third:hover {
@@ -950,6 +996,123 @@
       .load-more-btn:hover {
         background-color: rgb(226, 232, 237);
       }
+      footer {
+        position: sticky;
+        background: #06223b;
+        padding: 5px 0;
+        font-size: 16px;
+        color: #fff;
+        width: 100%;
+        border-top: 2px solid #a9a9a900;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
+          helvetica neue, Arial, sans-serif;
+      }
+      .container {
+        margin: 0 80px 0 80px;
+      }
+      .grid-footer {
+        padding-bottom: 33px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        width: 100%;
+        font-size: 15px;
+      }
+      .item-foot {
+        width: 100%;
+        padding: 0 8px;
+      }
+      .site-brand {
+        float: none;
+        margin: 8px 0;
+        filter: invert(1) hue-rotate(35deg);
+        line-height: 54px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      .footflag {
+        display: inline-flex;
+        list-style-type: disc;
+        padding-inline-start: 0;
+      }
+      .lang-foot {
+        display: inline-flex;
+        margin-top: 15px;
+      }
+      .ulfoot {
+        list-style: none;
+        text-align: left;
+      }
+      .footer-col-title {
+        color: #fff;
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        line-height: 2;
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 6px;
+        border-bottom: 1px solid #ccc;
+        margin-left: 13px;
+        padding-left: 0;
+      }
+      .footer-col-txt {
+        color: #adb3c4;
+        padding-left: 13px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        flex-direction: row;
+        justify-content: center;
+        text-decoration: none;
+        align-items: stretch;
+        line-height: 2.2;
+        font-size: 14px;
+      }
+      .sepa-foot {
+        width: 100%;
+        border-top: 1px solid #1c3651;
+      }
+      .double-foot {
+        margin-bottom: 15px;
+        margin-top: 17px;
+      }
+      .footer-social-copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .footer-social-copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .aixploria-c {
+        font-size: 14px;
+        color: #cddbdb;
+      }
+      .green-world {
+        width: 15px;
+        height: auto;
+        margin-left: 3px;
+      }
+      .mob-size {
+        font-size: 12px;
+        color: #bbd4e9;
+      }
+      .social-foot-img {
+        height: fit-content;
+        padding-top: 7px;
+      }
     </style>
   </head>
 
@@ -995,1766 +1158,2012 @@
         />
       </a>
     </header>
-    <br /><br /><br />
-    <div class="title">
-      <img
-        src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-mascoot-2032.webp"
-        width="75px"
-        height="75px"
-      />
-      <h1 class="title-name">AI Tools Directory</h1>
-    </div>
-    <p class="slogan">
-      Access the largest list of top-quality AI tools available on the web ★
-    </p>
-    <br /><br /><br />
-    <div class="additional-bar">
-      <div class="search-box">
-        <input type="text" placeholder="Search over 5000+ AI..." />
-        <div class="divider"></div>
-        <button>
-          <img
-            src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"
-            alt="Search"
-          />
-        </button>
+    <main>
+      <div class="title">
+        <img
+          src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-mascoot-2032.webp"
+          width="75px"
+          height="75px"
+        />
+        <h1 class="title-name">AI Tools Directory</h1>
       </div>
-      <div class="socialmedia">
-        <ul>
-          <li>
-            <a href="#"
-              ><img
-                src="https://www.aixploria.com/wp-content/uploads/2023/12/x-social-media-round-icon-ai.webp"
-                alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://www.aixploria.com/wp-content/uploads/2023/12/facebook-share-ai.webp"
-                alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://www.aixploria.com/wp-content/uploads/2023/12/linkedin-round-color-icon-3.webp"
-                alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://www.aixploria.com/wp-content/uploads/2023/12/telegram-icon-ai.webp"
-                alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://www.aixploria.com/wp-content/uploads/2023/12/email-round-solid-icon.webp"
-                alt=""
-            /></a>
-          </li>
-        </ul>
-      </div>
-      <div class="selectionbar">
-        <select class="category-slct">
-          <option class="Option1">--Select your Category--</option>
-          <option>3D model (66)</option>
-          <option>AI Agents (33)</option>
-          <option>AI Chat Assistant (34)</option>
-          <option>AI Detection (43)</option>
-          <option>AI Useful (55)</option>
-          <option>3D model (66)</option>
-          <option>AI Agents (33)</option>
-          <option>AI Chat Assistant (34)</option>
-          <option>AI Detection (43)</option>
-          <option>AI Useful (55)</option>
-          <option>3D model (66)</option>
-          <option>AI Agents (33)</option>
-          <option>AI Chat Assistant (34)</option>
-          <option>AI Detection (43)</option>
-          <option>AI Useful (55)</option>
-          <option>3D model (66)</option>
-          <option>AI Agents (33)</option>
-          <option>AI Chat Assistant (34)</option>
-          <option>AI Detection (43)</option>
-          <option>AI Useful (55)</option>
-          <option>3D model (66)</option>
-          <option>AI Agents (33)</option>
-          <option>AI Chat Assistant (34)</option>
-          <option>AI Detection (43)</option>
-          <option>AI Useful (55)</option>
-        </select>
-      </div>
-      <div class="glowing-buttons">
-        <button class="btn first">Free AI</button>
-        <button class="btn second">Freemium</button>
-        <button class="btn third">Paid</button>
-      </div>
-    </div>
-    <div class="new-posts">
-      <div class="new-items">
-        <div class="Descript">
-          <p><span class="star">★</span> Featured</p>
-          <span class="post-title">
+      <p class="slogan">
+        Access the largest list of top-quality AI tools available on the web ★
+      </p>
+      <div class="additional-bar">
+        <div class="search-box">
+          <input type="text" placeholder="Search over 5000+ AI..." />
+          <div class="divider"></div>
+          <button>
             <img
-              src="https://logosandtypes.com/wp-content/uploads/2024/01/Descript.png"
-              alt=""
-              width="35px"
-              height="50px"
+              src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"
+              alt="Search"
             />
+          </button>
+        </div>
+        <div class="socialmedia">
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.aixploria.com/wp-content/uploads/2023/12/x-social-media-round-icon-ai.webp"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.aixploria.com/wp-content/uploads/2023/12/facebook-share-ai.webp"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.aixploria.com/wp-content/uploads/2023/12/linkedin-round-color-icon-3.webp"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.aixploria.com/wp-content/uploads/2023/12/telegram-icon-ai.webp"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.aixploria.com/wp-content/uploads/2023/12/email-round-solid-icon.webp"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="selectionbar">
+          <select class="category-slct">
+            <option class="Option1">--Select your Category--</option>
+            <option>3D model (66)</option>
+            <option>AI Agents (33)</option>
+            <option>AI Chat Assistant (34)</option>
+            <option>AI Detection (43)</option>
+            <option>AI Useful (55)</option>
+            <option>3D model (66)</option>
+            <option>AI Agents (33)</option>
+            <option>AI Chat Assistant (34)</option>
+            <option>AI Detection (43)</option>
+            <option>AI Useful (55)</option>
+            <option>3D model (66)</option>
+            <option>AI Agents (33)</option>
+            <option>AI Chat Assistant (34)</option>
+            <option>AI Detection (43)</option>
+            <option>AI Useful (55)</option>
+            <option>3D model (66)</option>
+            <option>AI Agents (33)</option>
+            <option>AI Chat Assistant (34)</option>
+            <option>AI Detection (43)</option>
+            <option>AI Useful (55)</option>
+            <option>3D model (66)</option>
+            <option>AI Agents (33)</option>
+            <option>AI Chat Assistant (34)</option>
+            <option>AI Detection (43)</option>
+            <option>AI Useful (55)</option>
+          </select>
+        </div>
+        <div class="glowing-buttons">
+          <button class="btn first">Free AI</button>
+          <button class="btn second">Freemium</button>
+          <button class="btn third">Paid</button>
+        </div>
+      </div>
+      <div class="new-posts">
+        <div class="new-items">
+          <div class="Descript">
+            <p><span class="star">★</span> Featured</p>
+            <span class="post-title">
+              <img
+                src="https://logosandtypes.com/wp-content/uploads/2024/01/Descript.png"
+                alt=""
+                width="35px"
+                height="50px"
+              />
+              <a
+                class="dark-title"
+                id="specialButton"
+                data-postid="7505"
+                target="_blank"
+                href="https://get.descript.com/sx9ahgvct8j9"
+                rel="nofollow"
+                title="Descript"
+              >
+                Descript
+              </a>
+              <img
+                class="verification-icon verif-bluec"
+                src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp"
+                alt="Veriblue Verified Icon"
+              />
+            </span>
+            <p class="text">
+              « Edit and transform your images like a pro with a set of AI
+              tools: generative fill, generative expand, image creation from
+              text and more...
+            </p>
+            <br />
             <a
-              class="dark-title"
-              id="specialButton"
-              data-postid="7505"
+              rel="nofollow noopener"
               target="_blank"
               href="https://get.descript.com/sx9ahgvct8j9"
-              rel="nofollow"
-              title="Descript"
+              class="visit-site-button4"
+              id="specialButton"
+              data-postid="7505"
             >
-              Descript
+              <img
+                src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
+                width="16"
+                height="16"
+                style="width: 16px; height: 16px; margin-right: 5px"
+              />
+              <span data-title="Visit"> Visit</span>
             </a>
-            <img
-              class="verification-icon verif-bluec"
-              src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp"
-              alt="Veriblue Verified Icon"
-            />
-          </span>
-          <p class="text">
-            « Edit and transform your images like a pro with a set of AI tools:
-            generative fill, generative expand, image creation from text and
-            more...
-          </p>
-          <br />
-          <a
-            rel="nofollow noopener"
-            target="_blank"
-            href="https://get.descript.com/sx9ahgvct8j9"
-            class="visit-site-button4"
-            id="specialButton"
-            data-postid="7505"
-          >
-            <img
-              src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
-              width="16"
-              height="16"
-              style="width: 16px; height: 16px; margin-right: 5px"
-            />
-            <span data-title="Visit"> Visit</span>
-          </a>
+          </div>
         </div>
-      </div>
-      <div class="new-items">
-        <div class="Hubspot-CRM">
-          <p><span class="star">★</span> Featured</p>
-          <span class="post-title">
-            <img
-              src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg"
-              alt=""
-              width="35px"
-              height="50px"
-              style="margin-right: 5px"
-            />
+        <div class="new-items">
+          <div class="Hubspot-CRM">
+            <p><span class="star">★</span> Featured</p>
+            <span class="post-title">
+              <img
+                src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg"
+                alt=""
+                width="35px"
+                height="50px"
+                style="margin-right: 5px"
+              />
+              <a
+                class="dark-title"
+                id="specialButton"
+                data-postid="28418"
+                target="_blank"
+                href="https://hubspot.sjv.io/c/5293708/1722021/12893"
+                rel="nofollow"
+                title="HubSpot CRM"
+                >HubSpot CRM
+              </a>
+              <img
+                class="verification-icon verif-bluec"
+                src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp"
+                alt="Gold Verified Icon"
+              />
+            </span>
+            <p class="text">
+              « Edit and transform your images like a pro with a set of AI
+              tools: generative fill, generative expand, image creation from
+              text and more...
+            </p>
+            <br />
             <a
-              class="dark-title"
-              id="specialButton"
-              data-postid="28418"
+              rel="nofollow noopener"
               target="_blank"
-              href="https://hubspot.sjv.io/c/5293708/1722021/12893"
-              rel="nofollow"
-              title="HubSpot CRM"
-              >HubSpot CRM
+              href="https://get.descript.com/sx9ahgvct8j9"
+              class="visit-site-button4"
+              id="specialButton"
+              data-postid="7505"
+            >
+              <img
+                src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
+                width="16"
+                height="16"
+                style="width: 16px; height: 16px; margin-right: 5px"
+              />
+              <span data-title="Visit"> Visit</span>
             </a>
-            <img
-              class="verification-icon verif-bluec"
-              src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp"
-              alt="Gold Verified Icon"
-            />
-          </span>
-          <p class="text">
-            « Edit and transform your images like a pro with a set of AI tools:
-            generative fill, generative expand, image creation from text and
-            more...
-          </p>
-          <br />
-          <a
-            rel="nofollow noopener"
-            target="_blank"
-            href="https://get.descript.com/sx9ahgvct8j9"
-            class="visit-site-button4"
-            id="specialButton"
-            data-postid="7505"
-          >
-            <img
-              src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
-              width="16"
-              height="16"
-              style="width: 16px; height: 16px; margin-right: 5px"
-            />
-            <span data-title="Visit"> Visit</span>
-          </a>
+          </div>
         </div>
-      </div>
-      <div class="new-items">
-        <div class="Interior-AI">
-          <p><span class="star">★</span> Featured</p>
-          <span class="post-title">
-            <img
-              src="https://findmyaitool-rh.s3.ap-southeast-2.amazonaws.com/images/ai-tool/logo/InteriorAI-1723792479544"
-              alt=""
-              width="35px"
-              height="20px"
-              style="margin-right: 5px"
-            />
+        <div class="new-items">
+          <div class="Interior-AI">
+            <p><span class="star">★</span> Featured</p>
+            <span class="post-title">
+              <img
+                src="https://findmyaitool-rh.s3.ap-southeast-2.amazonaws.com/images/ai-tool/logo/InteriorAI-1723792479544"
+                alt=""
+                width="35px"
+                height="20px"
+                style="margin-right: 5px"
+              />
+              <a
+                class="dark-title"
+                id="specialButton"
+                data-postid="7225"
+                target="_blank"
+                href="https://interiorai.com/?via=aixploria"
+                rel="nofollow"
+                title="Interior AI"
+                >Interior AI</a
+              >
+              <img
+                class="verification-icon verif-bluec"
+                src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp"
+                alt="Veriblue Verified Icon"
+              />
+            </span>
+            <p class="text">
+              « Edit and transform your images like a pro with a set of AI
+              tools: generative fill, generative expand, image creation from
+              text and more...
+            </p>
+            <br />
             <a
-              class="dark-title"
-              id="specialButton"
-              data-postid="7225"
+              rel="nofollow noopener"
               target="_blank"
-              href="https://interiorai.com/?via=aixploria"
-              rel="nofollow"
-              title="Interior AI"
-              >Interior AI</a
+              href="https://get.descript.com/sx9ahgvct8j9"
+              class="visit-site-button4"
+              id="specialButton"
+              data-postid="7505"
             >
-            <img
-              class="verification-icon verif-bluec"
-              src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp"
-              alt="Veriblue Verified Icon"
-            />
-          </span>
-          <p class="text">
-            « Edit and transform your images like a pro with a set of AI tools:
-            generative fill, generative expand, image creation from text and
-            more...
-          </p>
-          <br />
-          <a
-            rel="nofollow noopener"
-            target="_blank"
-            href="https://get.descript.com/sx9ahgvct8j9"
-            class="visit-site-button4"
-            id="specialButton"
-            data-postid="7505"
-          >
-            <img
-              src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
-              width="16"
-              height="16"
-              style="width: 16px; height: 16px; margin-right: 5px"
-            />
-            <span data-title="Visit"> Visit</span>
-          </a>
+              <img
+                src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
+                width="16"
+                height="16"
+                style="width: 16px; height: 16px; margin-right: 5px"
+              />
+              <span data-title="Visit"> Visit</span>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="new-items">
-        <div class="Photoshop-AI">
-          <p><span class="star">★</span> Featured</p>
-          <span class="post-title">
-            <img
-              src="https://logodownload.org/wp-content/uploads/2019/10/adobe-photoshop-logo-2.png"
-              alt=""
-              width="40px"
-              height="30px"
-              style="margin-right: 5px"
-            />
+        <div class="new-items">
+          <div class="Photoshop-AI">
+            <p><span class="star">★</span> Featured</p>
+            <span class="post-title">
+              <img
+                src="https://logodownload.org/wp-content/uploads/2019/10/adobe-photoshop-logo-2.png"
+                alt=""
+                width="40px"
+                height="30px"
+                style="margin-right: 5px"
+              />
+              <a
+                class="dark-title"
+                id="specialButton"
+                data-postid="30520"
+                target="_blank"
+                href="https://prf.hn/l/1eEeBol"
+                rel="nofollow"
+                title="Photoshop AI"
+                >Photoshop AI</a
+              >
+              <img
+                class="verification-icon verif-bluec"
+                src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp"
+                alt="Gold Verified Icon"
+              />
+            </span>
+            <p class="text">
+              « Edit and transform your images like a pro with a set of AI
+              tools: generative fill, generative expand, image creation from
+              text and more...
+            </p>
+            <br />
             <a
-              class="dark-title"
-              id="specialButton"
-              data-postid="30520"
+              rel="nofollow noopener"
               target="_blank"
-              href="https://prf.hn/l/1eEeBol"
-              rel="nofollow"
-              title="Photoshop AI"
-              >Photoshop AI</a
+              href="https://get.descript.com/sx9ahgvct8j9"
+              class="visit-site-button4"
+              id="specialButton"
+              data-postid="7505"
             >
-            <img
-              class="verification-icon verif-bluec"
-              src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp"
-              alt="Gold Verified Icon"
-            />
-          </span>
-          <p class="text">
-            « Edit and transform your images like a pro with a set of AI tools:
-            generative fill, generative expand, image creation from text and
-            more...
-          </p>
-          <br />
-          <a
-            rel="nofollow noopener"
-            target="_blank"
-            href="https://get.descript.com/sx9ahgvct8j9"
-            class="visit-site-button4"
-            id="specialButton"
-            data-postid="7505"
-          >
-            <img
-              src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
-              width="16"
-              height="16"
-              style="width: 16px; height: 16px; margin-right: 5px"
-            />
-            <span data-title="Visit"> Visit</span>
-          </a>
+              <img
+                src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp"
+                width="16"
+                height="16"
+                style="width: 16px; height: 16px; margin-right: 5px"
+              />
+              <span data-title="Visit"> Visit</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <br /><br /><br />
-    <hr class="hr1" />
-    <div class="grid-list">
-      <div class="grid-items">
-        <div class="Latest-AI">
-          <span data-title="Latest AI">✨ Latest AI</span>
-        </div>
+      <br /><br /><br />
+      <hr class="hr1" />
+      <div class="grid-list">
+        <div class="grid-items">
+          <div class="Latest-AI">
+            <span data-title="Latest AI">✨ Latest AI</span>
+          </div>
 
-        <div class="list-container">
-          <div class="list-items">
-            <ul class="lists">
-              <li
-                style="
-                  color: rgb(213, 68, 117);
-                  font-style: italic;
-                  font-weight: bold;
-                "
-              >
-                <span class="star">★</span> Notion Sites
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right; margin-top: 5px"
-                  />
-                </span>
-              </li>
+          <div class="list-container">
+            <div class="list-items">
+              <ul class="lists">
+                <li
+                  style="
+                    color: rgb(213, 68, 117);
+                    font-style: italic;
+                    font-weight: bold;
+                  "
+                >
+                  <span class="star">★</span> Notion Sites
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right; margin-top: 5px"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                ContractCrab
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Vadoo AI
-                <span class="websites-type-Gratuit">
+                  ContractCrab
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
+                  Vadoo AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Anthropic Quickstarts
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Paradigm AI
-                <span class="websites-type-Gratuit">
+                  Anthropic Quickstarts
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Altera PlayLabs
-                <span class="websites-type-Gratuit">
+                  Paradigm AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Course Hero
-                <span class="websites-type-Gratuit">
+                  Altera PlayLabs
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                ContractCrab
-                <span class="websites-type-Gratuit">
+                  Course Hero
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Vadoo AI
-                <span class="websites-type-Gratuit">
+                  ContractCrab
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
+                  Vadoo AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Anthropic Quickstarts
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Paradigm AI
-                <span class="websites-type-Gratuit">
+                  Anthropic Quickstarts
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Altera PlayLabs
-                <span class="websites-type-Gratuit">
+                  Paradigm AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Course Hero
-                <span class="websites-type-Gratuit">
+                  Altera PlayLabs
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-            </ul>
+                  Course Hero
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Button at the end -->
+          <div class="load-more">
+            <button class="load-more-btn">More new AI (1793) ➔</button>
           </div>
         </div>
 
-        <!-- Button at the end -->
-        <div class="load-more">
-          <button class="load-more-btn">More new AI (1793) ➔</button>
-        </div>
-      </div>
+        <div class="grid-items">
+          <div class="AI-Selection">
+            <span data-title="AI-Selection">AIxploria Selection</span>
+          </div>
 
-      <div class="grid-items">
-        <div class="AI-Selection">
-          <span data-title="AI-Selection">AIxploria Selection</span>
-        </div>
+          <div class="list-container">
+            <div class="list-items">
+              <ul class="lists">
+                <li
+                  style="
+                    color: rgb(213, 68, 117);
+                    font-style: italic;
+                    font-weight: bold;
+                  "
+                >
+                  <span class="star">★</span> Notion Sites
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right; margin-top: 5px"
+                    />
+                  </span>
+                </li>
 
-        <div class="list-container">
-          <div class="list-items">
-            <ul class="lists">
-              <li
-                style="
-                  color: rgb(213, 68, 117);
-                  font-style: italic;
-                  font-weight: bold;
-                "
-              >
-                <span class="star">★</span> Notion Sites
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right; margin-top: 5px"
+                    src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
+                  ContractCrab
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Vadoo AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                ContractCrab
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Vadoo AI
-                <span class="websites-type-Gratuit">
+                  Anthropic Quickstarts
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
+                  Paradigm AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Altera PlayLabs
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Course Hero
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  ContractCrab
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Vadoo AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Anthropic Quickstarts
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Paradigm AI
-                <span class="websites-type-Gratuit">
+                  Anthropic Quickstarts
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Altera PlayLabs
-                <span class="websites-type-Gratuit">
+                  Paradigm AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Course Hero
-                <span class="websites-type-Gratuit">
+                  Altera PlayLabs
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                ContractCrab
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Vadoo AI
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
+                  Course Hero
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-              <li>
-                <img
-                  src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Anthropic Quickstarts
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Paradigm AI
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Altera PlayLabs
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Course Hero
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-            </ul>
+          <!-- Button at the end -->
+          <div class="load-more">
+            <button class="load-more-btn">More new AI (1793) ➔</button>
           </div>
         </div>
+        <div class="grid-items">
+          <div class="Super-Tools">
+            <span data-title="Super-Tools">Super-Tools</span>
+          </div>
 
-        <!-- Button at the end -->
-        <div class="load-more">
-          <button class="load-more-btn">More new AI (1793) ➔</button>
-        </div>
-      </div>
-      <div class="grid-items">
-        <div class="Super-Tools">
-          <span data-title="Super-Tools">Super-Tools</span>
-        </div>
+          <div class="list-container">
+            <div class="list-items">
+              <ul class="lists">
+                <li
+                  style="
+                    color: rgb(213, 68, 117);
+                    font-style: italic;
+                    font-weight: bold;
+                  "
+                >
+                  <span class="star">★</span> Notion Sites
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right; margin-top: 5px"
+                    />
+                  </span>
+                </li>
 
-        <div class="list-container">
-          <div class="list-items">
-            <ul class="lists">
-              <li
-                style="
-                  color: rgb(213, 68, 117);
-                  font-style: italic;
-                  font-weight: bold;
-                "
-              >
-                <span class="star">★</span> Notion Sites
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right; margin-top: 5px"
+                    src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
+                  ContractCrab
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Vadoo AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                ContractCrab
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Vadoo AI
-                <span class="websites-type-Gratuit">
+                  Anthropic Quickstarts
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
+                  Paradigm AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Altera PlayLabs
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Course Hero
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  ContractCrab
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Vadoo AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Anthropic Quickstarts
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Paradigm AI
-                <span class="websites-type-Gratuit">
+                  Anthropic Quickstarts
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Altera PlayLabs
-                <span class="websites-type-Gratuit">
+                  Paradigm AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Course Hero
-                <span class="websites-type-Gratuit">
+                  Altera PlayLabs
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                ContractCrab
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Vadoo AI
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
+                  Course Hero
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-              <li>
-                <img
-                  src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Anthropic Quickstarts
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Paradigm AI
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Altera PlayLabs
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Course Hero
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-            </ul>
+          <!-- Button at the end -->
+          <div class="load-more">
+            <button class="load-more-btn">More new AI (1793) ➔</button>
           </div>
         </div>
+        <div class="grid-items">
+          <div class="AI-Chat">
+            <span data-title="Ai-Chat">AI-Chat & Assistant</span>
+          </div>
 
-        <!-- Button at the end -->
-        <div class="load-more">
-          <button class="load-more-btn">More new AI (1793) ➔</button>
-        </div>
-      </div>
-      <div class="grid-items">
-        <div class="AI-Chat">
-          <span data-title="Ai-Chat">AI-Chat & Assistant</span>
-        </div>
+          <div class="list-container">
+            <div class="list-items">
+              <ul class="lists">
+                <li
+                  style="
+                    color: rgb(213, 68, 117);
+                    font-style: italic;
+                    font-weight: bold;
+                  "
+                >
+                  <span class="star">★</span> Notion Sites
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right; margin-top: 5px"
+                    />
+                  </span>
+                </li>
 
-        <div class="list-container">
-          <div class="list-items">
-            <ul class="lists">
-              <li
-                style="
-                  color: rgb(213, 68, 117);
-                  font-style: italic;
-                  font-weight: bold;
-                "
-              >
-                <span class="star">★</span> Notion Sites
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right; margin-top: 5px"
+                    src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
+                  ContractCrab
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Vadoo AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                ContractCrab
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Vadoo AI
-                <span class="websites-type-Gratuit">
+                  Anthropic Quickstarts
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
+                  Paradigm AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Altera PlayLabs
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Course Hero
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  ContractCrab
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
+                  />
+                  Vadoo AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
 
-              <li>
-                <img
-                  src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Anthropic Quickstarts
-                <span class="websites-type-Gratuit">
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Paradigm AI
-                <span class="websites-type-Gratuit">
+                  Anthropic Quickstarts
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Altera PlayLabs
-                <span class="websites-type-Gratuit">
+                  Paradigm AI
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Course Hero
-                <span class="websites-type-Gratuit">
+                  Altera PlayLabs
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+                <li>
                   <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
+                    src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
+                    alt=""
+                    width="17px"
+                    height="16px"
                   />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://contractcrab.com/wp-content/uploads/2024/02/ContractCrab_Logo_Icon.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                ContractCrab
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWT3dkpWHmbeL4YJj8xYbgJFFXIZKSbzofSw&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Vadoo AI
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
+                  Course Hero
+                  <span class="websites-type-Gratuit">
+                    <img
+                      src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
+                      alt="Notion Sites"
+                      title="Notion Sites"
+                      width="14"
+                      height="14"
+                      class="link-sitia"
+                      style="float: right"
+                    />
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-              <li>
-                <img
-                  src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Anthropic Quickstarts
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://bookface-images.s3.amazonaws.com/small_logos/c3480b49d1b5cd46b7fdc5e241e94171723b5fa7.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Paradigm AI
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMYgZjpWmlFVXR3Zwd3uZG8wq_l_rLy_oDEQ&s"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Altera PlayLabs
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-              <li>
-                <img
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/course-hero-logo-freelogovectors.net_.png"
-                  alt=""
-                  width="17px"
-                  height="16px"
-                />
-                Course Hero
-                <span class="websites-type-Gratuit">
-                  <img
-                    src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
-                    alt="Notion Sites"
-                    title="Notion Sites"
-                    width="14"
-                    height="14"
-                    class="link-sitia"
-                    style="float: right"
-                  />
-                </span>
-              </li>
-            </ul>
+          <!-- Button at the end -->
+          <div class="load-more">
+            <button class="load-more-btn">More new AI (1793) ➔</button>
           </div>
         </div>
-
-        <!-- Button at the end -->
-        <div class="load-more">
-          <button class="load-more-btn">More new AI (1793) ➔</button>
-        </div>
       </div>
-    </div>
-    <div>
-      <a
-        class="button-full-list"
-        href="#"
-        data-title=" See the full list of AI"
-      >
-        See the full list of AI <span class="down-arrow">&#9660;</span>
-        <div class="arrow-plus2"></div>
-      </a>
-    </div>
-    <br />
-    <div class="scroll-platform">
-      <div class="scroll-header-platform">
+      <div>
         <a
-          class="tooltips"
-          id="popular-platform"
-          target="_blank"
-          href="https://www.aixploria.com/en/last-ai"
-          title=""
+          class="button-full-list"
+          href="#"
+          data-title=" See the full list of AI"
         >
-          <span data-title="Popular platforms: ">Popular platforms: </span>
+          See the full list of AI <span class="down-arrow">&#9660;</span>
+          <div class="arrow-plus2"></div>
         </a>
       </div>
-      <div class="scroll-container-platform">
-        <ul class="scroll-list-platform">
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp"
-              alt="Google AI"
-              title="Google AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp"
-              alt="OpenAI"
-              title="OpenAI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp"
-              alt="Meta AI"
-              title="Meta AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp"
-              alt="Microsoft AI"
-              title="Microsoft AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp"
-              alt="Stability AI"
-              title="Stability AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp"
-              alt="Deepmind AI"
-              title="Deepmind AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp"
-              alt="Google AI"
-              title="Google AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp"
-              alt="OpenAI"
-              title="OpenAI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp"
-              alt="Meta AI"
-              title="Meta AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp"
-              alt="Microsoft AI"
-              title="Microsoft AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp"
-              alt="Stability AI"
-              title="Stability AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-          <li>
-            <img
-              loading="lazy"
-              src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp"
-              alt="Deepmind AI"
-              title="Deepmind AI"
-              width="200"
-              height="64"
-              style="max-width: 130px"
-            />
-          </li>
-        </ul>
-      </div>
-    </div>
-    <br /><br /><br /><br /><br />
-    <div class="boxes">
-      <div class="box box1">
-        <div class="img-container1">
-          <img
-            src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-ai-tools-directory-2024-ia.webp"
-            width="305px"
-            height="305px"
-          />
+      <br />
+      <div class="scroll-platform">
+        <div class="scroll-header-platform">
+          <a
+            class="tooltips"
+            id="popular-platform"
+            target="_blank"
+            href="https://www.aixploria.com/en/last-ai"
+            title=""
+          >
+            <span data-title="Popular platforms: ">Popular platforms: </span>
+          </a>
         </div>
-        <div class="text-container1">
-          <h1>The World's Best AI Tools Directory</h1>
-          <p>
-            Aixploria is a website dedicated to artificial intelligence that
-            allows you to discover the
-            <strong>best AI tools directory available online.</strong> Our site
-            features a selection of listings arranged in categories that make it
-            easy for you to find AIs that meet your criteria. In fact, the
-            largest list of sites using AI can be found on this page! Plus, this
-            list is updated daily, so you can bookmark it so you don't miss out
-            on the latest news.
-          </p>
-          <p>
-            Lately, the site also posts articles that explain how each AI works.
-            Found an AI tools that doesn't appear in the list? From now on, it
-            is possible to submit new AIs so that they can be added to the
-            ranking or the top 10. Actually, Aixploria is a kind of directory
-            and search engine dedicated to AI. With its simple and clean style,
-            you easily search using keywords like on a search engine.
-          </p>
+        <div class="scroll-container-platform">
+          <ul class="scroll-list-platform">
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp"
+                alt="Google AI"
+                title="Google AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp"
+                alt="OpenAI"
+                title="OpenAI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp"
+                alt="Meta AI"
+                title="Meta AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp"
+                alt="Microsoft AI"
+                title="Microsoft AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp"
+                alt="Stability AI"
+                title="Stability AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp"
+                alt="Deepmind AI"
+                title="Deepmind AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp"
+                alt="Google AI"
+                title="Google AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp"
+                alt="OpenAI"
+                title="OpenAI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp"
+                alt="Meta AI"
+                title="Meta AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp"
+                alt="Microsoft AI"
+                title="Microsoft AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp"
+                alt="Stability AI"
+                title="Stability AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp"
+                alt="Deepmind AI"
+                title="Deepmind AI"
+                width="200"
+                height="64"
+                style="max-width: 130px"
+              />
+            </li>
+          </ul>
         </div>
       </div>
-
-      <div class="box box2">
-        <div class="text-container2">
-          <h1>Aixploria: your guide to discovering the best AI</h1>
-          <p>
-            Other than that, the site is neat and clear, with good ergonomics to
-            ensure you get quick results. Obviously, the site is accessible for
-            free, without registration and is compatible with computers, tablets
-            and mobiles.
-          </p>
-
-          <p>
-            Whether you're looking for a machine translation tool, an image
-            generator, or any other AI app, Aixploria offers a variety of
-            high-quality choices. With our intuitive search engine, you can
-            easily find the right AI for your needs. Now, we also have articles
-            written by AI experts to help you understand the latest trends and
-            mostpopularapplications.
-          </p>
+      <br /><br /><br /><br /><br />
+      <div class="boxes">
+        <div class="box box1">
+          <div class="img-container1">
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-ai-tools-directory-2024-ia.webp"
+              width="305px"
+              height="305px"
+            />
+          </div>
+          <div class="text-container1">
+            <h1>The World's Best AI Tools Directory</h1>
+            <p>
+              Aixploria is a website dedicated to artificial intelligence that
+              allows you to discover the
+              <strong>best AI tools directory available online.</strong> Our
+              site features a selection of listings arranged in categories that
+              make it easy for you to find AIs that meet your criteria. In fact,
+              the largest list of sites using AI can be found on this page!
+              Plus, this list is updated daily, so you can bookmark it so you
+              don't miss out on the latest news.
+            </p>
+            <p>
+              Lately, the site also posts articles that explain how each AI
+              works. Found an AI tools that doesn't appear in the list? From now
+              on, it is possible to submit new AIs so that they can be added to
+              the ranking or the top 10. Actually, Aixploria is a kind of
+              directory and search engine dedicated to AI. With its simple and
+              clean style, you easily search using keywords like on a search
+              engine.
+            </p>
+          </div>
         </div>
-        <div class="img-container2">
-          <img
-            src="https://www.aixploria.com/wp-content/uploads/2023/12/ai-assistant-guide-aixploria-2.webp"
-          />
+
+        <div class="box box2">
+          <div class="text-container2">
+            <h1>Aixploria: your guide to discovering the best AI</h1>
+            <p>
+              Other than that, the site is neat and clear, with good ergonomics
+              to ensure you get quick results. Obviously, the site is accessible
+              for free, without registration and is compatible with computers,
+              tablets and mobiles.
+            </p>
+
+            <p>
+              Whether you're looking for a machine translation tool, an image
+              generator, or any other AI app, Aixploria offers a variety of
+              high-quality choices. With our intuitive search engine, you can
+              easily find the right AI for your needs. Now, we also have
+              articles written by AI experts to help you understand the latest
+              trends and mostpopularapplications.
+            </p>
+          </div>
+          <div class="img-container2">
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/12/ai-assistant-guide-aixploria-2.webp"
+            />
+          </div>
+        </div>
+
+        <div class="box box3">
+          <div class="img-container3">
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/12/top10-best-ai-aixploria-3.webp"
+            />
+          </div>
+          <div class="text-container3">
+            <h1>Top 10 best AI</h1>
+            <p>
+              Meanwhile, a new special section called « top 10 AI » has been
+              created. This one updates in real time and allows you to see the
+              top 10 AI in each category at a glance. It's very useful, because
+              it's sometimes hard to find your way around, with so many new AI
+              tools coming out every day. As a result, the AI tool directory
+              quickly becomes unreadable, and this option becomes essential.
+            </p>
+
+            <p>
+              With great patience, we have carefully selected the most
+              innovative and useful AIs to offer you the best options available.
+              By the way on this subject, you can check our “top 10” list in the
+              tab (of the same name) at the top of this page.
+            </p>
+          </div>
+        </div>
+
+        <div class="box box4">
+          <div class="text-container4">
+            <h1>A website for all AI enthusiasts and aficionados</h1>
+            <p>
+              As already mentioned, our platform is easy to use due to its
+              intentionally simplified design. This makes it ideal for curious
+              beginners as well as for experts who want to discover the latest
+              advances in AI. Ultimately, no matter what your level is, our site
+              is designed to be safely explored and meet your expectations
+              without delay.
+            </p>
+
+            <p>
+              Because AI are now clearly part of our daily lives, but also the
+              tools of our future, keeping up to date with the latest trends is
+              becoming essential. Aixploria can help you keep up to date and
+              stay one step ahead of your competitors.
+            </p>
+          </div>
+          <div class="img-container4">
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/12/fan-ai-aixploria-3.webp"
+            />
+          </div>
+        </div>
+
+        <div class="box box5">
+          <div class="img-container5">
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/03/aixploria-mascoot-ai-44.webp"
+              height="250px"
+              width="250px"
+            />
+          </div>
+          <div class="text-container5">
+            <h1>Why come to this AI tools directory?</h1>
+            <p>
+              To date, the best answer might be: “Out of curiosity” but there
+              are many other reasons. First, you can come to Aixploria to learn
+              about the latest trends and advances in AI or to find a specific
+              AI. Why not come along and simply learn how the various AI in our
+              database list work?
+            </p>
+
+            <p>
+              Sharing your own AI discoveries with the community can also be
+              interesting. However, the best excuse to drop by Aixploria.com is
+              surely the choice and the number of AI present in each category.
+              Two new sections have recently been added to the site, and they
+              seem to have become quite popular: an area dedicated to news about
+              artificial intelligence. These news items are available in both
+              written (AI News) and video versions (AI News YouTube)
+            </p>
+          </div>
+        </div>
+        <div class="box box6">
+          <div class="text-container6">
+            <h1>
+              Contribute to the community by sharing your findings on Aixploria
+            </h1>
+            <p>
+              Aixploria is an online platform dedicated to artificial
+              intelligence that encourages community participation. To this end,
+              we believe that AI discovery is a collaborative process and that
+              we all have something to contribute. That’s why we've created a
+              space where users can share their own AI findings via a form.
+            </p>
+
+            <p>
+              Whether you're a novice, a seasoned developer, or just a fan of
+              AI, you can contribute to the community by sharing your AI
+              findings on Aixploria. This not only allows us to keep our list of
+              AI tools up to date, but also to share your knowledge with other
+              Internet users.
+            </p>
+
+            <p class="greeting-end">
+              Thank you for reading and for your support. See you on Aixploria!
+            </p>
+          </div>
+          <div class="img-container6">
+            <img
+              src="https://www.aixploria.com/wp-content/uploads/2023/12/community-aixploria-share-ai-2.webp"
+            />
+          </div>
         </div>
       </div>
-
-      <div class="box box3">
-        <div class="img-container3">
-          <img
-            src="https://www.aixploria.com/wp-content/uploads/2023/12/top10-best-ai-aixploria-3.webp"
-          />
+    </main>
+    <footer>
+      <div class="container">
+        <div class="grid-footer">
+          <div class="item-foot">
+            <div class="site-brand">
+              <img
+                decoding="async"
+                loading="lazy"
+                src="https://www.aixploria.com/wp-content/uploads/2023/09/logo-light-aixploria-3.webp"
+                alt="Aixploria"
+                title="Aixploria"
+                width="200"
+                height="45"
+                class="logo24"
+              />
+            </div>
+            <p data-title="Artificial intelligence for everyone">
+              Artificial intelligence for everyone
+            </p>
+            <ul class="footflag">
+              <li class="lang-foot">
+                <a href="/" style="height: 48px; width: 48px"
+                  ><img
+                    decoding="async"
+                    loading="lazy"
+                    src="https://www.aixploria.com//wp-content/uploads/2023/12/icon-lang-english-us.webp"
+                    class="im-footflag"
+                    width="20"
+                    height="13"
+                    alt="English"
+                /></a>
+              </li>
+              <li class="lang-foot">
+                <a href="/" style="height: 48px; width: 48px"
+                  ><img
+                    decoding="async"
+                    loading="lazy"
+                    src="https://www.aixploria.com//wp-content/uploads/2023/12/icon-lang-fr.webp"
+                    class="im-footflag"
+                    width="20"
+                    height="13"
+                    alt="Français"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item-foot">
+            <ul class="ulfoot">
+              <li class="footer-col-title" data-title="Resources">Resources</li>
+              <li>
+                <a
+                  href="https://www.aixploria.com/en/ai-news-and-tutorials/"
+                  title="Tutorials, tips and blog"
+                  class="footer-col-txt"
+                  data-title="Tutorials, tips and blog"
+                  >Tutorials, tips and blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.aixploria.com/en/worldwide-top-ai-conferences-agenda/"
+                  title="AI Conferences Agenda"
+                  class="footer-col-txt"
+                  data-title="AI Conferences Agenda"
+                  >AI Conferences Agenda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.aixploria.com/en/glossary-lexicon-ai/"
+                  title="AI Glossary &amp; Lexicon"
+                  class="footer-col-txt"
+                  data-title="AI Glossary &amp; Lexicon"
+                  >AI Glossary &amp; Lexicon</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item-foot">
+            <ul class="ulfoot">
+              <li class="footer-col-title" data-title="Useful Tools">
+                Useful Tools
+              </li>
+              <li>
+                <a
+                  href="https://www.aixploria.com/en/best-youtube-videos-about-ai/"
+                  title="Best AI Youtube Channels"
+                  class="footer-col-txt"
+                  data-title="Best AI Youtube Channels"
+                  >Best AI Youtube Channels</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.aixploria.com/en/top-100-ai/"
+                  title="Top 100 AI"
+                  class="footer-col-txt"
+                  data-title="Top 100 AI"
+                  >Top 100 AI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.aixploria.com/en/gpts-list-ai-directory/"
+                  title="GPTs List"
+                  class="footer-col-txt"
+                  data-title="GPTs List"
+                  >GPTs List</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.aixploria.com/en/hubspot-ai-tools-enterprises/"
+                  title="Hubspot AI Tools"
+                  class="footer-col-txt"
+                  data-title="Hubspot AI Tools"
+                  >Hubspot AI Tools</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item-foot">
+            <ul class="ulfoot">
+              <li class="footer-col-title" data-title="Company">Company</li>
+              <li>
+                <a
+                  rel="nofollow noopener"
+                  href="https://www.aixploria.com/en/add-ai/"
+                  title="Submit an AI Tool"
+                  class="footer-col-txt"
+                  data-title="Submit an AI Tool"
+                  >Submit an AI Tool</a
+                >
+              </li>
+              <li>
+                <a
+                  rel="nofollow noopener"
+                  href="https://www.aixploria.com/en/add-gpts/"
+                  title="Submit a GPTs"
+                  class="footer-col-txt"
+                  data-title="Submit a GPTs"
+                  >Submit a GPTs</a
+                >
+              </li>
+              <li>
+                <a
+                  rel="nofollow noopener"
+                  href="https://www.aixploria.com/en/form-add-event-ai/"
+                  title="Submit an AI Event"
+                  class="footer-col-txt"
+                  data-title="Submit an AI Event"
+                  >Submit an AI Event</a
+                >
+              </li>
+              <li>
+                <a
+                  rel="nofollow noopener"
+                  href="https://www.aixploria.com/en/contact/"
+                  title="Contact us"
+                  class="footer-col-txt"
+                  data-title="Contact Us"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  rel="nofollow noopener"
+                  href="https://www.aixploria.com/en/featured-on-aixploria/"
+                  title="Feature your tool on AIxploria"
+                  class="footer-col-txt"
+                  data-title="Feature your tool"
+                  >Feature your tool ★</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="text-container3">
-          <h1>Top 10 best AI</h1>
-          <p>
-            Meanwhile, a new special section called « top 10 AI » has been
-            created. This one updates in real time and allows you to see the top
-            10 AI in each category at a glance. It's very useful, because it's
-            sometimes hard to find your way around, with so many new AI tools
-            coming out every day. As a result, the AI tool directory quickly
-            becomes unreadable, and this option becomes essential.
-          </p>
-
-          <p>
-            With great patience, we have carefully selected the most innovative
-            and useful AIs to offer you the best options available. By the way
-            on this subject, you can check our “top 10” list in the tab (of the
-            same name) at the top of this page.
-          </p>
+        <div class="sepa-foot"></div>
+        <div class="double-foot">
+          <div class="footer-social-copy">
+            <div class="social-foot">
+              <a
+                href="https://twitter.com/Aixploria"
+                target="_blank"
+                title="Aixploria X"
+                class="footer-social-copy"
+                id="social-icon-footer"
+                style="padding-right: 9px; filter: invert(1) hue-rotate(180deg)"
+                ><img
+                  decoding="async"
+                  loading="lazy"
+                  src="https://www.aixploria.com/wp-content/uploads/2023/12/x-icon-ai-style.webp"
+                  width="20"
+                  height="20"
+                  alt="Aixploria X"
+                  class="social-foot-img"
+              /></a>
+            </div>
+            <div class="years-foot">
+              <span class="aixploria-c"
+                >© 2024 Aixploria.
+                <span data-title="All rights reserved"
+                  >All rights reserved
+                  <img
+                    decoding="async"
+                    loading="lazy"
+                    src="https://www.aixploria.com/wp-content/uploads/2024/01/aixploria-eco-friendly-green.webp"
+                    alt="Green World"
+                    title="Eco-Friendly"
+                    width="32"
+                    height="33"
+                    class="green-world"
+                  />
+                </span>
+                <a
+                  rel="nofollow noopener"
+                  href="https://www.aixploria.com/en/cookies-policy"
+                  title="Cookie Policys"
+                  class="footer-col-txt"
+                  data-title="Cookie Policy"
+                  ><span class="mob-size">Cookie Policy</span></a
+                >
+                <a
+                  rel="nofollow noopener"
+                  href="https://www.aixploria.com/en/terms-conditions"
+                  title="Conditions of use"
+                  class="footer-col-txt"
+                  data-title="Conditions of use"
+                  ><span class="mob-size">Conditions of use</span></a
+                >
+                <a
+                  rel="nofollow noopener"
+                  href="https://www.aixploria.com/en/privacy-statement"
+                  title="Legals informations"
+                  class="footer-col-txt"
+                  data-title="Legals informations"
+                  ><span class="mob-size">Legals informations</span></a
+                >
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="box box4">
-        <div class="text-container4">
-          <h1>A website for all AI enthusiasts and aficionados</h1>
-          <p>
-            As already mentioned, our platform is easy to use due to its
-            intentionally simplified design. This makes it ideal for curious
-            beginners as well as for experts who want to discover the latest
-            advances in AI. Ultimately, no matter what your level is, our site
-            is designed to be safely explored and meet your expectations without
-            delay.
-          </p>
-
-          <p>
-            Because AI are now clearly part of our daily lives, but also the
-            tools of our future, keeping up to date with the latest trends is
-            becoming essential. Aixploria can help you keep up to date and stay
-            one step ahead of your competitors.
-          </p>
-        </div>
-        <div class="img-container4">
-          <img
-            src="https://www.aixploria.com/wp-content/uploads/2023/12/fan-ai-aixploria-3.webp"
-          />
-        </div>
-      </div>
-
-      <div class="box box5">
-        <div class="img-container5">
-          <img
-            src="https://www.aixploria.com/wp-content/uploads/2023/03/aixploria-mascoot-ai-44.webp"
-            height="250px"
-            width="250px"
-          />
-        </div>
-        <div class="text-container5">
-          <h1>Why come to this AI tools directory?</h1>
-          <p>
-            To date, the best answer might be: “Out of curiosity” but there are
-            many other reasons. First, you can come to Aixploria to learn about
-            the latest trends and advances in AI or to find a specific AI. Why
-            not come along and simply learn how the various AI in our database
-            list work?
-          </p>
-
-          <p>
-            Sharing your own AI discoveries with the community can also be
-            interesting. However, the best excuse to drop by Aixploria.com is
-            surely the choice and the number of AI present in each category. Two
-            new sections have recently been added to the site, and they seem to
-            have become quite popular: an area dedicated to news about
-            artificial intelligence. These news items are available in both
-            written (AI News) and video versions (AI News YouTube)
-          </p>
-        </div>
-      </div>
-      <div class="box box6">
-        <div class="text-container6">
-          <h1>
-            Contribute to the community by sharing your findings on Aixploria
-          </h1>
-          <p>
-            Aixploria is an online platform dedicated to artificial intelligence
-            that encourages community participation. To this end, we believe
-            that AI discovery is a collaborative process and that we all have
-            something to contribute. That’s why we've created a space where
-            users can share their own AI findings via a form.
-          </p>
-
-          <p>
-            Whether you're a novice, a seasoned developer, or just a fan of AI,
-            you can contribute to the community by sharing your AI findings on
-            Aixploria. This not only allows us to keep our list of AI tools up
-            to date, but also to share your knowledge with other Internet users.
-          </p>
-
-          <p class="greeting-end">
-            Thank you for reading and for your support. See you on Aixploria!
-          </p>
-        </div>
-        <div class="img-container6">
-          <img
-            src="https://www.aixploria.com/wp-content/uploads/2023/12/community-aixploria-share-ai-2.webp"
-          />
-        </div>
-      </div>
-    </div>
+    </footer>
   </body>
 </html>
