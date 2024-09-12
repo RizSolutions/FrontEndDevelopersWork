@@ -303,7 +303,7 @@
         }
         
         .custom-underline {
-            width: 100%;
+            width: 150px;
             height: 2px;
             margin: 5px 0;
             background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
@@ -316,8 +316,8 @@
         }
         
         .custom-box button {
-            margin-top: 20px;
-            padding: 10px 20px;
+            margin-top: 15px;
+            padding: 4px 7px;
             background-color: #007bff;
             color: white;
             border: none;
@@ -337,6 +337,54 @@
 
         .custom-box button:hover {
             background-color: #0056b3;
+        }
+
+
+
+
+        .center-button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            margin-bottom: 100px;
+        }
+
+        .bar-button {
+            padding: 17px 150px; /* Adjusts the size of the bar shape */
+            border: 5px solid transparent; /* Transparent border for gradient */
+            border-image: linear-gradient(to right, lightblue, darkblue, purple, pink, brown, orange) 1;
+            background-color: transparent; /* No background color */
+            color: #000000; /* Text color */
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative; /* Needed for ::after positioning */
+            overflow: hidden; /* Ensures hover effect stays inside */
+            transition: color 0.3s ease; /* Smooth transition for text color */
+        }
+
+        .bar-button::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #e9e76db9; /* Background color for the hover effect */
+            transform: scale(0, 0); /* Initially, it's scaled down (hidden) */
+            transition: transform 0.7s ease;
+            z-index: -1; /* Places the effect behind the text */
+        }
+
+        .bar-button:hover {
+            color: rgb(0, 0, 0); /* Changes text color on hover */
+        }
+
+        .bar-button:hover::after {
+            transform: scale(1, 1); /* Expands the background to cover the entire button */
+            transition: transform 0.3s ease-out;
         }
 
 
@@ -567,7 +615,11 @@
         }
 
 
-
+        hr{
+            height: 2px;
+            width: 90%;
+            background-color: #b8b8b8;
+        }
 
 
 
@@ -641,7 +693,7 @@
     <div class="boxy-container">
         <div class="custom-box">
             <div class="boxy-header"></div>
-            <img src="https://www.aixploria.com/wp-content/uploads/2024/08/adobe-photoshop-icon-ai.png" alt="Profile Image">
+            <img src="" alt="Profile Image">
             <h3>Photoshop AI<span class="blue-tick">✔️</span></h3>
             <div class="custom-underline"></div>
             <p>« Edit and transform your images like a pro with a set of AI tools: generative fill, generative expand..</p>
@@ -650,7 +702,7 @@
         
         <div class="custom-box">
             <div class="boxy-header"></div>
-            <img src="https://www.aixploria.com/wp-content/uploads/favicons/interior-ai.png" alt="Profile Image">
+            <img src="" alt="Profile Image">
             <h3>Interior AI<span class="blue-tick">✔️</span></h3>
             <div class="custom-underline"></div>
             <p>« Transform your interior or change the design of any room using a simple photo</p>
@@ -659,7 +711,7 @@
         
         <div class="custom-box">
             <div class="boxy-header"></div>
-            <img src="https://www.aixploria.com/wp-content/uploads/2024/04/HubSpot-fav.png" alt="Profile Image">
+            <img src="" alt="Profile Image">
             <h3>HubSpot CRM<span class="blue-tick">✔️</span></h3>
             <div class="custom-underline"></div>
             <p>« Optimize your sales and marketing with a particularly intuitive, AI-driven professional CRM. Track you..</p>
@@ -668,7 +720,7 @@
         
         <div class="custom-box">
             <div class="boxy-header"></div>
-            <img src="https://www.aixploria.com/wp-content/uploads/favicons/vector-magic.png" alt="Profile Image">
+            <img src="" alt="Profile Image">
             <h3>Vector Magic<span class="blue-tick">✔️</span></h3>
             <div class="custom-underline"></div>
             <p>« An AI that automatically vectorizes your images and transforms them into high-quality vector graphics...</p>
@@ -677,6 +729,12 @@
     </div>
 
 
+    <hr>
+
+    <div class="center-button-container">
+        <button class="bar-button">SEE  THE  FULL  LIST  OF  AI</button>
+    </div>
+    
 
 
     <div class="icon-section">
