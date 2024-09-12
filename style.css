@@ -169,13 +169,13 @@ body{
     justify-content: center;
     width: 100%;
     padding-top: 50px;
+    height: 260px;
 }
 .featurediv1{
     text-align: center;
+    width: 260px;
     display: inline-block;
-    padding: 20px;
     background-color: #fff;
-    position: relative;
     border: 1px solid #f5f5f5;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
     border-radius: 10px;
@@ -196,6 +196,8 @@ body{
     font-size: 11px;
     left: 0;
     background: #fff5f9;
+    position: sticky;
+    margin-top: 0;
 }
 .feature1 span{
     display: inline-block;
@@ -204,36 +206,37 @@ body{
     background-clip: text;
     font-size: 21px !important;
 }
+
 .hubspotheading a{
     font-size: 20px !important;
     color: #3f4a4f;
     padding: 10px 0 5px;
     font-weight: 700;
     margin-bottom: 10px;
-    margin-top: 18px;
+    margin-top: 10px;
     max-width: 78%;
     display: inline-flex;
     background-clip: text;
     border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #00749700;
     border-bottom: 2px solid;
 }
 .leftimage img{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
 }
 .rightimage img{
     width: 16px;
     height: 16px;
 }
 .featurepara{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .featurepara a{
     font-size: 14px;
     color: #333;
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
     overflow: hidden;
     letter-spacing: .3px;
@@ -243,7 +246,7 @@ body{
     text-overflow: ellipsis;
 }
 .visit{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .visit button{
     font-size: 12px;
@@ -276,26 +279,22 @@ body{
 }
 .featurediv2{
     text-align: center;
+    width: 260px;
     display: inline-block;
-    padding: 20px;
     background-color: #fff;
-    position: relative;
     border: 1px solid #f5f5f5;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
     border-color: rgb(255 208 238);
     border-style: solid;
     border-width: 2px;
 }
 .feature2{
-    padding-top: 0%;
     width:100%;
 }
 .feature2 p{
     text-align: center;
-    padding: 1px 9px 2px 5px;
     color: #000;
     right: 0;
     opacity: 1;
@@ -303,6 +302,8 @@ body{
     font-size: 11px;
     left: 0;
     background: #fff5f9;
+    position: sticky;
+    margin-top: 0;
 }
 .feature2 span{
     display: inline-block;
@@ -317,13 +318,12 @@ body{
     padding: 10px 0 5px;
     font-weight: 700;
     margin-bottom: 10px;
-    margin-top: 18px;
+    margin-top: 10px;
     max-width: 78%;
     display: inline-flex;
     background-clip: text;
     border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #00749700;
     border-bottom: 2px solid;
 }
 .leftimage2 img{
@@ -335,12 +335,12 @@ body{
     height: 16px;
 }
 .featurepara2{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .featurepara2 a{
     font-size: 14px;
     color: #333;
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
     overflow: hidden;
     letter-spacing: .3px;
@@ -350,7 +350,7 @@ body{
     text-overflow: ellipsis;
 }
 .visit2{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .visit2 button{
     font-size: 12px;
@@ -383,26 +383,22 @@ body{
 }
 .featurediv3{
     text-align: center;
+    width: 260px;
     display: inline-block;
-    padding: 20px;
     background-color: #fff;
-    position: relative;
     border: 1px solid #f5f5f5;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
     border-color: rgb(255 208 238);
     border-style: solid;
     border-width: 2px;
 }
 .feature3{
-    padding-top: 0%;
     width:100%;
 }
 .feature3 p{
     text-align: center;
-    padding: 1px 9px 2px 5px;
     color: #000;
     right: 0;
     opacity: 1;
@@ -410,6 +406,8 @@ body{
     font-size: 11px;
     left: 0;
     background: #fff5f9;
+    position: sticky;
+    margin-top: 0;
 }
 .feature3 span{
     display: inline-block;
@@ -424,13 +422,12 @@ body{
     padding: 10px 0 5px;
     font-weight: 700;
     margin-bottom: 10px;
-    margin-top: 18px;
+    margin-top: 10px;
     max-width: 78%;
     display: inline-flex;
     background-clip: text;
     border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #00749700;
     border-bottom: 2px solid;
 }
 .leftimage3 img{
@@ -442,12 +439,12 @@ body{
     height: 16px;
 }
 .featurepara3{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .featurepara3 a{
     font-size: 14px;
     color: #333;
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
     overflow: hidden;
     letter-spacing: .3px;
@@ -457,7 +454,7 @@ body{
     text-overflow: ellipsis;
 }
 .visit3{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .visit3 button{
     font-size: 12px;
@@ -490,26 +487,22 @@ body{
 }
 .featurediv4{
     text-align: center;
+    width: 260px;
     display: inline-block;
-    padding: 20px;
     background-color: #fff;
-    position: relative;
     border: 1px solid #f5f5f5;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
     border-color: rgb(255 208 238);
     border-style: solid;
     border-width: 2px;
 }
 .feature4{
-    padding-top: 0%;
     width:100%;
 }
 .feature4 p{
     text-align: center;
-    padding: 1px 9px 2px 5px;
     color: #000;
     right: 0;
     opacity: 1;
@@ -517,6 +510,8 @@ body{
     font-size: 11px;
     left: 0;
     background: #fff5f9;
+    position: sticky;
+    margin-top: 0;
 }
 .feature4 span{
     display: inline-block;
@@ -537,7 +532,6 @@ body{
     background-clip: text;
     border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #00749700;
     border-bottom: 2px solid;
 }
 .leftimage4 img{
@@ -549,12 +543,12 @@ body{
     height: 16px;
 }
 .featurepara4{
-    padding-top: 30px;
+    padding: 10px;
 }
 .featurepara4 a{
     font-size: 14px;
     color: #333;
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
     overflow: hidden;
     letter-spacing: .3px;
@@ -564,7 +558,7 @@ body{
     text-overflow: ellipsis;
 }
 .visit4{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .visit4 button{
     font-size: 12px;
@@ -596,8 +590,88 @@ body{
     margin-right: 5px;  
 }
 .cutline{
-    border: 2px solid;
-    justify-content: center;
+    border: 0;
+    font-size: 100%;
+    outline: 0;
+    vertical-align: baseline;
+    height: 4px;
     background: #dfdfdf;
-    margin: 35px 0 0
+    margin: 35px 0 0;
+}
+.aitoolslist{
+    gap: 35px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 35px;
+}
+.latestai{
+    border: 1px solid #d4dee5;
+    box-shadow: rgb(113 152 239 / 46%) 1px 1px 10px;
+    margin: 20px 0;
+    box-shadow: 1px 1px 10px 0 #d0d1cb;
+    border-radius: 10px;
+    border: 1px solid #d0d1cb;
+    background: #fff;
+}
+.latestai h1{
+    padding: 12px 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #2a2828;
+    border-bottom: 2px solid #24373e;
+    border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    margin: 0;
+    position: relative;
+    font-weight: 600;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    display: flex;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, helvetica neue, Arial, sans-serif;
+}
+.latestai ul{
+    overflow-y: auto;
+    border: 1px solid #ccc; 
+    max-height: 290px;
+    background: #fff;
+    color: #9f9f9f;
+    padding-top: 10px;
+    box-shadow: 1px 1px 10px 0 #d0d1cb;
+    border-radius: 10px;
+}
+.latestai li{
+    list-style: none;
+}
+.latestai span{
+
+    color: #ffbc00;
+    font-size: 24px;
+}
+.latestai a{
+    font-weight: 600;
+    font-style: italic;
+    color: #e91e96;
+}
+.latestai img{
+    margin-left: 65px;
+    position: absolute;
+    right: 15px;
+    top: 2px;
+    opacity: .18;
+    visibility: visible;
+    font-size: 18px;
+    line-height: 1;
+    color: #999;
 }
