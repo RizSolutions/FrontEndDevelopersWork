@@ -153,20 +153,27 @@ span { color:rgb(69, 70, 71); font-weight: 400; line-height: 28px; font-size: 20
     .box-button { color: white; background-color: #337ab7; padding-left: 26px; padding-right: 26px; padding-top: 10px; padding-bottom: 10px;
     font-size: 17px; font-weight: 600; border-radius: 6px; box-shadow: 0 2px 10px rgb(0 0 0/16%),0 3px 6px rgb(0 0 0/10%);}  
     .background-icon { vertical-align: middle; margin-right: 2px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .horizontal-line { background: #dfdfdf; height: 4px; border: #dfdfdf;} 
+.Grid-menu { width: 100%;box-sizing: border-box; display: flex; padding-top: 20px;padding-bottom: 25px; gap: 14px; justify-content: center;}
+.first-grid { width: 18%;box-sizing: border-box; vertical-align: baseline; line-height: 24px; 
+    border: 1px; border-style: solid; border-color: #d4dee5; border-image-source: initial; border-image-slice: initial;
+    border-radius: 10px; border-image-outset: initial;box-shadow: rgb(113 152 239/46%) 1px 1px 10px; margin-top: 30px;
+    margin-bottom: 20px; margin-left: 0; margin-right: 0;background: white; padding: 10px; vertical-align: baseline; }
+.topline { justify-content: center;align-items: center; border-bottom-width:2px; border-bottom-style: solid; border-bottom-color: #2a2828; border-image:
+    linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1; justify-content: center; align-items: center; 
+    }    
+.grid-title { margin-top: 0; vertical-align: center;align-items: center; text-align: center;font-size: 14px; color: #2a2828;
+    font-weight: 600; }
+.grid-icon { filter: invert(100%); padding-left:76px;width: 21px;height: 21px;background-position-x: left;background-position-y:top; }
+.grid-body { line-height: 1px}
+.tools-day { display: inline-flex; vertical-align: bottom;font-size: 24px;color:#ffbc00;
+    background: linear-gradient(89deg, #a0dbfd 1%, #947bed 15%, #fb81b5 35%, #ffbd75 60%, #ffbd75 98%);
+    animation-duration: 13s; animation-timing-function: linear; animation-iteration-count: infinite;animation-direction: normal;
+animation-fill-mode: none;animation-play-state: running;animation-timeline: auto;animation-range-start: normal;
+background-clip: text; color: transparent; margin-left: -45%;}
+.tooltips { font-weight: 600;font-style: italic;color: #e91e96; }
+.arrow { position:static;top: 2px;opacity: 18;visibility: visible;font-size: 18px;line-height: 1;color: #999;}
+.arrow-icon {  float: right; }
 
 h2 {
     width: 100%;
