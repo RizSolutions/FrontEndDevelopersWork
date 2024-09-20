@@ -734,18 +734,20 @@ body{
 .popularplatforms li{
     display: inline-block;
 }
-.popularplatformsheading a{
+.popularplatformsheading{
     font-weight: 600;
-    display: inline-block;
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    vertical-align: baseline;
     margin-right: 20px;
-    font-size: 18px;
+    font-size: 16px;
     color: #3075b1;
 }
 .transition{
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    width: 800px;
     position: relative;
     display: flex;
     padding: 0;
@@ -754,13 +756,57 @@ body{
 }
 @keyframes scroll-linear {
     100% {
-        transform: translateX(calc(-100% / 2))  /* Move all content left by 100% of its width */
+        transform: translateX(calc(-100% / 2));
     }
 }
 .transition img{
     height: 40px;
     max-width: 130px;
     margin-left: 30px;
+}
+.parentdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.parentdiv1{
+    align-items: center;
+    background: #f8f5ff;
+    width: 95%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    display: flex;
+    padding: 50px;
+}
+.child1image{
+    border: 5px solid #fff0;
+    box-shadow: 1px 1px 10px 0 #61a7cf00;
+    max-width: 300px;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+.rightcontainer{
+    width: calc(100% - 320px);
+    padding: 19px 20px;
+    text-align: justify;
+}
+.rightcontainer h1{
+    color: #474747 !important;
+    font-size: 29px !important;
+    border-bottom: none !important;
+    font-family: system-ui !important;
+    text-align: center;
+    padding: 13px;
+    margin: 10px
+}
+.rightcontainer p{
+    text-align: justify;
+    font-size: 15px;
+    font-family: system-ui;
+    letter-spacing: .3px;
+    margin-bottom: 20px;
+    line-height: 1.8;
 }
 
 
