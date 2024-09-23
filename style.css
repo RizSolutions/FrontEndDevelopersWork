@@ -744,33 +744,58 @@ body{
     font-size: 16px;
     color: #3075b1;
 }
-.transition{
-    display: inline-block;
+.icon-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0; /* Adjust the top and bottom margin as needed */
+}
+
+.icon-heading {
+    margin-right: 20px;
+    font-size: 18px;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(79, 79, 187);
+}
+
+.icon-heading:hover {
+    color: rgb(79, 162, 187);
+}
+
+.icons {
     overflow: hidden;
     white-space: nowrap;
+    width: 800px;
     position: relative;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    animation: scroll-linear 40s linear infinite;
 }
-@keyframes scroll-linear {
-    100% {
-        transform: translateX(calc(-100% / 2));
+
+.icons-slide {
+    display: inline-block;
+    animation: 30s slide infinite linear;
+}
+
+.icons-slide img {
+    height: 50px;
+    margin: 0 30px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
-.transition img{
-    height: 40px;
-    max-width: 130px;
-    margin-left: 30px;
-}
+
 .parentdiv{
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .parentdiv1{
-    align-items: center;
     background: #f8f5ff;
     width: 95%;
     height: auto;
@@ -808,5 +833,56 @@ body{
     margin-bottom: 20px;
     line-height: 1.8;
 }
+.parentdiv2{
+    background: #f6fbff;
+    width: 95%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    display: flex;
+    padding: 50px;
+}
+.parentdiv3{
+    background: #fffcf3;
+    width: 95%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    display: flex;
+    padding: 50px;
+}
+.parentdiv4{
+    background: #f7fdf6;
+    width: 95%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    display: flex;
+    padding: 50px;
+}
+.parentdiv5{
+    background: #fdf6ff;
+    width: 95%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    display: flex;
+    padding: 50px;
+}
+.parentdiv6{
+    background: #f6faff;
+    width: 95%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    display: flex;
+    padding: 50px;
+}
+.tankyou{
+    text-align: center;
+    width: 100%;
+    padding: 21px;
+}
+
 
 
