@@ -241,8 +241,8 @@
         }
         
         .custom-box {
-            width: 260px;
-            height: 280px;
+            width: 230px;
+            height: 230px;
             background-color: #fff;
             border: 2px solid #ecb6d0;
             box-shadow: 0 4px 8px #ecb6d0;
@@ -260,8 +260,8 @@
         }
 
         .boxy-header {
-            background-color: #ffcccb;
-            padding: 5px 0;
+            background-color: #ffdded91;
+            padding: 3px 0;
             border-radius: 0px;
             font-size: 14px;
             font-weight: bold;
@@ -310,15 +310,21 @@
             margin-bottom: 10px;
             background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
         }
+        .picture-inline{
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Adds space between the image and the heading */
+        }
         
         .custom-box p {
             margin-top: 15px;
-            font-size: 16px;
+            font-size: 14px;
             color: #666;
         }
         
         .custom-box button {
             padding: 4px 7px;
+            margin: auto auto;
             background-color: #007bff;
             color: white;
             border: none;
@@ -332,8 +338,8 @@
         }
 
         .custom-box button img {
-            height: 20px;
-            width: 20px;
+            height: 15px;
+            width: 15px;
         }
 
         .custom-box button:hover {
@@ -342,83 +348,83 @@
 
 
         .boxes-inline {
-            margin-top: 40px;
-            display: flex;
-            margin-left: 80px;
-            gap: 40px;
-            align-items: center;
+        display: flex;
+        margin-left: 135px;
+        margin-top: 70px;
+        gap: 40px;
+        align-items: center;
+        background-color: transparent;
+        font-family: Arial, sans-serif;
         }
 
-
         .list-box {
-            width: 20%;
-            height: 450px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgb(107, 159, 238);
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
+        width: 20%;
+        height: 450px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgb(107, 159, 238);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box; /* Moved from * selector */
+        margin: 0; /* Reset margin inside the class */
+        padding: 0; /* Reset padding inside the class */
         }
 
         .list-box h3 {
-            margin-bottom: 10px;
+        margin-bottom: 10px;
         }
 
         .rainbow-line {
-            width: 95%;
-            height: 2px;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            margin-bottom: 10px;
+        width: 95%;
+        height: 2px;
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        margin-bottom: 10px;
         }
 
         .list {
-            width: 100%;
-            justify-content: center;
-            float: left ;
-            height: 300px;
-            overflow-y: auto;
-            padding: 10px;
+        width: 100%;
+        height: 330px;
+        overflow-y: auto;
+        padding: 10px;
+        box-sizing: border-box; /* Ensure the list respects padding */
         }
 
-        .list hr{
-            margin-top: 4px;
-            margin-bottom: 2px;
+        .list hr {
+        margin-top: 4px;
+        margin-bottom: 2px;
         }
 
         .list ul {
-            list-style-type: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         }
 
         .list ul li {
-            margin-bottom: 8px;
+        margin-bottom: 8px;
         }
 
         .list-button {
-            margin-top: auto;
-            width: 90%;
-            padding: 7px;
-            background-color: lightgrey;
-            border: none;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 5px;
+        margin-top: auto;
+        margin-bottom: 10px;
+        width: 90%;
+        padding: 7px;
+        background-color: rgba(211, 211, 211, 0.281);
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+        font-family: monospace;
         }
 
         .list-button:hover {
-            background-color: grey;
-            color: white;
+        background-color: rgba(92, 130, 185, 0.267);
+        color: rgb(0, 0, 0);
         }
 
-        .icon-opacity {
-            opacity: 0.3;
-        }
-
-        .icon-opacity:hover {
-            opacity: 0.95;
-        }
 
 
 
@@ -705,6 +711,115 @@
             background-color: #b8b8b8;
         }
 
+        .aixploria-footer {
+        background-color: #202125;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+        width: 100%;
+        }
+
+        .footer-top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin: 0 100px;
+        }
+
+        .footer-column {
+        width: 30%;
+        min-width: 200px;
+        margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 0.9em;
+        }
+
+        .footer-column a:hover {
+        text-decoration: underline;
+        }
+
+        .footer-column ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        .footer-column ul li {
+        margin-bottom: 10px;
+        }
+
+        .social-icons {
+        display: flex;
+        gap: 15px;
+        }
+
+        .social-icons img {
+        width: 30px;
+        height: 30px;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+        }
+
+        .social-icons img:hover {
+        filter: grayscale(0%);
+        }
+
+        .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #333;
+        margin: 40px 100px;
+        }
+
+        .footer-logo img {
+        width: 150px;
+        }
+
+        .footer-text {
+        font-size: 0.9em;
+        }
+
+        .footer-text a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        .footer-text a:hover {
+        text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+        .footer-top {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-column {
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-logo img {
+            margin-bottom: 10px;
+        }
+        }
+
 
 
     </style>
@@ -777,8 +892,8 @@
     <div class="boxy-container">
         <div class="custom-box">
             <div class="boxy-header"></div>
-            <img src="" alt="Profile Image">
-            <h3>Photoshop AI<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp" alt=""></span></h3>
+            <div class="picture-inline"><img src="https://www.aixploria.com/wp-content/uploads/2024/08/adobe-photoshop-icon-ai.png" alt="Profile Image">
+            <h3>Photoshop AI<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp" alt=""></span></h3></div>
             <div class="custom-underline"></div>
             <p>« Edit and transform your images like a pro with a set of AI tools: generative fill, generative expand..</p>
             <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
@@ -786,8 +901,8 @@
         
         <div class="custom-box">
             <div class="boxy-header"></div>
-            <img src="" alt="Profile Image">
-            <h3>Interior AI<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp" alt=""></span></h3>
+            <div class="picture-inline"><img src="" alt="Profile Image">
+            <h3>Interior AI<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp" alt=""></span></h3></div>
             <div class="custom-underline"></div>
             <p>« Transform your interior or change the design of any room using a simple photo</p>
             <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
@@ -795,8 +910,8 @@
         
         <div class="custom-box">
             <div class="boxy-header"></div>
-            <img src="" alt="Profile Image">
-            <h3>HubSpot CRM<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp" alt=""></span></h3>
+            <div class="picture-inline"><img src="" alt="Profile Image">
+            <h3>HubSpot CRM<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp" alt=""></span></h3></div>
             <div class="custom-underline"></div>
             <p>« Optimize your sales and marketing with a particularly intuitive, AI-driven professional CRM. Track you..</p>
             <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
@@ -804,8 +919,8 @@
         
         <div class="custom-box">
             <div class="boxy-header"></div>
-            <img src="" alt="Profile Image">
-            <h3>Vector Magic<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp" alt=""></span></h3>
+            <div class="picture-inline"><img src="" alt="Profile Image">
+            <h3>Vector Magic<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp" alt=""></span></h3></div>
             <div class="custom-underline"></div>
             <p>« An AI that automatically vectorizes your images and transforms them into high-quality vector graphics...</p>
             <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
@@ -824,13 +939,13 @@
             <div class="list">
             <ul>
                     <li>
-                        <img src="" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                        <img src="https://www.aixploria.com/wp-content/uploads/favicons/contractcrab.png" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
                         Bliro
                         <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px; margin-left:10px;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
-                        <img src="image_before_link_2" alt="Before Image 2" style="width:20px; height:20px; margin-right:10px;">
+                        <img src="https://www.aixploria.com/wp-content/uploads/favicons/contractcrab.png" alt="Before Image 2" style="width:20px; height:20px; margin-right:10px;">
                         Overloop
                         <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 2" style="width:15px; height:15px; margin-left:10px;" class="icon-opacity">
                     </li>
@@ -945,7 +1060,7 @@
                     <hr>
             </ul>
             </div>
-            <button class="list-button">Button</button>
+            <button class="list-button">More new AI (1834) →</button>
         </div>
         
         <div class="list-box">
@@ -1075,7 +1190,7 @@
                 <hr>
             </ul>
             </div>
-            <button class="list-button">Button</button>
+            <button class="list-button">See all category (40) →</button>
         </div>
         
         <div class="list-box">
@@ -1206,7 +1321,7 @@
                 </ul>
                 
             </div>
-            <button class="list-button">Button</button>
+            <button class="list-button">See all category (61) →</button>
         </div>
         
         <div class="list-box">
@@ -1337,7 +1452,7 @@
                 </ul>
                 
             </div>
-            <button class="list-button">Button</button>
+            <button class="list-button">See all category (34) →</button>
         </div>
     </div>
 
@@ -1370,9 +1485,6 @@
                 <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 12" >
             </div>
         </div>
-        
-            
-        
     </div>
     
 
@@ -1458,6 +1570,49 @@
                 <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/community-aixploria-share-ai-2.webp" alt="User Reviews and Ratings"></a>
             </div>
         </div>
+
+
+        <footer class="aixploria-footer">
+            <div class="footer-top">
+                <div class="footer-column contact">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:info@aixploria.com">info@aixploria.com</a></p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Address: 123 Street Name, City, Country</p>
+                </div>
+        
+                <div class="footer-column links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="Facebook"></a>
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="Twitter"></a>
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="Instagram"></a>
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/aixploria-logo.svg" alt="Aixploria Logo">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2024 Aixploria. All rights reserved. | <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
+        
     
     
     </div>
