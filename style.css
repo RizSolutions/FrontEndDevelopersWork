@@ -756,13 +756,9 @@ body{
     font-size: 18px;
     font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
     text-decoration: none;
-    color: rgb(79, 79, 187);
+    font-weight: 600;
+    color: #3075b1;
 }
-
-.icon-heading:hover {
-    color: rgb(79, 162, 187);
-}
-
 .icons {
     overflow: hidden;
     white-space: nowrap;
@@ -776,8 +772,8 @@ body{
 }
 
 .icons-slide img {
-    height: 50px;
-    margin: 0 30px;
+    max-width: 130px;
+    aspect-ratio: auto 200 / 64;
 }
 
 @keyframes slide {
@@ -882,6 +878,18 @@ body{
     text-align: center;
     width: 100%;
     padding: 21px;
+}
+.footernav{
+    background: #06223b;
+    padding: 0%;
+    margin: 0%;
+}
+.left1{
+    width: 100%;
+}
+.left1image img{
+    width: 200px;
+    height: 45px;
 }
 
 
