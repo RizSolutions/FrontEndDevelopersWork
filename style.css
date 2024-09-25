@@ -884,12 +884,33 @@ body{
     padding: 0%;
     margin: 0%;
 }
+.footergrid{
+    padding-bottom: 33px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    width: 100%;
+    font-size: 15px
+}
 .left1{
     width: 100%;
+}
+.left1para p{
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, helvetica neue, Arial, sans-serif;
 }
 .left1image img{
     width: 200px;
     height: 45px;
+}
+.flags{
+    display: inline-flex;
+    margin-left: 11px;
+}
+.flags img{
+    width: 20px;
+    height: 13px;
+    border-radius: 3px;
 }
 
 
