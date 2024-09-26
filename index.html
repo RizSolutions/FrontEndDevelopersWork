@@ -1072,6 +1072,37 @@
         height: fit-content;
         padding-top: 7px;
       }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 160px;
+      }
+
+      .dropdown-menu a {
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        color: #333;
+        margin: 0px;
+        font-size: 15px;
+      }
+
+      .dropdown-menu a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
     </style>
   </head>
 
@@ -1093,8 +1124,14 @@
           height="22px"
         />
       </a>
-      <span class="navopt">
-        <a href="#">Full List</a>
+      <span class="navopt" style="display: flex">
+        <div class="dropdown">
+          <a href="#" class="nav-link">Full List</a>
+          <div class="dropdown-menu">
+            <a href="#">AI Xploria demo</a>
+            <a href="/Project 3/aliprint.html">Ali Printpack demo</a>
+          </div>
+        </div>
         <a href="#">AI Categories</a>
         <a href="#">AI Tutorials</a>
         <a href="#">+ More</a>
