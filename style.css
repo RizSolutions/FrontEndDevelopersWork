@@ -598,91 +598,7 @@ body{
     background: #dfdfdf;
     margin: 35px 0 0;
 }
-.aitools{
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    margin: 35px 0 0;
-}
-.latestai{
-    border: 1px solid #d4dee5;
-    box-shadow: rgb(113 152 239 / 46%) 1px 1px 10px;
-    margin: 0 0 20px;
-    border-radius: 10px;
-    background: #fff;
-    padding: 10px;
-}
-.latestaiheader{
-    border-radius: 10px 10px 0px 0px;
-    background-color: #ffffff;
-    color: #2a2828;
-    border-bottom: 2px solid #24373e;
-    border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
-    padding: 12px 0;
-    overflow: hidden;
-    text-rendering: optimizeSpeed;
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
-    position: relative;
-    font-weight: 600;
-    height: 47px;
-    line-height: 47px;
-    text-align: center;
-    display: flex;
-    display: -ms-flexbox;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    text-decoration: none;
-}
-.latestaiheading h1{
-    color: #2a2828;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-}
-.latestai{
-    overflow-y: scroll;
-    max-height: 290px;
-    padding-top: 0;
-    background: #fff;
-    color: #9f9f9f;
-    border-radius: 10px;
-    position: relative;
-}
-.latestailist ul{
-    list-style-type: none;
-}    
-
-.latestailist a{
-    border-bottom: 1px solid #ededed;
-    font-size: 16px;
-    line-height: inherit;
-    position: relative;
-    color: #9f9f9f;
-    margin-bottom: 5px;
-    margin-left: -10px;
-}
-.latestailist a img{
-        width: 14px;
-        height: 14px;
-        vertical-align: middle;
-        padding-right: 0px;
-}
-.morenewai button{
-    cursor: pointer;
-    color: #1f2020;
-    padding: 5px 5px 5px 10px;
-    border-radius: 0 0 10px 10px;
-    font-family: monospace;
-    font-size: 11px;
-    text-align: center;
-}
 .fulllistai button{
-    
     font-size: 15px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -888,33 +804,31 @@ body{
 .footergrid{
     padding-right: 200px;
     padding-left: 200px;
-    margin-top: 30px;
+    padding-top: 25px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
 }
 .left1{
+    padding-top: 50px;
     width: 100%;
-    display: inline-block;
-    justify-content: center;
 }
 .left1para p{
     color: #fff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, helvetica neue, Arial, sans-serif;
     margin-bottom: 25px;
-    justify-content: center;
 }
 .left1image img{
-    width: 200px;
-    height: 45px;
-    filter: invert(1) hue-rotate(35deg);
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width: 200px;
+    filter: invert(1) hue-rotate(35deg);
 }
 .flags{
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-items: center;
 }
 .flags img{
     width: 20px;
@@ -923,19 +837,16 @@ body{
 }
 .left2{
     width: 100%;
-    display: block;
+    height: 100%;
 }
 .left2heading p{
     color: #fff;
+    border-bottom: 1px solid #ccc;
     font-weight: 700;
     font-size: 14px;
-    width: 100%;
     line-height: 2;
-    align-items: stretch;
-    align-content: stretch;
-}
-.left2list{
-    padding-left: 13px;
+    margin-bottom: 6px;
+    display: inline-block;
 }
 .left2list ul li{
     list-style: none;
@@ -944,21 +855,51 @@ body{
 .left2list a{
     color: #adb3c4;
     font-size: 14px;
-    flex-direction: row;
-    text-align: left;
-    padding-left: 13px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-content: stretch;
-    flex-direction: row;
-    justify-content: center;
     text-decoration: none;
-    align-items: stretch;
     line-height: 2.2;
 }
 .cutline2{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
     width: 100%;
+    justify-content: center;
     border-top: 1px solid #1c3651;
+}
+.end{
+    padding-right: 180px;
+    padding-left: 180px;
+    padding-bottom: 50px;
+    justify-content: center;
+}
+.endline{
+    display: flex;
+}
+.copyright{
+    font-size: 14px;
+    color: #cddbdb;
+}
+.ecofriendly{
+    width: 15px;
+    height: 15px;
+    margin-left: 3px;
+}
+.endlist span{
+    padding-left: 13px;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    color: #bbd4e9;
+    cursor: pointer;
+}
+.twitter{
+    padding-left: 550px;
+}
+.twitter img{
+    filter: invert(1) hue-rotate(180deg);
+    width: 22px;
+    height: 20px;
 }
 
 
