@@ -202,8 +202,16 @@ background-clip: text; color: transparent; margin-left: -45%;}
 .platforms-populaires { font: 600; color: #3075b1;text-decoration: none;}                 
 .scroll-container { overflow: hidden;display: inline-block;vertical-align: top;width: calc(100% - 200px);white-space-collapse: collapse;text-wrap: nowrap;
                     margin-bottom: 50px;}
-.scroll-list { display:flex;padding: 0;margin: 0;
-                animation: 40s linear infinite;  }
+.scroll-list { display:flex;padding: 0;margin: 0; 
+    animation: 30s slide infinite linear;  }
+@keyframes slide {
+                from {
+                    transform: translateX(0);
+                }
+                to {
+                    transform: translateX(-100%);
+                }
+            }     
                                     
 .listing { list-style: none;margin-right: 30px;}
 .scrol-img { vertical-align: middle;}     
@@ -372,4 +380,4 @@ h5 { font-size: 14px; font-weight: 550; text-decoration:underline; }
 .footer-bottom { display: flex;flex-direction: row-reverse;justify-content: space-between;align-items: center; }
 .footer-twitter { padding-right: 9px;filter: invert(1) hue-rotate(180deg); padding-top: 7px; }
 .end { color: #cddbdb;font-size: 14px;}
-.leaf { width: 15px;height: auto;margin-left: 3px;vertical-align: middle;}
+.leaf { width: 15px;height: auto;margin-left: 3px;vertical-align: middle; }
