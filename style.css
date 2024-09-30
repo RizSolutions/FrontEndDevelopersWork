@@ -7,6 +7,9 @@ body{
     padding: 0%;
     margin: 0%;
 }
+li{
+    list-style: none;
+}
 .navbar{
     background: rgba(255, 255, 255, .95);
     font-size: 100%;
@@ -597,6 +600,57 @@ body{
     height: 4px;
     background: #dfdfdf;
     margin: 35px 0 0;
+}
+.aitoolslist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px; 
+    padding-top: 33px;
+}
+.listcontainer{
+    border: 1px solid #d4dee5;
+    box-shadow: rgb(113 152 239 / 46%) 1px 1px 10px;
+}
+.listheading{
+    background-color: #ffffff;
+    color: #2a2828;
+    border-bottom: 2px solid #24373e;
+    border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
+    text-align: center;
+}
+.link1{
+    display: inline-block;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    border-bottom: 1px solid #ededed;
+}
+.star{
+    font-size: 24px;
+    vertical-align: bottom;
+    background: linear-gradient(89deg, #a0dbfd 1%, #947bed 15%, #fb81b5 35%, #ffbd75 60%, #ffbd75 98%);
+    background-clip: text;
+    color: transparent;
+    animation: spin 13s linear infinite;
+    display: inline-block;
+}
+.text1{
+    font-weight: 600;
+    font-size: 16px;
+    font-style: italic;
+    color: #e91e96;
+}
+.button1{
+    background: #c7760900;
+}
+.feedback{
+    color: #fff;
+    padding: 4px;
+    border-radius: 999999px;
+    margin-right: -5px;
+    text-decoration: none;
+    font-size: 11px;
+    float: right;
+    text-align: right;
 }
 .fulllistai button{
     font-size: 15px;
