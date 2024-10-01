@@ -193,13 +193,71 @@
       gap: 20px;
       margin: 10px;
     }
-
-    .Brands {
-      display: flex;
-      gap: 5rem; /* Space between logos */
+    .Brands-list,
+    .Certifications-list {
+      width: 100%;
+      overflow: hidden; /* Ensure only 4 logos are visible */
     }
-    .Brands li {
+
+    .Brands,
+    .Certifications {
+      display: flex;
+      gap: 50px; /* Adjust the space between logos */
+      animation: slide 16s ease-in-out infinite; /* Continuous sliding with pauses */
+    }
+
+    .Brands,
+    .Certifications li {
       list-style: none;
+      flex-shrink: 0;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0); /* Show the first 4 logos */
+      }
+
+      25% {
+        transform: translateX(
+          calc(-100% / 4 * 1)
+        ); /* Slide to the second set of 4 logos */
+      }
+      50% {
+        transform: translateX(
+          calc(-100% / 4 * 2)
+        ); /* Slide to the third set of 4 logos */
+      }
+      75% {
+        transform: translateX(
+          calc(-100% / 4 * 3)
+        ); /* Slide to the fourth set of 4 logos */
+      }
+      100% {
+        transform: translateX(
+          calc(-100% / 4 * 4)
+        ); /* Return to the first set (seamless loop) */
+      }
+      120% {
+        transform: translateX(
+          calc(-100% / 4 * 4)
+        ); /* Return to the first set (seamless loop) */
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .Brands-list,
+      .Certifications-list {
+        width: calc(
+          (270px * 4) + (50px * 4)
+        ); /* Show 4 logos at a time with appropriate gaps */
+      }
+    }
+
+    .Brands:hover {
+      animation-play-state: paused; /* Pause the animation when hovering */
+    }
+    .Certifications:hover {
+      animation-play-state: paused; /* Pause the animation when hovering */
     }
   </style>
   <body>
@@ -475,81 +533,99 @@
                 width="280px"
               />
             </li>
+          </ul>
+        </div>
+        <div class="headings">
+          <h1 style="margin-top: 20px">Certifications</h1>
+          <hr class="hdng-hr" />
+        </div>
+        <div class="Certifications-list">
+          <ul class="Certifications">
             <li>
               <img
                 style="margin-top: 50px"
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/BSK-768x214.png"
+                src="https://aliprintpack.com/wp-content/uploads/2023/08/APPMA.png"
                 alt=""
-                width="280px"
+                width="230px"
               />
             </li>
             <li>
               <img
-                style="margin-top: 50px"
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/Dunelm-768x283.png"
+                style="margin-top: 50px; margin-left: 20px"
+                src="https://aliprintpack.com/wp-content/uploads/2023/08/FSC.png"
                 alt=""
                 width="220px"
               />
             </li>
             <li>
               <img
-                style="margin-top: 30px"
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/IKEA-768x291.png"
+                style="margin-top: 30px; margin-left: 80px"
+                src="https://aliprintpack.com/wp-content/uploads/2023/08/Global-RS-768x380.png"
                 alt=""
-                width="280px"
+                width="200px"
               />
             </li>
             <li>
               <img
-                style="margin-top: 30px"
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/JYSK-768x291.png"
-                alt=""
-                width="280px"
-              />
-            </li>
-            <li>
-              <img
-                style="margin-top: 50px"
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/Matalan-768x214.png"
-                alt=""
-                width="280px"
-              />
-            </li>
-            <li>
-              <img
-                style="margin-top: 50px"
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/PB-768x214.png"
-                alt=""
-                width="280px"
-              />
-            </li>
-            <li>
-              <img
-                style="margin-top: 50px"
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/Primark-768x214.png"
-                alt=""
-                width="280px"
-              />
-            </li>
-            <li>
-              <img
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/Target.png"
+                style="margin-top: 30px; margin-left: 40px"
+                src="https://aliprintpack.com/wp-content/uploads/2023/08/GMI.png"
                 alt=""
                 width="230px"
-                style="margin-top: 0"
               />
             </li>
             <li>
               <img
-                style="margin-top: 50px"
-                src="https://aliprintpack.com/wp-content/uploads/2023/08/Walmart-768x214.png"
+                style="margin-top: 50px; margin-left: 80px"
+                src="https://aliprintpack.com/wp-content/uploads/2023/08/OEKO-TEX-1-768x380.png"
                 alt=""
-                width="280px"
+                width="230px"
+              />
+            </li>
+            <li>
+              <img
+                style="margin-top: 50px; margin-left: 30px"
+                src="https://aliprintpack.com/wp-content/uploads/2023/08/Papgai-768x380.png"
+                alt=""
+                width="230px"
+              />
+            </li>
+            <li>
+              <img
+                style="margin-top: 50px; margin-left: 80px"
+                src="https://aliprintpack.com/wp-content/uploads/2023/08/Sedex.png"
+                alt=""
+                width="200px"
+              />
+            </li>
+            <li>
+              <img
+                style="margin-top: 70px; margin-left: 40px"
+                src="https://aliprintpack.com/wp-content/uploads/2023/08/SGS-768x380.png"
+                alt=""
+                width="230px"
               />
             </li>
           </ul>
         </div>
+        <div class="headings">
+          <h1 style="margin-top: 0">Contact Us</h1>
+          <hr class="hdng-hr" style="margin-bottom: 20px" />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28924.170929481792!2d67.09359009576836!3d25.016374839003415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394cbdf6c44a50e3%3A0x38d6ac73b30887f9!2sAli%20Printpack%20(Pvt.)%20Ltd!5e0!3m2!1sen!2s!4v1727780360517!5m2!1sen!2s"
+            width="1100"
+            height="500"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </main>
+    <footer>
+      <div class="upper-footer"></div>
+      <div class="center-footer"></div>
+      <div class="lower-footer"></div>
+    </footer>
   </body>
 </html>
