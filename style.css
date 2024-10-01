@@ -124,9 +124,6 @@ span {
     height: auto;
     width: auto;
 }
-
-.buttons-3 {}
-
 .button01 {
     background-image: initial;
     background-position: initial;
@@ -166,9 +163,19 @@ span {
     padding-bottom: 0px;
 }
 
-.button01:hover {
-    background-color: #3ab51b52 !important;
-}
+.button01:hover{
+    color: #338539; /* Light green text */
+    background-image: -webkit-linear-gradient(
+      45deg,
+      #bce0a0 50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(45deg, #bce0a0 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 1.9s ease-in-out;
+  }
 
 .button02 {
     background-image: initial;
@@ -209,10 +216,19 @@ span {
     padding-bottom: 0px;
 }
 
-.button02:hover {
-    background-color: #ffd9a8 !important;
+.button02:hover{
+    color: #ffb95e;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      #ffd9a8 50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(45deg, #ffd9a8 50%, transparent 50%);
+    background-position: 100%;
     background-size: 400%;
-}
+    -webkit-transition: 300ms ease-in-out;
+    transition: 1.9s ease-in-out;
+  }
 
 .button03 {
     background-image: initial;
@@ -252,10 +268,19 @@ span {
     padding-right: 10px;
     padding-bottom: 0px;
 }
-
-.button03:hover {
-    background-color: #ffb6b6 !important;
-}
+.button03:hover{
+    color: #ff8585 ; 
+    background-image: -webkit-linear-gradient(
+      45deg,
+      #ffb6b6  50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(45deg, #ffb6b6 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 1.9s ease-in-out;
+  }
 
 .mini-box {
     display: flex;
@@ -666,7 +691,7 @@ span {
     white-space-collapse: collapse;
     text-wrap: nowrap;
     margin-bottom: 50px;
-}
+    }
 
 .scroll-list {
     display: flex;
@@ -674,6 +699,7 @@ span {
     margin: 0;
     animation: 30s slide infinite linear;
     width: 100%;
+   
     
 }
 
