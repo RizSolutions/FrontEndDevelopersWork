@@ -193,57 +193,118 @@
 
         
 
-        .buttons {
-            margin-left: 20px;
-            cursor: pointer;
-        }
-
-        .btn1 {
-            padding: 5px 8px;
-            color: darkgreen;
-            margin-right: 10px;
-            background: white;
-            border: 3px solid rgb(255, 255, 255) ;
-            border-radius: 8px;
-            box-shadow: 3px 3px 10px rgba(0, 100, 0, 0.459); /* Add shadow */
-        }
-
-        .btn1:hover{
-            color: white;
-            background-color: rgba(0, 100, 0, 0.459);
-            border: 2px solid white;
-        }
-
-        .btn2 {
-            padding: 5px 17px;
-            color: rgb(131, 59, 37);
-            margin-right: 10px; 
-            background: white;
-            border: 3px solid white ;
-            border-radius: 8px;
-            box-shadow: 3px 3px 10px rgba(160, 19, 19, 0.349); /* Add shadow */
-        }
-
-        .btn2:hover{
-            color: white;
-            background-color: rgba(160, 19, 19, 0.349);
-            border: 2px solid white;
-        }
-
-        .btn3 {
-            padding: 5px 2px;
-            color: rgb(104, 0, 81);
-            background: white;
-            border: 3px solid white ;
-            border-radius: 8px;
-            box-shadow: 3px 3px 10px rgba(78, 7, 136, 0.349); /* Add shadow */
-        } 
-
-        .btn3:hover{
-            color: white;
-            background-color: rgba(78, 7, 136, 0.349);
-            border: 2px solid white;
-        }
+        .glowing-buttons {
+                display: flex;
+            }
+            .btn {
+                box-sizing: border-box;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-color: transparent;
+                border: 2px solid white;
+                border-radius: 0.6em;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -webkit-flex;
+                -webkit-align-self: center;
+                -ms-flex-item-align: center;
+                align-self: center;
+                font-size: 12px;
+                font-weight: 780;
+                line-height: 1;
+                margin: 3px;
+                text-decoration: none;
+                text-align: center;
+                font-family: "Montserrat", sans-serif;
+                color: white;
+                padding: 5px 10px 5px 10px;
+                align-items: center;
+                text-align: center;
+            }
+        
+            /* Light Green */
+            .first {
+                color: #338539; /* Light green text */
+                background-image: -webkit-linear-gradient(
+                45deg,
+                #bce0a0 50%,
+                transparent 50%
+                );
+                background-image: linear-gradient(45deg, #bce0a0 50%, transparent 50%);
+                background-position: 100%;
+                background-size: 400%;
+                -webkit-transition: background 300ms ease-in-out;
+                transition: background 1.3s ease-in-out;
+            }
+        
+            .first:hover {
+                background-position: 0;
+                border-color: white; /* Maintain white border on hover */
+            }
+        
+            /* Light Orange */
+            .second {
+                color: #ad6301; /* Light orange text */
+                background-image: -webkit-linear-gradient(
+                45deg,
+                #b57f1b52 50%,
+                transparent 50%
+                );
+                background-image: linear-gradient(
+                45deg,
+                #b57f1b52 50%,
+                transparent 50%
+                );
+                background-position: 100%;
+                background-size: 400%;
+                -webkit-transition: background 300ms ease-in-out;
+                transition: background 1.3s ease-in-out;
+            }
+        
+            .second:hover {
+                background-position: 0;
+                border-color: white; /* Maintain white border on hover */
+            }
+        
+            /* Light Red */
+            .third {
+                color: #9f3a2f; /* Light red text */
+                background-image: -webkit-linear-gradient(
+                45deg,
+                #b51b1b52 50%,
+                transparent 50%
+                );
+                background-image: linear-gradient(
+                45deg,
+                #b51b1b52 50%,
+                transparent 50%
+                );
+                background-position: 100%;
+                background-size: 400%;
+                -webkit-transition: background 300ms ease-in-out;
+                transition: background 1.3s ease-in-out;
+            }
+        
+            .third:hover {
+                background-position: 0;
+                border-color: white; /* Maintain white border on hover */
+            }
+        
+            .first {
+                color: #338539;
+                box-shadow: 1px 2px 6px 0 #69a27c;
+            }
+        
+            .second {
+                color: #ad6301;
+                box-shadow: 1px 2px 6px 0 #b89f71;
+            }
+        
+            .third {
+                color: #c12020;
+                box-shadow: 1px 2px 6px 0 #b27373;
+            }
 
 
 
@@ -919,10 +980,10 @@
             </select>
         </div>
 
-        <div class="buttons">
-            <button class="btn1"><b>Free</b></button>
-            <button class="btn2"><b>Freemium</b></button>
-            <button class="btn3"><b>Paid</b></button>
+        <div class="glowing-buttons">
+            <button class="btn first">Free AI</button>
+            <button class="btn second">Freemium</button>
+            <button class="btn third">Paid</button>
         </div>
     </div>
 
@@ -974,128 +1035,129 @@
             <h3 style="font-size: 15px;">Latest AI</h3>
             <div class="rainbow-line"></div>
             <div class="list">
-            <ul>
-                    <li>
+                <ul>
+                    <li></li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
-                        Bliro
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        ChatGPT
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 2" style="width:20px; height:20px; margin-right:10px;">
-                        Overloop
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 2" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Claude AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 2" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 3" style="width:20px; height:20px; margin-right:10px;">
-                        Void Editor
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 3" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Gemini AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 3" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 4" style="width:20px; height:20px; margin-right:10px;">
-                        Applio
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp" alt="After Image 4" style="width:15px; height:15px;float: right;" class="icon-opacity">
+                        Poe
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp" alt="After Image 4" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 5" style="width:20px; height:20px; margin-right:10px;">
-                        Quill
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 5" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Microsoft Copilot
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 5" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 6" style="width:20px; height:20px; margin-right:10px;">
-                        AutoGen
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 6" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Meta AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 6" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 7" style="width:20px; height:20px; margin-right:10px;">
-                        Remini
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 7" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        ChatSonic
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 7" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 8" style="width:20px; height:20px; margin-right:10px;">
-                        Dropbox Sign
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Payant.webp" alt="After Image 8" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Le Chat by Mistral AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Payant.webp" alt="After Image 8" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 9" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
+                        Grok by xAI
                         <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 9" style="width:15px; height:15px; float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 10" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 10" style="width:15px; height:15px; float: right;"class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 10" style="width:15px; height:15px;  float: right;"class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 11" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 11" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 11" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 12" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 12" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 12" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 13" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 13" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 13" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 14" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 14" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 14" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 15" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 15" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 15" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 16" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 16" style="width:15px; height:15px;float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 16" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 17" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 17" style="width:15px; height:15px; float: right;"class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 17" style="width:15px; height:15px;  float: right;"class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 18" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 18" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 18" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 19" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 19" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 19" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
                     <li>
                         <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 20" style="width:20px; height:20px; margin-right:10px;">
-                        G1 Llama Meta
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 20" style="width:15px; height:15px; float: right;" class="icon-opacity">
+                        Pi AI
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 20" style="width:15px; height:15px;  float: right;" class="icon-opacity">
                     </li>
                     <hr>
-            </ul>
+                </ul>                
+                
             </div>
             <button class="list-button">More new AI (1834) →</button>
         </div>
