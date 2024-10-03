@@ -34,7 +34,7 @@
         255,
         255,
         255,
-        0.85
+        0.893
       ); /* Slight transparency for the background */
       position: fixed;
     }
@@ -84,7 +84,7 @@
     }
     .main-hdng {
       position: absolute;
-      top: 40%;
+      top: 38%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
@@ -104,7 +104,7 @@
     }
     .tagline {
       position: absolute;
-      top: 70%;
+      top: 60%;
       left: 53%;
       transform: translate(-50%, -50%);
       font-size: 35px;
@@ -118,7 +118,7 @@
     }
     .fctry-btn {
       position: absolute;
-      top: 80%;
+      top: 70%;
       transform: translate(-50%, -50%);
       font-size: 20px;
       color: black; /* White text to stand out on video */
@@ -132,7 +132,7 @@
     }
     .glry-btn {
       position: absolute;
-      top: 80%;
+      top: 70%;
       transform: translate(-50%, -50%);
       font-size: 20px;
       color: black; /* White text to stand out on video */
@@ -256,7 +256,7 @@
       padding-top: 90px;
       padding-bottom: 146px;
       margin-top: 50px;
-      height: 720px;
+      height: 550px;
     }
     .content {
       display: flex;
@@ -352,15 +352,15 @@
         #28ace2 -25%,
         #28ace2 140%
       ) !important;
-      width: 80%;
+      width: 85%;
       justify-content: left;
       margin-left: 100px;
       padding: 20px 30px;
       align-items: center;
       gap: 60px;
       border-radius: 10px;
-      margin-top: 300px;
-      height: 125px;
+      margin-top: 110px;
+      height: 135px;
     }
     .written {
       width: 40%;
@@ -370,8 +370,64 @@
       margin-left: 30px;
       font-weight: 500;
     }
-    .media {
-      margin-top: 40px;
+    .orng-line {
+      color: orange;
+      font-size: 16px;
+    }
+    .orng-line:hover {
+      color: rgb(249, 45, 79);
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    .icn {
+      width: 5px; /* Adjust the size as needed */
+      height: 5px;
+      background-color: #28ace2;
+      display: inline-block;
+      margin: 0px 5px 3px;
+    }
+    .pink:hover {
+      color: rgb(249, 45, 79);
+    }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 40px;
+      background-color: #29abe2;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.5s ease;
+      animation: pulse 1.5s infinite; /* Pulse effect */
+    }
+
+    .scroll-to-top:hover {
+      background-color: #007bb5;
+    }
+
+    /* Glowing pulse animation */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(41, 171, 226, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 30px rgba(41, 171, 226, 0);
+      }
+      70% {
+        box-shadow: 0 0 0 0 rgba(41, 171, 226, 0);
+      }
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
   <body>
@@ -384,7 +440,6 @@
           height="40px"
         />
       </a>
-
       <a href="https://aliprintpack.com/" class="home-icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -438,6 +493,17 @@
           >
         </div>
       </div>
+      <a name="top"></a>
+      <a href="#" class="scroll-to-top">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+        >
+          <path fill="none" stroke="white" stroke-width="2" d="M4 16l8-8 8 8" />
+        </svg>
+      </a>
       <div class="cntnt-hdngs">
         <div class="headings">
           <h1>About Us</h1>
@@ -1005,10 +1071,16 @@
           font-family: Arial, Helvetica, sans-serif;
         "
       >
-        <p>
+        <p style="font-size: 16px; margin-top: 100px">
           Copyrights © 2023
-          <span style="color: orange"> Ali PrintPack (PVT) Ltd.</span> Designed
-          by Srp.ai.
+          <span class="orng-line"> Ali PrintPack (PVT) Ltd.</span>
+          Designed by
+          <span class="orng-line">Srp.ai.</span>
+          <span class="text" style="float: right">
+            <span class="pink">Privacy Policy</span>
+            <span class="icn"></span>
+            <span class="pink">Terms & Conditions</span>
+          </span>
         </p>
       </div>
     </footer>
