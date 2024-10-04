@@ -502,12 +502,12 @@ span {
     display: flex;
     padding-top: 20px;
     padding-bottom: 25px;
-    gap: 14px;
-    justify-content: center;
+    gap: 50px;
+    justify-content:center;
 }
 
 .first-grid {
-    width: 18%;
+    width: 16%;
     box-sizing: border-box;
     vertical-align: baseline;
     line-height: 24px;
@@ -524,8 +524,8 @@ span {
     margin-left: 0;
     margin-right: 0;
     background: white;
-    padding: 10px;
-    vertical-align: baseline;
+   
+  
 }
 
 .topline {
@@ -560,7 +560,10 @@ span {
 }
 
 .grid-body {
-    line-height: 1px
+    line-height: 1px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .tools-day {
@@ -579,13 +582,17 @@ span {
     animation-range-start: normal;
     background-clip: text;
     color: transparent;
-    margin-left: -45%;
+    
 }
 
 .tooltips {
     font-weight: 600;
     font-style: italic;
-    color: #e91e96;
+    color: #52484d;
+    text-align: left;
+    font-size: 15px;margin-right: 5px;
+    text-decoration: none;
+   
 }
 
 .arrow {
