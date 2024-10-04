@@ -619,8 +619,14 @@ li{
     border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
     text-align: center;
 }
-.link1{
-    display: inline-block;
+.listbox{
+    overflow-y: auto;
+    max-height: 290px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+.list1{
+    display: flex;
     font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
     border-bottom: 1px solid #ededed;
 }
@@ -631,26 +637,55 @@ li{
     background-clip: text;
     color: transparent;
     animation: spin 13s linear infinite;
-    display: inline-block;
 }
-.text1{
+.line1{
+    display: flex;
+}
+.firstlink{ 
+    display: flex;
+    gap: 50px;
+}
+.linktext{
     font-weight: 600;
-    font-size: 16px;
     font-style: italic;
     color: #e91e96;
 }
-.button1{
-    background: #c7760900;
-}
 .feedback{
+    background: #c7760900;
     color: #fff;
     padding: 4px;
     border-radius: 999999px;
     margin-right: -5px;
-    text-decoration: none;
+}
+.linkbutton{
+    width: 14px;
+    height: 14px;
+}
+.listimage{
+    width: 16px;
+    height: 16px;
+}
+.listfooter{
+    margin-top: 26px;
+}
+.morenewai{
+    padding-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+    align-items: center;
+}
+.listendbutton{
+    color: #1f2020;
+    background: #f2f2f2;
+    font-family: monospace;
+    border: 2px solid #fcfeff;
+    border-radius: 0 0 10px 10px;
+    padding-top: 15px;
     font-size: 11px;
-    float: right;
-    text-align: right;
+    text-align: center;
+    display: block;
+    background: #eef1f0;
+    width: 95%;
+    height: 30px;
 }
 .fulllistai button{
     font-size: 15px;
