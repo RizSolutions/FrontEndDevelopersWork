@@ -497,7 +497,7 @@ span {
 }
 
 .Grid-menu {
-    width: 100%;
+    width: 100%; height: 420px;
     box-sizing: border-box;
     display: flex;
     padding-top: 20px;
@@ -506,8 +506,8 @@ span {
     justify-content:center;
 }
 
-.first-grid {
-    width: 16%;
+.first-grid {width: 18%; 
+    display: block;
     box-sizing: border-box;
     vertical-align: baseline;
     line-height: 24px;
@@ -524,11 +524,11 @@ span {
     margin-left: 0;
     margin-right: 0;
     background: white;
-   
-  
+    align-items: center;
 }
 
 .topline {
+    width: 100%;
     justify-content: center;
     align-items: center;
     border-bottom-width: 2px;
@@ -536,8 +536,7 @@ span {
     border-bottom-color: #2a2828;
     border-image:
         linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .grid-title {
@@ -551,64 +550,36 @@ span {
 }
 
 .grid-icon {
+    vertical-align: middle;
     filter: invert(100%);
-    padding-left: 76px;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
     width: 21px;
     height: 21px;
     background-position-x: left;
-    background-position-y: top;
+    background-position-y: center;
 }
 
 .grid-body {
     line-height: 1px;
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.tools-day {
+    width:auto;
     display: inline-flex;
-    vertical-align: bottom;
-    font-size: 24px;
-    color: #ffbc00;
-    background: linear-gradient(89deg, #a0dbfd 1%, #947bed 15%, #fb81b5 35%, #ffbd75 60%, #ffbd75 98%);
-    animation-duration: 13s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-timeline: auto;
-    animation-range-start: normal;
-    background-clip: text;
-    color: transparent;
-    
+    justify-content: center;
+    overflow-y: auto;
 }
 
-.tooltips {
-    font-weight: 600;
-    font-style: italic;
-    color: #52484d;
-    text-align: left;
-    font-size: 15px;margin-right: 5px;
-    text-decoration: none;
-   
-}
-
-.arrow {
-    position: static;
-    top: 2px;
-    opacity: 18;
-    visibility: visible;
-    font-size: 18px;
-    line-height: 1;
-    color: #999;
-}
-
-.arrow-icon {
-    float: right;
-}
-
+.main-body-list { overflow-y:auto; vertical-align: middle;}
+.body-of-list { display:inline-block; padding-top: 20px;vertical-align: middle; }
+.starting-grid-body-icon { width: 12px;height: 12px;vertical-align: middle; margin-left:15px;margin-right: 10px; }    
+.text-of-list { vertical-align:middle; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              color: rgb(55, 60, 51); font-weight: 400; font-size: 15px; line-height: 24px;}
+.ending-grid-body-icon { width: 16px;height: 16px;margin-left: 30px; vertical-align: center; opacity: 0.5; float: right;margin-top: 8px;}
+.ending-grid-body-icon:hover { opacity: 1; }   
+.grid-anchor:hover { background-color: rgb(244, 255, 228);}  
+.grid-anchor-poe:hover { background-color: rgb(255, 228, 228);}  
+.grid-anchor-chatsonic:hover { background-color: rgb(250, 228, 255);}  
+.grid-anchor-grok:hover { background-color: rgb(247, 253, 201);}  
 .large-button {
     display: flex;
     flex-wrap: wrap;
