@@ -611,6 +611,8 @@ li{
 .listcontainer{
     border: 1px solid #d4dee5;
     box-shadow: rgb(113 152 239 / 46%) 1px 1px 10px;
+    border-radius: 10px;
+    background: #fff;
 }
 .listheading{
     background-color: #ffffff;
@@ -642,8 +644,8 @@ li{
     display: flex;
 }
 .firstlink{ 
-    display: flex;
-    gap: 50px;
+    display: inline-block;
+
 }
 .linktext{
     font-weight: 600;
@@ -653,9 +655,9 @@ li{
 .feedback{
     background: #c7760900;
     color: #fff;
-    padding: 4px;
     border-radius: 999999px;
-    margin-right: -5px;
+    float: right;
+    margin-left: 30px;
 }
 .linkbutton{
     width: 14px;
@@ -790,101 +792,46 @@ li{
     }
 }
 
-.parentdiv{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width:90%;
+.boxes{
+    margin-top: 63px;
+    border-top: 12px solid #a3a3a300;
+    padding-top: 30px;
+    text-align: justify;
+    display: block;
+    padding: 180px;
 }
-.parentdiv1{
-    background: #f8f5ff;
-    width: 95%;
-    height: auto;
-    margin-bottom: 40px;
-    border-radius: 50px;
+.box1{
     display: flex;
+    width: 100%;
+    align-items: center;
+    background: #f8f5ff;    
+    margin-bottom: 40px;
+    border-radius: 2.5rem;
     padding: 50px;
 }
-.child1image{
+.boximage{
+    width: 30%;
     border: 5px solid #fff0;
     box-shadow: 1px 1px 10px 0 #61a7cf00;
     max-width: 300px;
     margin-right: 35px;
     margin-left: 35px;
 }
-.rightcontainer{
+.boxtext{
     width: calc(100% - 320px);
-    padding: 19px 20px;
-    text-align: justify;
 }
-.rightcontainer h1{
+.boxheading{
+    text-align: center;
+    font-family: system-ui;
     color: #474747 !important;
     font-size: 29px !important;
-    border-bottom: none !important;
-    font-family: system-ui !important;
-    text-align: center;
-    padding: 13px;
-    margin: 10px
+    font-weight: 700 !important;
 }
-.rightcontainer p{
-    text-align: justify;
-    font-size: 15px;
+.boxpara{
     font-family: system-ui;
-    letter-spacing: .3px;
-    margin-bottom: 20px;
     line-height: 1.8;
 }
-.parentdiv2{
-    background: #f6fbff;
-    width: 95%;
-    height: auto;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    display: flex;
-    padding: 50px;
-}
-.parentdiv3{
-    background: #fffcf3;
-    width: 95%;
-    height: auto;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    display: flex;
-    padding: 50px;
-}
-.parentdiv4{
-    background: #f7fdf6;
-    width: 95%;
-    height: auto;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    display: flex;
-    padding: 50px;
-}
-.parentdiv5{
-    background: #fdf6ff;
-    width: 95%;
-    height: auto;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    display: flex;
-    padding: 50px;
-}
-.parentdiv6{
-    background: #f6faff;
-    width: 95%;
-    height: auto;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    display: flex;
-    padding: 50px;
-}
-.tankyou{
-    text-align: center;
-    width: 100%;
-    padding: 21px;
-}
+
 .footernav{
     background: #06223b;
     padding: 0%;
