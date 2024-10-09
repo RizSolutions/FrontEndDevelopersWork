@@ -793,23 +793,59 @@ li{
 }
 
 .boxes{
-    margin-top: 63px;
-    border-top: 12px solid #a3a3a300;
-    padding-top: 30px;
     text-align: justify;
-    display: block;
-    padding: 180px;
+    padding-right: 180px;
+    padding-left: 180px;
 }
 .box1{
     display: flex;
     width: 100%;
     align-items: center;
-    background: #f8f5ff;    
-    margin-bottom: 40px;
-    border-radius: 2.5rem;
-    padding: 50px;
 }
-.boximage{
+.box2{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.boxdiv1{
+    background: #f8f5ff;
+    border-radius: 2.5rem;
+    padding: 19px 20px;
+    margin-bottom: 40px;
+}
+.boxdiv2{
+    background: #f6fbff;
+    border-radius: 2.5rem;
+    padding: 19px 20px;
+    margin-bottom: 40px;
+}
+.boxdiv3{
+    background: #fffcf3;
+    border-radius: 2.5rem;
+    padding: 19px 20px;
+    margin-bottom: 40px;
+}
+.boxdiv4{
+    background: #f7fdf6;
+    border-radius: 2.5rem;
+    padding: 19px 20px;
+    margin-bottom: 40px;
+}
+.boxdiv5{
+    background: #fdf6ff;
+    border-radius: 2.5rem;
+    padding: 19px 20px;
+    margin-bottom: 40px;
+}
+.boxdiv6{
+    background: #f6faff;
+    border-radius: 2.5rem;
+    padding: 19px 20px;
+    margin-bottom: 40px;
+}
+.boxi1image{
     width: 30%;
     border: 5px solid #fff0;
     box-shadow: 1px 1px 10px 0 #61a7cf00;
@@ -817,8 +853,12 @@ li{
     margin-right: 35px;
     margin-left: 35px;
 }
+.boximages{
+    width: 300px;
+    height: 300px;
+}
 .boxtext{
-    width: calc(100% - 320px);
+    padding: 50px;
 }
 .boxheading{
     text-align: center;
@@ -828,8 +868,13 @@ li{
     font-weight: 700 !important;
 }
 .boxpara{
+    color: #343f42;
     font-family: system-ui;
     line-height: 1.8;
+}
+.thankyou{
+    margin-top: 50px;
+    text-align: center;
 }
 
 .footernav{
@@ -895,10 +940,7 @@ li{
     line-height: 2.2;
 }
 .cutline2{
-    padding-left: 100px;
-    padding-right: 100px;
     padding-top: 20px;
-    width: 100%;
     justify-content: center;
     border-top: 1px solid #1c3651;
 }
