@@ -43,18 +43,19 @@ body {
 }
 
 
-.top-title {
+.top-title {width: auto;
     display: flex;
     text-align: center;
     justify-content: center;
     margin-left: auto;
     margin-right: 0;
     margin-bottom: 30px;
+    vertical-align: middle;
 }
 
-h1 {
+h1 {width: 200px;
     padding-left: 0%;
-    margin-left: 0%;
+    margin-left: 0;
     align-items: center;
     border-bottom-width: 1px ;
     border-bottom: 2px solid;
@@ -73,7 +74,7 @@ h1 {
     -webkit-text-fill-color: #00749700;
 }
 
-span {
+span { width: auto;
     color: rgb(69, 70, 71);
     font-weight: 400;
     line-height: 28px;
@@ -82,48 +83,60 @@ span {
 }
 
 .search-box {
+    width: 210px;
+    font-size: 14px;
     padding-top: 7px;
     padding-bottom: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-width: 4px;
-    border-color: black;
-    border-color: initial;
-    border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1
+    border-width: 0.5px;
+    border-color: rgb(163, 163, 163);
+    border-radius: 4px;
+    background: white;
+    color: rgb(73, 73, 73);
+    padding-left: 8px;
+ 
 }
+.search-box1 { vertical-align: middle;}
 
 .horizontal-list {
-    display: flex;
+    width: 1350px;
+    display:flex;
     margin-top: 60px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:center;
     vertical-align: middle;
     margin-bottom: 60px
 }
 
 .selection-option {
-    font-size: medium;
+    width: 230px;
+    margin-left: 5px;
+    margin-right: 46px;
+    font-size: 14px;
     padding-top: 7px;
     padding-bottom: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-width: 4px;
-    border-color: initial;
-    border-image: linear-gradient(89deg, #a0dbfd 1%, #947bed 26%, #fb81b5 51%, #ffbd75 98%) 1;
+   padding-left: 20px;
+    border-width: 0.5px;
+    border-color: rgb(163, 163, 163);
+    border-radius: 4px;
     background: white;
+    color: rgb(73, 73, 73);
 }
 
 .searchI {
-    height: auto;
-    width: auto;
+    height: 26px;
+    width: 18px;
     vertical-align: middle;
     padding: 0;
     margin: 0;
 }
 
 .social-icons {
+    margin-left: 30px;
     height: auto;
-    width: auto;
+    width: 250px;
+    padding: 7px;
+    justify-content: center;
+    text-align: center;
 }
 .button01 {
     background-image: initial;
@@ -288,12 +301,12 @@ span {
     justify-content: center;
     padding-top: 44px;
     padding-bottom: 44px;
-    row-gap: 35px;
-    column-gap: 35px;
+    row-gap: 30px;
+    column-gap: 30px;
 }
 
 .mini-box1 {
-    width: 280px;
+    width: 260px;
     height: 270px;
     border: 1px solid #f5f5f5;
     border-radius: 10px;
@@ -307,7 +320,7 @@ span {
 .mini-box1:hover { box-shadow: 0 2px 10px rgba(255 208 238);}
 
 .mini-box2 {
-    width: 280px;
+    width: 260px;
     height: 270px;
     border: 1px solid #f5f5f5;
     border-radius: 10px;
@@ -321,7 +334,7 @@ span {
 .mini-box2:hover { box-shadow: 0 2px 10px rgba(255 208 238);}
 
 .mini-box3 {
-    width: 280px;
+    width: 260px;
     height: 270px;
     border: 1px solid #f5f5f5;
     border-radius: 10px;
@@ -335,7 +348,7 @@ span {
 .mini-box3:hover { box-shadow: 0 2px 10px rgba(255 208 238);}
 
 .mini-box4 {
-    width: 280px;
+    width: 260px;
     height: 270px;
     border: 1px solid #f5f5f5;
     border-radius: 10px;
@@ -506,7 +519,7 @@ span {
     justify-content:center;
 }
 
-.first-grid {width: 18%; 
+.first-grid {width: 19%; height: 360px;
     display: block;
     box-sizing: border-box;
     vertical-align: baseline;
@@ -528,6 +541,7 @@ span {
 }
 
 .topline {
+    padding-top: 5px;padding-bottom: 5px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -546,8 +560,16 @@ span {
     text-align: center;
     font-size: 14px;
     color: #2a2828;
-    font-weight: 600;
-}
+    font-weight: 600; }
+.grid-title-13 {
+    
+        margin-top: 0;
+        vertical-align: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        color: #2a2828;
+        font-weight: 600; }    
 
 .grid-icon {
     vertical-align: middle;
@@ -558,8 +580,18 @@ span {
     width: 21px;
     height: 21px;
     background-position-x: left;
-    background-position-y: center;
-}
+    background-position-y: center; }
+.grid-icon13 {
+        vertical-align: middle;
+        filter: invert(100%);
+        margin-left: 65px;
+        justify-content: center;
+        align-items: center;
+        width: 21px;
+        height: 21px;
+        background-position-x: center;
+        background-position-y: center;
+    }
 
 .grid-body {
     line-height: 1px;
@@ -569,17 +601,20 @@ span {
     overflow-y: auto;
 }
 
-.main-body-list { overflow-y:auto; vertical-align: middle;}
-.body-of-list { display:inline-block; padding-top: 20px;vertical-align: middle; }
+.main-body-list { overflow-y:auto; vertical-align: middle;height: 250px;}
+.body-of-list { display:inline-block; padding-top: 15px;vertical-align: middle; }
 .starting-grid-body-icon { width: 12px;height: 12px;vertical-align: middle; margin-left:15px;margin-right: 10px; }    
 .text-of-list { vertical-align:middle; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
               color: rgb(55, 60, 51); font-weight: 400; font-size: 15px; line-height: 24px;}
-.ending-grid-body-icon { width: 16px;height: 16px;margin-left: 30px; vertical-align: center; opacity: 0.5; float: right;margin-top: 8px;}
+.ending-grid-body-icon { width: 14px;height: 14px;margin-left: 30px; vertical-align: center; opacity: 0.5; float: right;margin-top: 8px;}
 .ending-grid-body-icon:hover { opacity: 1; }   
+.grid-anchor { text-decoration:none; vertical-align:middle; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(55, 60, 51); font-weight: 400; font-size: 15px; line-height: 24px;}
 .grid-anchor:hover { background-color: rgb(244, 255, 228);}  
-.grid-anchor-poe:hover { background-color: rgb(255, 228, 228);}  
-.grid-anchor-chatsonic:hover { background-color: rgb(250, 228, 255);}  
-.grid-anchor-grok:hover { background-color: rgb(247, 253, 201);}  
+.grid-bottom { font-size: 12px;font-weight: 400; text-decoration: none; width: 80%;padding-left: 62px;padding-right: 50px;padding-top: 8px;padding-bottom: 8px; align-items: center;color:
+     rgb(68, 68, 68); background-color: #f2f2f2;border-bottom-right-radius: 6px;border-bottom-left-radius: 6px; cursor: pointer;}
+.grid-bottom:hover { background: #e7e7e7;}
+.list-button { margin-left: 7px;margin-right: 5px;width: 100%;margin-top: 19px; justify-content: center;vertical-align:middle ;}
 .large-button {
     display: flex;
     flex-wrap: wrap;
