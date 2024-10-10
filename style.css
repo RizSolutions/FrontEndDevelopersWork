@@ -625,7 +625,7 @@ li{
     overflow-y: auto;
     max-height: 290px;
     border: 1px solid #ccc;
-    width: 300px;
+    width: 100%;
 }
 .list1{
     display: flex;
@@ -640,24 +640,16 @@ li{
     color: transparent;
     animation: spin 13s linear infinite;
 }
-.line1{
-    display: flex;
-}
-.firstlink{ 
-    display: inline-block;
-
-}
 .linktext{
+    padding-left: 10px;
     font-weight: 600;
     font-style: italic;
     color: #e91e96;
 }
 .feedback{
-    background: #c7760900;
-    color: #fff;
-    border-radius: 999999px;
-    float: right;
-    margin-left: 30px;
+    color: #999;
+    position: relative;
+    left: 15px;
 }
 .linkbutton{
     width: 14px;
