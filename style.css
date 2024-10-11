@@ -104,6 +104,7 @@ li{
     text-align: center;
     font-style: italic;
     font-weight: 500;
+    color: #757575;
     font-size: 18px !important;
 }
 .searchbox a button{
@@ -113,11 +114,10 @@ li{
     border: 1px solid #ccc;
     vertical-align: middle;
     margin: 0;
-    color: #666;
 }
 .socialmedia img{
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 .socialmedia li{
  display: inline-block;
@@ -127,10 +127,15 @@ li{
 .socialmedia li a{
     margin-left: 5px;
 }
+.selectionbar{
+    padding-left: 60px;
+}
 .selectionbar select{
     width: 300px;
     height: 40px;
+    border: 1px solid #ccc;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
 }
 .Option1{
     text-align: center;
@@ -594,7 +599,7 @@ li{
 }
 .cutline{
     border: 0;
-    font-size: 100%;
+    font-size: 91%;
     outline: 0;
     vertical-align: baseline;
     height: 4px;
@@ -607,6 +612,8 @@ li{
     align-items: center;
     gap: 35px; 
     padding-top: 33px;
+    padding-left: 180px;
+    padding-right: 180px;
 }
 .listcontainer{
     border: 1px solid #d4dee5;
@@ -622,23 +629,56 @@ li{
     text-align: center;
 }
 .listbox{
-    overflow-y: auto;
-    max-height: 290px;
-    border: 1px solid #ccc;
+    padding-right: 15px;
     width: 100%;
 }
+.listing{
+    overflow-y: auto;
+    max-height: 300px;
+}
+::-webkit-scrollbar {
+    width: 13px;  /* width of the scrollbar */
+}
+::-webkit-scrollbar-thumb {
+    background-color:#9f9f9f;  /* color of the scrollbar */
+    border-radius: 6px;  /* rounded corners */
+    border: 3px solid #f1f1f1;  /* add a border around the scrollbar */
+}
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;  /* track background */
+    border-radius: 6px;
+}
 .list1{
-    display: flex;
+    list-style: none;
+    margin-top: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 5px;
+    padding-right: 15px;
     font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    border-bottom: 1px solid #ededed;
+}
+.firstlist{
+    font-size: 14px;
+    border-bottom: 1px solid #e4e4e4;
 }
 .star{
+    color: #ffbc00;
     font-size: 24px;
-    vertical-align: bottom;
+    vertical-align: middle;
     background: linear-gradient(89deg, #a0dbfd 1%, #947bed 15%, #fb81b5 35%, #ffbd75 60%, #ffbd75 98%);
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     animation: spin 13s linear infinite;
+    display: inline-block;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .linktext{
     padding-left: 10px;
@@ -646,14 +686,17 @@ li{
     font-style: italic;
     color: #e91e96;
 }
+.listtext{
+    padding-left: 10px;
+}
 .feedback{
-    color: #999;
-    position: relative;
-    left: 15px;
+    float: right;
+    padding-left: 15px;
 }
 .linkbutton{
     width: 14px;
     height: 14px;
+    opacity: 0.2;
 }
 .listimage{
     width: 16px;
@@ -664,8 +707,7 @@ li{
 }
 .morenewai{
     padding-bottom: 10px;
-    padding: 5px 5px 5px 10px;
-    align-items: center;
+    padding: 5px 15px 5px 15px;
 }
 .listendbutton{
     color: #1f2020;
@@ -677,9 +719,10 @@ li{
     font-size: 11px;
     text-align: center;
     display: block;
+    align-items: center;
     background: #eef1f0;
-    width: 95%;
-    height: 30px;
+    width: 100%;
+    height: 20px;
 }
 .fulllistai button{
     font-size: 15px;
@@ -722,7 +765,7 @@ li{
     margin-left: 12px;
 }
 .popularplatforms{
-    margin-top: 189px;
+    padding-top: 189px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -747,7 +790,7 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 0; /* Adjust the top and bottom margin as needed */
+    padding-top: 189px;
 }
 
 .icon-heading {
@@ -767,10 +810,11 @@ li{
 
 .icons-slide {
     display: inline-block;
-    animation: 30s slide infinite linear;
+    animation: 60s slide infinite linear;
 }
 
 .icons-slide img {
+    padding-left: 30px;
     max-width: 130px;
     aspect-ratio: auto 200 / 64;
 }
@@ -785,6 +829,7 @@ li{
 }
 
 .boxes{
+    padding-top: 150px;
     text-align: justify;
     padding-right: 180px;
     padding-left: 180px;
