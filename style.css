@@ -44,7 +44,7 @@ body {
 
 
 .top-title {width: auto;
-    display: flex;
+    display: block;
     text-align: center;
     justify-content: center;
     margin-left: auto;
@@ -52,9 +52,10 @@ body {
     margin-bottom: 30px;
     vertical-align: middle;
 }
-
+.icon { display: flex; margin-left: 15px; align-items: center;text-align: center;justify-content: center;}
 h1 {width: 200px;
-    padding-left: 0%;
+    padding-right: 0;
+    padding-left: 0;
     margin-left: 0;
     align-items: center;
     border-bottom-width: 1px ;
@@ -74,7 +75,8 @@ h1 {width: 200px;
     -webkit-text-fill-color: #00749700;
 }
 
-span { width: auto;
+.und-head { 
+    justify-content: center;align-items: center;text-align: center; width: auto;
     color: rgb(69, 70, 71);
     font-weight: 400;
     line-height: 28px;
@@ -606,12 +608,12 @@ span { width: auto;
 .starting-grid-body-icon { width: 12px;height: 12px;vertical-align: middle; margin-left:15px;margin-right: 10px; }    
 .text-of-list { vertical-align:middle; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
               color: rgb(55, 60, 51); font-weight: 400; font-size: 15px; line-height: 24px;}
-.ending-grid-body-icon { width: 14px;height: 14px;margin-left: 30px; vertical-align: center; opacity: 0.5; float: right;margin-top: 8px;}
+.ending-grid-body-icon { width: 14px;height: 14px;margin-left: 30px; vertical-align: center; opacity: 0.1; float: right;margin-top: 8px;}
 .ending-grid-body-icon:hover { opacity: 1; }   
 .grid-anchor { text-decoration:none; vertical-align:middle; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(55, 60, 51); font-weight: 400; font-size: 15px; line-height: 24px;}
 .grid-anchor:hover { background-color: rgb(244, 255, 228);}  
-.grid-bottom { font-size: 12px;font-weight: 400; text-decoration: none; width: 80%;padding-left: 62px;padding-right: 50px;padding-top: 8px;padding-bottom: 8px; align-items: center;color:
+.grid-bottom { font-size: 12px;font-weight: 400; text-decoration: none; width: 80%;padding-left: 60px;padding-right: 60px;padding-top: 8px;padding-bottom: 8px; align-items: center;color:
      rgb(68, 68, 68); background-color: #f2f2f2;border-bottom-right-radius: 6px;border-bottom-left-radius: 6px; cursor: pointer;}
 .grid-bottom:hover { background: #e7e7e7;}
 .list-button { margin-left: 7px;margin-right: 5px;width: 100%;margin-top: 19px; justify-content: center;vertical-align:middle ;}
