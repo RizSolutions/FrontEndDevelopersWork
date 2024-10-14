@@ -405,47 +405,47 @@
         display: flex;
         justify-content: center;
         width: 90%;
-        margin-left: 65px;
+        margin-left: 55px;
         height: 70px;
         align-items: center;
-        gap: 65px;
+        gap: 55px;
         margin-top: 60px;
       }
       .search-box {
         display: flex;
         align-items: center;
-        border: 1px solid #bebebe;
+        border: 0.7px solid #c9c9c9;
         border-radius: 8px;
-        padding: 5px 10px;
-        width: 250px; /* Adjust the width as needed */
-        height: 30px;
+        width: 275px; /* Adjust the width as needed */
+        height: 38px;
       }
 
       .search-box input {
+        align-items: center;
         border: none;
         outline: none;
         flex-grow: 1;
-        font-size: 16px;
+        font-size: 15px;
         font-style: italic;
         text-align: center;
       }
 
-      .search-box .divider {
-        width: 1px;
-        height: 25px; /* Adjust the height as needed */
-        background-color: #000000;
-        margin-right: 5px;
-      }
-
       .search-box button {
-        background: none;
-        border: none;
+        background: #eaeaea;
+        border-bottom: 8px solid #eaeaea;
+        border-left: 7.3px solid #eaeaea;
+        border-right: 8px solid #eaeaea;
+        border-top: 9px solid #eaeaea;
+        border-radius: 0px 8px 8px 0px;
         cursor: pointer;
       }
 
       .search-box button img {
-        width: 20px; /* Adjust the size of the icon */
-        height: 20px;
+        width: 19px; /* Adjust the size of the icon */
+        height: 18px;
+      }
+      .socialmedia {
+        margin-left: 23px;
       }
       .socialmedia img {
         width: 18px;
@@ -460,10 +460,13 @@
         margin-left: 3px;
       }
       .selectionbar select {
+        margin-left: 30px;
+        margin-right: 20px;
         width: 300px;
-        height: 40px;
+        height: 38px;
         border-radius: 5px;
-        border-color: #8b8b8b;
+        border-color: #b2b1b1;
+        box-shadow: 2px #c9c9c9;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
           helvetica neue, Arial, sans-serif;
         font-size: 15px;
@@ -478,6 +481,7 @@
       }
       .glowing-buttons {
         display: flex;
+        margin-right: -20px;
       }
       .btn {
         box-sizing: border-box;
@@ -576,17 +580,17 @@
 
       .first {
         color: #338539;
-        box-shadow: 1px 2px 6px 0 #69a27c;
+        box-shadow: 1px 2px 8px 0px #9ed7b1;
       }
 
       .second {
         color: #ad6301;
-        box-shadow: 1px 2px 6px 0 #b89f71;
+        box-shadow: 1px 2px 8px 0px #ecd3a4;
       }
 
       .third {
         color: #c12020;
-        box-shadow: 1px 2px 6px 0 #b27373;
+        box-shadow: 1px 2px 8px 0px #d4a7a7;
       }
 
       .button-full-list {
@@ -650,7 +654,7 @@
       .new-posts {
         display: flex;
         justify-content: center;
-        padding-top: 40px;
+        padding-top: 35px;
         gap: 25px;
         width: 100%;
       }
@@ -712,8 +716,10 @@
 
       .text {
         text-align: center;
-        padding: 10px;
-        font-size: 13px;
+        padding: 20px 10px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
 
       .visit-site-button4 {
@@ -765,7 +771,7 @@
         color: #333;
         text-decoration-color: #538ac6;
         font-weight: 700;
-        margin-top: 18px;
+        margin-top: 7px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -814,7 +820,7 @@
         display: flex;
         justify-content: center;
         padding-top: 44px;
-        gap: 40px;
+        gap: 27px;
         width: 100%;
       }
 
@@ -822,7 +828,7 @@
         width: 270px;
         height: 430px;
         border: 1px solid #f5f5f5;
-        box-shadow: 0 2px 10px rgba(193, 193, 193, 0.934);
+        box-shadow: 0 2px 10px rgba(196, 239, 246, 0.934);
         border-radius: 10px;
         overflow: hidden;
         position: relative;
@@ -904,7 +910,6 @@
         overflow-y: hidden;
         cursor: pointer;
       }
-
       .Latest-AI,
       .AI-Selection,
       .Super-Tools,
@@ -996,9 +1001,6 @@
         margin: 8px 0;
         filter: invert(1) hue-rotate(35deg);
         line-height: 54px;
-      }
-      p {
-        margin-bottom: 10px;
       }
       .footflag {
         display: inline-flex;
@@ -1176,7 +1178,6 @@
       <div class="additional-bar">
         <div class="search-box">
           <input type="text" placeholder="Search over 5000+ AI..." />
-          <div class="divider"></div>
           <button>
             <img
               src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"
@@ -1225,7 +1226,7 @@
         </div>
         <div class="selectionbar">
           <select class="category-slct">
-            <option class="Option1">--Select your Category--</option>
+            <option class="Option1">--Select a category--</option>
             <option>3D model (66)</option>
             <option>AI Agents (33)</option>
             <option>AI Chat Assistant (34)</option>
@@ -1262,7 +1263,7 @@
       <div class="new-posts">
         <div class="new-items">
           <div class="Descript">
-            <p><span class="star">★</span> Featured</p>
+            <p style="font-size: 12px"><span class="star">★</span> Featured</p>
             <span class="post-title">
               <img
                 src="https://logosandtypes.com/wp-content/uploads/2024/01/Descript.png"
@@ -1289,8 +1290,7 @@
             </span>
             <p class="text">
               « Edit and transform your images like a pro with a set of AI
-              tools: generative fill, generative expand, image creation from
-              text and more...
+              tools: generative fill, generative expand...
             </p>
             <br />
             <a
@@ -1313,7 +1313,7 @@
         </div>
         <div class="new-items">
           <div class="Hubspot-CRM">
-            <p><span class="star">★</span> Featured</p>
+            <p style="font-size: 11px"><span class="star">★</span> Featured</p>
             <span class="post-title">
               <img
                 src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg"
@@ -1340,8 +1340,7 @@
             </span>
             <p class="text">
               « Edit and transform your images like a pro with a set of AI
-              tools: generative fill, generative expand, image creation from
-              text and more...
+              tools: generative fill, generative expand...
             </p>
             <br />
             <a
@@ -1364,7 +1363,7 @@
         </div>
         <div class="new-items">
           <div class="Interior-AI">
-            <p><span class="star">★</span> Featured</p>
+            <p style="font-size: 11px"><span class="star">★</span> Featured</p>
             <span class="post-title">
               <img
                 src="https://findmyaitool-rh.s3.ap-southeast-2.amazonaws.com/images/ai-tool/logo/InteriorAI-1723792479544"
@@ -1391,8 +1390,7 @@
             </span>
             <p class="text">
               « Edit and transform your images like a pro with a set of AI
-              tools: generative fill, generative expand, image creation from
-              text and more...
+              tools: generative fill, generative expand...
             </p>
             <br />
             <a
@@ -1415,7 +1413,7 @@
         </div>
         <div class="new-items">
           <div class="Photoshop-AI">
-            <p><span class="star">★</span> Featured</p>
+            <p style="font-size: 11px"><span class="star">★</span> Featured</p>
             <span class="post-title">
               <img
                 src="https://logodownload.org/wp-content/uploads/2019/10/adobe-photoshop-logo-2.png"
@@ -1442,8 +1440,7 @@
             </span>
             <p class="text">
               « Edit and transform your images like a pro with a set of AI
-              tools: generative fill, generative expand, image creation from
-              text and more...
+              tools: generative fill, generative expand...
             </p>
             <br />
             <a
