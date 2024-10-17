@@ -4,7 +4,7 @@ body {
     width: 100%;
 }
 .navbar {
-    padding: 10px;
+    
     display: flex;
     width: 100%;
     position: sticky;
@@ -46,14 +46,97 @@ body {
 .menu-lists:hover { color: rgb(255, 106, 0) } 
 
 .menu-button {
-padding: 16px;    
+padding-top:5px;  padding-bottom: 0;  
+padding-left: 6px; padding-right: 6px;
+height: 50px;   
 margin-top:8px ;
-margin-bottom:auto ;
-margin-left: auto;
-margin-right:auto ;
+margin-bottom:0 ;
+margin-left: 55px;
+margin-right:0px ;
+text-align: center;
 text-decoration: none;
 background-color: #28ace2;
 font-size: 13px;
 color: white;
 letter-spacing: 1px;
-border-radius: 5px; }
+border-radius: 5px; 
+vertical-align: middle;}
+
+.video-container {
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    width:auto;
+    object-fit:cover;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    z-index: 1; }
+
+.vid-head {height: auto;width: auto; position: absolute; text-align: center;vertical-align: middle;}    
+.vid-heading01 {
+    color:white;
+    font-size: 65px;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+.vid-heading02 {
+    color:#28ace2;
+    font-size: 100px;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+h3 { 
+    font-size: 38px;
+    font-weight: 400;
+    color:white;}
+.vid-button {
+    
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+} 
+
+.abt-serv-text {
+    text-align: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.title-of-about-us {
+    margin-top: 6px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family:auto;
+}
+.divider {
+    border-style: solid;
+    border-color: #ecde0d;
+    width: 105px;
+    height: 6px;
+    background-color: #ecde0d;
+}
+.subtitle-of-about-us {
+    font-size: 28px;
+    font-weight: 600;
+}
+.para-of-about-us {
+    text-align: center;
+    justify-content:space-evenly; 
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.801);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-left: 40px; margin-right: 40px;
+    line-height: 28px;
+}
+.sustain-img {
+    margin-top: 5px;
+    width: auto;
+    height: auto;
+}
