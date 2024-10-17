@@ -139,6 +139,113 @@
             display: block;
             margin: 20px auto; /* Centers the image */
         }
+
+
+
+
+        .slider-one {
+            text-align: center;
+        }
+
+        .slider-one h1 {
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        .slider-one hr {
+            width: 120px;
+            height: 7px;
+            background: #ecde0d;
+            border: 1px solid #ecde0d;
+            
+        }
+
+        .icons {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%; /* Slider width set to 100% */
+            position: relative;
+            margin: 50px auto; /* 50px margin from top and bottom */
+        }
+
+        .icons-slide {
+            display: inline-block;
+            animation: 30s slide infinite linear;
+            animation-play-state: running; /* Ensures the animation runs by default */
+        }
+
+        .icons-slide img {
+            height: 100px; /* Image height set to 150px */
+            margin: 0 100px; /* 100px gap between images */
+        }
+
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+
+
+
+        
+
+        .slider-two {
+            text-align: center;
+            margin-top: 120px;
+        }
+
+        .slider-two h1 {
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        .slider-two hr {
+            width: 120px;
+            height: 7px;
+            background: #ecde0d;
+            border: 1px solid #ecde0d;
+        }
+
+        .icons {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 95%; /* Slider width set to 95% */
+            position: relative;
+            margin: 50px auto; /* Centering the slider */
+        }
+
+        .icons-slide2 {
+            display: inline-block;
+            animation: 30s slide infinite linear;
+            animation-play-state: running; /* Ensures the animation runs by default */
+        }
+
+        .icons-slide2 img {
+            height: 150px;
+            margin: 0 100px;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .icons-slide:hover,
+        .icons-slide2:hover {
+            animation-play-state: paused; /* Pauses the animation on hover */
+        }
+
+
+
         
 
     </style>
@@ -199,48 +306,60 @@
             <hr>
             <img src="https://aliprintpack.com/wp-content/uploads/2023/09/SUSTAINABLE-768x363.png" alt="">
         </div>
-        <div class="slider-one">
-            <h1>BRANDS</h1>
-            <hr>
-            <div class="icons">
-                <div class="icons-slide">
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 1" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 2" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 3" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 4" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 5" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 6" >
-                </div>
-                <div class="icons-slide">
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 7" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 8" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 9" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 10" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 11" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 12" >
-                </div>
+    </div>
+    <div class="slider-one">
+        <h1>BRANDS</h1>
+        <hr>
+        <div class="icons">
+            <div class="icons-slide">
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Matalan-768x214.png" alt="Icon 1" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/PB-768x214.png" alt="Icon 2" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Primark-768x214.png" alt="Icon 3" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Target.png" alt="Icon 4" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Walmart-768x214.png" alt="Icon 5" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/BSK-768x214.png" alt="Icon 6" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Dunelm-768x283.png" alt="Icon 7" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/IKEA-768x291.png" alt="Icon 8" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/JYSK-768x291.png" alt="Icon 9" >
+            </div>
+            <div class="icons-slide">
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Matalan-768x214.png" alt="Icon 1" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/PB-768x214.png" alt="Icon 2" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Primark-768x214.png" alt="Icon 3" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Target.png" alt="Icon 4" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Walmart-768x214.png" alt="Icon 5" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/BSK-768x214.png" alt="Icon 6" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Dunelm-768x283.png" alt="Icon 7" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/IKEA-768x291.png" alt="Icon 8" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/JYSK-768x291.png" alt="Icon 9" >
             </div>
         </div>
-        <div class="slider-two">
-            <h1>CERTIFICATIONS</h1>
-            <hr>
-            <div class="icons">
-                <div class="icons-slide">
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 1" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 2" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 3" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 4" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 5" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 6" >
-                </div>
-                <div class="icons-slide">
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 7" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 8" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 9" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 10" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 11" >
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 12" >
-                </div>
+    </div>
+    <div class="slider-two">
+        <h1>CERTIFICATIONS</h1>
+        <hr>
+        <div class="icons">
+            <div class="icons-slide2">
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/GMI.png" alt="Icon 1" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/OEKO-TEX-1-768x380.png" alt="Icon 2" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Papgai-768x380.png" alt="Icon 3" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Sedex.png" alt="Icon 4" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/SGS-768x380.png" alt="Icon 5" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/APPMA.png" alt="Icon 6" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/APPMA2.png" alt="Icon 7" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/FSC.png" alt="Icon 8" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Global-RS-768x380.png" alt="Icon 9" >
+            </div>
+            <div class="icons-slide2">
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/GMI.png" alt="Icon 1" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/OEKO-TEX-1-768x380.png" alt="Icon 2" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Papgai-768x380.png" alt="Icon 3" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Sedex.png" alt="Icon 4" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/SGS-768x380.png" alt="Icon 5" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/APPMA.png" alt="Icon 6" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/APPMA2.png" alt="Icon 7" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/FSC.png" alt="Icon 8" >
+                <img src="https://aliprintpack.com/wp-content/uploads/2023/08/Global-RS-768x380.png" alt="Icon 9" >
             </div>
         </div>
     </div>
