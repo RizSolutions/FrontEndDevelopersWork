@@ -18,9 +18,15 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #ffffff;
-            height: 50px;
+            background-color:  rgba(255, 255, 255, 0.95); /* Solid white background */
+            height: 50px; /* New height */
+            position: fixed; /* Keep the header fixed at the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ensure the header spans the full width */
+            z-index: 1000; /* Ensure the header stays above other content */
         }
+
 
         .logo {
             margin-left: 5px;

@@ -12,7 +12,7 @@
             background-color: rgb(249, 252, 253);
         }
 
-
+        
 
 
 
@@ -22,11 +22,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
             color: black;
             border-bottom: 2px solid rgb(255, 255, 255);
             box-shadow: 0px 4px 6px -1px rgba(56, 152, 207, 0.5); /* Blue shadow */
+            position: fixed; /* Keep the header fixed at the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ensure the header takes full width */
+            z-index: 1000; /* Keep the header on top of other elements */
         }
+
 
         header:hover {
             box-shadow: 0px 6px 8px -2px rgba(56, 152, 207, 0.5);
@@ -73,6 +79,33 @@
             position: relative;
         }
 
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        /* Style for the dropdown links */
+        .dropdown-content a {
+            color: black;
+            padding: 8px 25px;
+            text-decoration: none;
+            display: flex;
+        }
+
+        .more-button:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
         
         .nav-img1 {
             height: 20px;
@@ -93,7 +126,7 @@
             display: flex;
             flex-direction: column;
             align-items: center; /* Center the entire section horizontally */
-            margin-top: 20px; /* Adjust the top margin as needed */
+            margin-top: 70px; /* Adjust the top margin as needed */
             text-align: center;
         }
 
@@ -149,19 +182,24 @@
             width: 250px;
             padding: 10px;
             border: 2px solid #ccc;
-            border-radius: 5px 0 0 5px;
+            border-radius: 7px 0 0 7px;
             font-size: 16px;
+            margin: 0;
+            /* Ensure the search-box and search-button borders overlap */
+            margin-right: -2px; /* Offset the gap caused by the borders */
         }
 
         .search-button {
-            padding: 10px 15px;
+            padding: 8px 15px;
             border: 2px solid #ccc;
-            border-left: none;
-            border-radius: 0 5px 5px 0;
+            border-radius: 0 7px 7px 0;
             background-color: #eee;
             font-size: 16px;
             cursor: pointer;
+            margin: 0;
         }
+
+
 
         .search-button img {
             height: 15px;
@@ -606,7 +644,7 @@
 
         .icons-slide {
             display: inline-block;
-            animation: 30s slide infinite linear;
+            animation: 40s slide infinite linear;
         }
 
         .icons-slide img {
@@ -936,745 +974,984 @@
             <a href="#"><b>Full List</b></a>
             <a href="#"><b>AI Categories</b></a>
             <a href="#"><b>AI Tutorials</b></a>
-            <button class="more-button"><b>+ More</b></button>
+            <button class="more-button"><b>+ More</b>
+                <div class="dropdown-content">
+                    <a href="aliprint.html" target="_blank">Visit ALI PtinterPack website</a>
+                </div>
+            </button>
             <a href="#"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/language-translator-icon2.webp" alt="Menu Image 2" class="nav-img2"></a>
             
             <!-- Button to open file in a new tab -->
-            <a href="aliprint.html" target="_blank">
-                <button style="padding: 5px 10px; font-size: 12px;"><b>Open File</b></button>
-            </a>
+            <img src="https://www.aixploria.com/wp-content/uploads/2023/09/dark-mode-toggle-icon-5558.webp" alt=""  style="height: 20px; width: 35px; margin-left: 20px;">
         </nav>
     </header>
     
 
 
-
-
-    <div class="top-section">
-        <div class="heading-container">
-            <a href=""><img src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-mascoot-2032.webp" alt="hundred"></a>
-            <h1><b>AI Tools Directory</b></h1>
-        </div>
-        <div class="description">
-            <p>Access the largest list of top-quality AI tools available on the web ★</p>
-        </div>
-    </div>
-    </div>
-
-
-
-    <div class="first-bar">
-        <div class="search-container">
-            <input type="text" placeholder="       Search over 5000+ AI...   " class="search-box">
-            <button type="submit" class="search-button"> <img src="https://cdn.iconscout.com/icon/free/png-512/free-search-icon-download-in-svg-png-gif-file-formats--feather-version-11-pack-user-interface-icons-434390.png?f=webp&w=256" alt=""></button>
-        </div>
-
-        <div class="media-icons">
-            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/x-social-media-round-icon-ai.webp" alt="X">
-            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/facebook-share-ai.webp" alt="Facebook">
-            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/linkedin-round-color-icon-3.webp" alt="LinkedIn">
-            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/telegram-icon-ai.webp" alt="Telegram">
-            <img src="https://www.aixploria.com/wp-content/uploads/2023/12/email-round-solid-icon.webp" alt="Email">
-        </div>
-
-        <div class="category-dropdown">
-            <select class="categories-options">
-                <option value="" disabled selected>   ---select a category---    </option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
-        </div>
-
-        <div class="glowing-buttons">
-            <button class="btn first">Free AI</button>
-            <button class="btn second">Freemium</button>
-            <button class="btn third">Paid</button>
-        </div>
-    </div>
-
-    <div class="boxy-container">
-        <div class="custom-box">
-            <div class="boxy-header"></div>
-            <div class="picture-inline"><img src="https://logodownload.org/wp-content/uploads/2019/10/adobe-photoshop-logo-2.png" alt="Profile Image">
-            <h3>Photoshop AI<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp" alt=""></span></h3></div>
-            <div class="custom-underline"></div>
-            <p>« Edit and transform your images like a pro with a set of AI tools: generative fill, generative expand..</p>
-            <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
-        </div>
-        
-        <div class="custom-box">
-            <div class="boxy-header"></div>
-            <div class="picture-inline"><img src="https://findmyaitool-rh.s3.ap-southeast-2.amazonaws.com/images/ai-tool/logo/InteriorAI-1723792479544" alt="Profile Image">
-            <h3>Interior AI<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp" alt=""></span></h3></div>
-            <div class="custom-underline"></div>
-            <p>« Transform your interior or change the design of any room using a simple photo</p>
-            <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
-        </div>
-        
-        <div class="custom-box">
-            <div class="boxy-header"></div>
-            <div class="picture-inline"><img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Profile Image">
-            <h3>HubSpot CRM<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp" alt=""></span></h3></div>
-            <div class="custom-underline"></div>
-            <p>« Optimize your sales and marketing with a particularly intuitive, AI-driven professional CRM. Track you..</p>
-            <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
-        </div>
-        
-        <div class="custom-box">
-            <div class="boxy-header"></div>
-            <div class="picture-inline"><img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Profile Image">
-            <h3>Vector Magic<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp" alt=""></span></h3></div>
-            <div class="custom-underline"></div>
-            <p>« An AI that automatically vectorizes your images and transforms them into high-quality vector graphics...</p>
-            <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
-        </div>
-    </div>
-
-
-    <hr>
-
-
-
-    <div class="boxes-inline">
-        <div class="list-box">
-            <h3 style="font-size: 15px;">Latest AI</h3>
-            <div class="rainbow-line"></div>
-            <div class="list">
-                <ul>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
-                        ChatGPT
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 2" style="width:20px; height:20px; margin-right:10px;">
-                        Claude AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 2" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 3" style="width:20px; height:20px; margin-right:10px;">
-                        Gemini AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 3" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 4" style="width:20px; height:20px; margin-right:10px;">
-                        Poe
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp" alt="After Image 4" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 5" style="width:20px; height:20px; margin-right:10px;">
-                        Microsoft Copilot
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 5" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 6" style="width:20px; height:20px; margin-right:10px;">
-                        Meta AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 6" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 7" style="width:20px; height:20px; margin-right:10px;">
-                        ChatSonic
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 7" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 8" style="width:20px; height:20px; margin-right:10px;">
-                        Le Chat by Mistral AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Payant.webp" alt="After Image 8" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 9" style="width:20px; height:20px; margin-right:10px;">
-                        Grok by xAI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 9" style="width:15px; height:15px; float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 10" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 10" style="width:15px; height:15px;  float: right;"class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 11" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 11" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 12" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 12" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 13" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 13" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 14" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 14" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 15" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 15" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 16" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 16" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 17" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 17" style="width:15px; height:15px;  float: right;"class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 18" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 18" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 19" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 19" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 20" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 20" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                </ul>                
-                
-            </div>
-            <button class="list-button">More new AI (1834) →</button>
-        </div>
-        
-        <div class="list-box">
-            <h3 style="font-size: 15px;">AIxploria Selection</h3>
-            <div class="rainbow-line"></div>
-            <div class="list">
-            <ul>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
-                    Bliro
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 2" style="width:20px; height:20px; margin-right:10px;">
-                    QuitPorn
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 2" style="width:15px; height:15px; float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 3" style="width:20px; height:20px; margin-right:10px;">
-                    Quill
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 3" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 4" style="width:20px; height:20px; margin-right:10px;">
-                    SlideSpeak AI
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp" alt="After Image 4" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 5" style="width:20px; height:20px; margin-right:10px;">
-                    Healing Journey AI
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 5" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 6" style="width:20px; height:20px; margin-right:10px;">
-                    UniFab
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 6" style="width:15px; height:15px; float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 7" style="width:20px; height:20px; margin-right:10px;">
-                    Headpix.ai
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 7" style="width:15px; height:15px; float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 8" style="width:20px; height:20px; margin-right:10px;">
-                    Humanizer AI
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Payant.webp" alt="After Image 8" style="width:15px; height:15px; float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 9" style="width:20px; height:20px; margin-right:10px;">
-                    Momen
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 9" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 10" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 10" style="width:15px; height:15px;  float: right;"class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 11" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 11" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 12" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 12" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 13" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 13" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 14" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 14" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 15" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 15" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 16" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 16" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 17" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 17" style="width:15px; height:15px;  float: right;"class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 18" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 18" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 19" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 19" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-                <li>
-                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 20" style="width:20px; height:20px; margin-right:10px;">
-                    heyLibby
-                    <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 20" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                </li>
-                <hr>
-            </ul>
-            </div>
-            <button class="list-button">See all category (40) →</button>
-        </div>
-        
-        <div class="list-box">
-            <h3 style="font-size: 15px;">SuperTools</h3>
-            <div class="rainbow-line"></div>
-            <div class="list">
-                <ul>
-                    <li></li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
-                        MidJourney V6.1
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 2" style="width:20px; height:20px; margin-right:10px;">
-                        Adobe Firefly 3
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 2" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 3" style="width:20px; height:20px; margin-right:10px;">
-                        Stable Diffusion
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 3" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 4" style="width:20px; height:20px; margin-right:10px;">
-                        Perplexity AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp" alt="After Image 4" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 5" style="width:20px; height:20px; margin-right:10px;">
-                        Infinite Craft By Neal
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 5" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 6" style="width:20px; height:20px; margin-right:10px;">
-                        Ideogram 2.0
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 6" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 7" style="width:20px; height:20px; margin-right:10px;">
-                        Lexica.art
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 7" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 8" style="width:20px; height:20px; margin-right:10px;">
-                        Runway ML
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Payant.webp" alt="After Image 8" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 9" style="width:20px; height:20px; margin-right:10px;">
-                        Civitai
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 9" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 10" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 10" style="width:15px; height:15px;  float: right;"class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 11" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 11" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 12" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 12" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 13" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 13" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 14" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 14" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 15" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 15" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 16" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 16" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 17" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 17" style="width:15px; height:15px;  float: right;"class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 18" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 18" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 19" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 19" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 20" style="width:20px; height:20px; margin-right:10px;">
-                        Globe Explorer AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 20" style="width:15px; height:15px; float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                </ul>
-                
-            </div>
-            <button class="list-button">See all category (61) →</button>
-        </div>
-        
-        <div class="list-box">
-            <h3 style="font-size: 15px;">AI Chat & Asisstant</h3>
-            <div class="rainbow-line"></div>
-            <div class="list">
-                <ul>
-                    <li></li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
-                        ChatGPT
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 2" style="width:20px; height:20px; margin-right:10px;">
-                        Claude AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 2" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 3" style="width:20px; height:20px; margin-right:10px;">
-                        Gemini AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 3" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 4" style="width:20px; height:20px; margin-right:10px;">
-                        Poe
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp" alt="After Image 4" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 5" style="width:20px; height:20px; margin-right:10px;">
-                        Microsoft Copilot
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 5" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 6" style="width:20px; height:20px; margin-right:10px;">
-                        Meta AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 6" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 7" style="width:20px; height:20px; margin-right:10px;">
-                        ChatSonic
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 7" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 8" style="width:20px; height:20px; margin-right:10px;">
-                        Le Chat by Mistral AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Payant.webp" alt="After Image 8" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 9" style="width:20px; height:20px; margin-right:10px;">
-                        Grok by xAI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 9" style="width:15px; height:15px; float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 10" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 10" style="width:15px; height:15px;  float: right;"class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 11" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 11" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 12" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 12" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 13" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 13" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 14" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 14" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 15" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 15" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 16" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 16" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 17" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 17" style="width:15px; height:15px;  float: right;"class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 18" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 18" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 19" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 19" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                    <li>
-                        <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 20" style="width:20px; height:20px; margin-right:10px;">
-                        Pi AI
-                        <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp" alt="After Image 20" style="width:15px; height:15px;  float: right;" class="icon-opacity">
-                    </li>
-                    <hr>
-                </ul>
-                
-            </div>
-            <button class="list-button">See all category (34) →</button>
-        </div>
-    </div>
-
-
-
-
-    <div class="center-button-container">
-        <button class="bar-button">SEE  THE  FULL  LIST  OF  AI</button>
-    </div>
     
 
-
-    <div class="icon-section">
-        <a href="" class="icon-heading" id="popular platforms:" target="_blank"><b>Popular platforms:</b></a>
-        <div class="icons">
-            <div class="icons-slide">
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 1" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 2" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 3" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 4" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 5" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 6" >
+            <div class="top-section">
+                <div class="heading-container">
+                    <a href=""><img src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-mascoot-2032.webp" alt="hundred"></a>
+                    <h1><b>AI Tools Directory</b></h1>
+                </div>
+                <div class="description">
+                    <p>Access the largest list of top-quality AI tools available on the web ★</p>
+                </div>
             </div>
-            <div class="icons-slide">
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 7" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 8" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 9" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 10" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 11" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 12" >
             </div>
-        </div>
-    </div>
-    
 
 
-    <div class="box-container">
-        <div class="box box1">
-            <div class="left-side">
-                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-ai-tools-directory-2024-ia.webp" alt="The World’s Best AI Tools Directory"></a>
+
+            <div class="first-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="       Search over 5000+ AI...   " class="search-box">
+                    <button type="submit" class="search-button"> <img src="https://cdn.iconscout.com/icon/free/png-512/free-search-icon-download-in-svg-png-gif-file-formats--feather-version-11-pack-user-interface-icons-434390.png?f=webp&w=256" alt=""></button>
+                </div>
+
+                <div class="media-icons">
+                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/x-social-media-round-icon-ai.webp" alt="X">
+                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/facebook-share-ai.webp" alt="Facebook">
+                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/linkedin-round-color-icon-3.webp" alt="LinkedIn">
+                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/telegram-icon-ai.webp" alt="Telegram">
+                    <img src="https://www.aixploria.com/wp-content/uploads/2023/12/email-round-solid-icon.webp" alt="Email">
+                </div>
+
+                <div class="category-dropdown">
+                    <select class="categories-options">
+                        <option value="" disabled selected>   ---select a category---    </option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+
+                <div class="glowing-buttons">
+                    <button class="btn first">Free AI</button>
+                    <button class="btn second">Freemium</button>
+                    <button class="btn third">Paid</button>
+                </div>
             </div>
-            <div class="right-side">
-                <h2 class="heading1">The World’s Best AI Tools Directory</h2>
-                <p>Aixploria is a website dedicated to artificial intelligence that allows you to discover the <b>best AI tools directory available online.</b> Our site features a selection of listings arranged in categories that make it easy for you to find AIs that meet your criteria. In fact, the largest list of sites using AI can be found on this page! Plus, this list is updated daily, so you can bookmark it so you don’t miss out on the latest news.</p>
-                <p>Lately, the site also posts articles that explain how each AI works. Found an AI tools that doesn’t appear in the list? From now on, it is possible to submit new AIs so that they can be added to the ranking or the top 10. Actually, Aixploria is a kind of directory and search engine dedicated to AI. With its simple and clean style, you easily search using keywords like on a search engine</p>
+
+            <div class="boxy-container">
+                <div class="custom-box">
+                    <div class="boxy-header"></div>
+                    <div class="picture-inline"><img src="https://logodownload.org/wp-content/uploads/2019/10/adobe-photoshop-logo-2.png" alt="Profile Image">
+                    <h3>Photoshop AI<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp" alt=""></span></h3></div>
+                    <div class="custom-underline"></div>
+                    <p>« Edit and transform your images like a pro with a set of AI tools: generative fill, generative expand..</p>
+                    <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
+                </div>
+                
+                <div class="custom-box">
+                    <div class="boxy-header"></div>
+                    <div class="picture-inline"><img src="https://findmyaitool-rh.s3.ap-southeast-2.amazonaws.com/images/ai-tool/logo/InteriorAI-1723792479544" alt="Profile Image">
+                    <h3>Interior AI<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp" alt=""></span></h3></div>
+                    <div class="custom-underline"></div>
+                    <p>« Transform your interior or change the design of any room using a simple photo</p>
+                    <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
+                </div>
+                
+                <div class="custom-box">
+                    <div class="boxy-header"></div>
+                    <div class="picture-inline"><img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Profile Image">
+                    <h3>HubSpot CRM<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon-or.webp" alt=""></span></h3></div>
+                    <div class="custom-underline"></div>
+                    <p>« Optimize your sales and marketing with a particularly intuitive, AI-driven professional CRM. Track you..</p>
+                    <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
+                </div>
+                
+                <div class="custom-box">
+                    <div class="boxy-header"></div>
+                    <div class="picture-inline"><img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Profile Image">
+                    <h3>Vector Magic<span class="blue-tick"><img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/vericon/verifiedai-icon.webp" alt=""></span></h3></div>
+                    <div class="custom-underline"></div>
+                    <p>« An AI that automatically vectorizes your images and transforms them into high-quality vector graphics...</p>
+                    <button><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="0"><b>VISIT</b></button>
+                </div>
             </div>
-        </div>
-        
-        
-        
-        
-        <div class="box box2">
-            <div class="right-side2">
-                <h2 class="heading2">Aixploria: your guide to discovering the best AI</h2>
-                <p>Other than that, the site is neat and clear, with good ergonomics to ensure you get quick results. Obviously, the site is accessible for free, without registration and is compatible with computers, tablets and mobiles.</p>
-                <p>Whether you’re looking for a machine translation tool, an image generator, or any other AI app, Aixploria offers a variety of high-quality choices. With our intuitive search engine, you can easily find the right AI for your needs. Now, we also have articles written by AI experts to help you understand the latest trends and most popular applications.</p>
+
+
+            <hr>
+
+
+
+            <div class="boxes-inline">
+                <div class="list-box">
+                    <h3 style="font-size: 15px;">Latest AI</h3>
+                    <div class="rainbow-line"></div>
+                    <div class="list">
+                        <ul>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>                    
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                        </ul>                
+                        
+                    </div>
+                    <button class="list-button">More new AI (1834) →</button>
+                </div>
+                
+                <div class="list-box">
+                    <h3 style="font-size: 15px;">AIxploria Selection</h3>
+                    <div class="rainbow-line"></div>
+                    <div class="list">
+                        <ul>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>                    
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                        </ul>
+                    </div>
+                    <button class="list-button">See all category (40) →</button>
+                </div>
+                
+                <div class="list-box">
+                    <h3 style="font-size: 15px;">SuperTools</h3>
+                    <div class="rainbow-line"></div>
+                    <div class="list">
+                        <ul>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>                    
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                        </ul>
+                        
+                    </div>
+                    <button class="list-button">See all category (61) →</button>
+                </div>
+                
+                <div class="list-box">
+                    <h3 style="font-size: 15px;">AI Chat & Asisstant</h3>
+                    <div class="rainbow-line"></div>
+                    <div class="list">
+                        <ul>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>                    
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                            <li style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://logos.prod-v1.vertice.one/0079f31a-400f-5c0b-8b12-fc86c5177e46.svg" alt="Before Image 1" style="width:20px; height:20px; margin-right:10px;">
+                                    <div class="fonts" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;">ChatGPT</div>
+                                </div>
+                                <img src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp" alt="After Image 1" style="width:15px; height:15px;" class="icon-opacity">
+                            </li>
+                            
+                            <hr>
+                        </ul>
+                        
+                    </div>
+                    <button class="list-button">See all category (34) →</button>
+                </div>
             </div>
-            <div class="left-side2">
-                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/ai-assistant-guide-aixploria-2.webp" alt="Aixploria: your guide to discovering the best AI"></a>
+
+
+
+
+            <div class="center-button-container">
+                <button class="bar-button">SEE  THE  FULL  LIST  OF  AI</button>
             </div>
-        </div>
-        
-        
-        
-        
-        <div class="box box3">
-            <div class="left-side">
-                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/top10-best-ai-aixploria-3.webp" alt="Top 10 best AI tools on the Aixploria website"></a>
+            
+
+
+            <div class="icon-section">
+                <a href="" class="icon-heading" id="popular platforms:" target="_blank"><b>Popular platforms:</b></a>
+                <div class="icons">
+                    <div class="icons-slide">
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 1" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 2" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 3" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 4" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 5" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 6" >
+                    </div>
+                    <div class="icons-slide">
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/google-ai-2.webp" alt="Icon 7" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/openai-ai-logo-2.webp" alt="Icon 8" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/meta-ai-2.webp" alt="Icon 9" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/microsoft-ai-2.webp" alt="Icon 10" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/stability-ai-logo-2.webp" alt="Icon 11" >
+                        <img src="https://www.aixploria.com/wp-content/uploads/2023/12/deepmind-ai-logo-2.webp" alt="Icon 12" >
+                    </div>
+                </div>
             </div>
-            <div class="right-side">
-                <h2 class="heading3">Top 10 best AI</h2>
-                <p>We have compiled a list of the <b>top 10 best AI tools</b> on the Aixploria website, based on user reviews, ratings, and popularity. This list is updated regularly to ensure that you have access to the most relevant and effective AI tools on the market. Each tool is evaluated based on its features, ease of use, and overall performance, making it easier for you to choose the right tool for your needs.</p>
-                <p>So, whether you’re a beginner or an experienced AI user, this top 10 list will help you find the best tools to enhance your productivity and creativity.</p>
-            </div>
-        </div>
+            
+
+
+            <div class="box-container">
+                <div class="box box1">
+                    <div class="left-side">
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/aixploria-ai-tools-directory-2024-ia.webp" alt="The World’s Best AI Tools Directory"></a>
+                    </div>
+                    <div class="right-side">
+                        <h2 class="heading1">The World’s Best AI Tools Directory</h2>
+                        <p>Aixploria is a website dedicated to artificial intelligence that allows you to discover the <b>best AI tools directory available online.</b> Our site features a selection of listings arranged in categories that make it easy for you to find AIs that meet your criteria. In fact, the largest list of sites using AI can be found on this page! Plus, this list is updated daily, so you can bookmark it so you don’t miss out on the latest news.</p>
+                        <p>Lately, the site also posts articles that explain how each AI works. Found an AI tools that doesn’t appear in the list? From now on, it is possible to submit new AIs so that they can be added to the ranking or the top 10. Actually, Aixploria is a kind of directory and search engine dedicated to AI. With its simple and clean style, you easily search using keywords like on a search engine</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="box box2">
+                    <div class="right-side2">
+                        <h2 class="heading2">Aixploria: your guide to discovering the best AI</h2>
+                        <p>Other than that, the site is neat and clear, with good ergonomics to ensure you get quick results. Obviously, the site is accessible for free, without registration and is compatible with computers, tablets and mobiles.</p>
+                        <p>Whether you’re looking for a machine translation tool, an image generator, or any other AI app, Aixploria offers a variety of high-quality choices. With our intuitive search engine, you can easily find the right AI for your needs. Now, we also have articles written by AI experts to help you understand the latest trends and most popular applications.</p>
+                    </div>
+                    <div class="left-side2">
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/ai-assistant-guide-aixploria-2.webp" alt="Aixploria: your guide to discovering the best AI"></a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="box box3">
+                    <div class="left-side">
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/top10-best-ai-aixploria-3.webp" alt="Top 10 best AI tools on the Aixploria website"></a>
+                    </div>
+                    <div class="right-side">
+                        <h2 class="heading3">Top 10 best AI</h2>
+                        <p>We have compiled a list of the <b>top 10 best AI tools</b> on the Aixploria website, based on user reviews, ratings, and popularity. This list is updated regularly to ensure that you have access to the most relevant and effective AI tools on the market. Each tool is evaluated based on its features, ease of use, and overall performance, making it easier for you to choose the right tool for your needs.</p>
+                        <p>So, whether you’re a beginner or an experienced AI user, this top 10 list will help you find the best tools to enhance your productivity and creativity.</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="box box4">
+                    <div class="right-side2">
+                        <h2 class="heading4">A website for all AI enthusiasts and aficionados</h2>
+                        <p>In addition to our AI tools directory, Aixploria also offers a wide range of <b>articles and tutorials</b> to help you get the most out of your AI experience. Our team of experts regularly publishes content on the latest AI trends, tips for using specific tools, and step-by-step guides to help you master the technology.</p>
+                        <p>Whether you’re interested in learning about AI image generation, natural language processing, or any other aspect of artificial intelligence, you’ll find valuable resources on Aixploria. Our goal is to empower you with the knowledge and skills to harness the full potential of AI.</p>
+                    </div>
+                    <div class="left-side2">
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/fan-ai-aixploria-3.webp" alt="Articles & Tutorials: Learn how to use AI tools"></a>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="box box5">
+                    <div class="left-side">
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/aixploria-mascoot-ai-44.webp" alt="AI Technology Directory"></a>
+                    </div>
+                    <div class="right-side">
+                        <h2 class="heading5">Why come to this AI tools directory?</h2>
+                        <p>Aixploria’s AI Technology Directory provides an extensive database of AI tools, technologies, and platforms. Whether you’re searching for AI software for business automation, creative projects, or educational purposes, our directory offers an in-depth look at the most advanced solutions available.</p>
+                        <p>Explore the AI Technology Directory to find the right tools for your projects, and stay ahead of the curve with the latest AI advancements. The directory is regularly updated to reflect the most recent developments in AI technology.</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="box box6">
+                    <div class="right-side2">
+                        <h2 class="heading6">Contribute to the community by sharing your findings on Aixploria</h2>
+                        <p>Aixploria values the opinions of its users, and we encourage you to share your experiences with the AI tools listed in our directory. By leaving a review or rating, you can help others make informed decisions about which tools to use.</p>
+                        <p>Read user reviews and ratings to gain insights into the pros and cons of each AI tool. This feedback system ensures that our directory remains a reliable resource for finding the best AI solutions for your needs.</p>
+                        <p class="thankyou-line">Thank you for reading and for your support. See you on Aixploria!</p>
+                    </div>
+                    <div class="left-side2">
+                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/community-aixploria-share-ai-2.webp" alt="User Reviews and Ratings"></a>
+                    </div>
+                </div>
         
-        
-        
-        
-        <div class="box box4">
-            <div class="right-side2">
-                <h2 class="heading4">A website for all AI enthusiasts and aficionados</h2>
-                <p>In addition to our AI tools directory, Aixploria also offers a wide range of <b>articles and tutorials</b> to help you get the most out of your AI experience. Our team of experts regularly publishes content on the latest AI trends, tips for using specific tools, and step-by-step guides to help you master the technology.</p>
-                <p>Whether you’re interested in learning about AI image generation, natural language processing, or any other aspect of artificial intelligence, you’ll find valuable resources on Aixploria. Our goal is to empower you with the knowledge and skills to harness the full potential of AI.</p>
-            </div>
-            <div class="left-side2">
-                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/fan-ai-aixploria-3.webp" alt="Articles & Tutorials: Learn how to use AI tools"></a>
-            </div>
-        </div>
-        
-        
-        
-        <div class="box box5">
-            <div class="left-side">
-                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/aixploria-mascoot-ai-44.webp" alt="AI Technology Directory"></a>
-            </div>
-            <div class="right-side">
-                <h2 class="heading5">Why come to this AI tools directory?</h2>
-                <p>Aixploria’s AI Technology Directory provides an extensive database of AI tools, technologies, and platforms. Whether you’re searching for AI software for business automation, creative projects, or educational purposes, our directory offers an in-depth look at the most advanced solutions available.</p>
-                <p>Explore the AI Technology Directory to find the right tools for your projects, and stay ahead of the curve with the latest AI advancements. The directory is regularly updated to reflect the most recent developments in AI technology.</p>
-            </div>
-        </div>
-        
-        
-        
-        
-        <div class="box box6">
-            <div class="right-side2">
-                <h2 class="heading6">Contribute to the community by sharing your findings on Aixploria</h2>
-                <p>Aixploria values the opinions of its users, and we encourage you to share your experiences with the AI tools listed in our directory. By leaving a review or rating, you can help others make informed decisions about which tools to use.</p>
-                <p>Read user reviews and ratings to gain insights into the pros and cons of each AI tool. This feedback system ensures that our directory remains a reliable resource for finding the best AI solutions for your needs.</p>
-                <p class="thankyou-line">Thank you for reading and for your support. See you on Aixploria!</p>
-            </div>
-            <div class="left-side2">
-                <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/12/community-aixploria-share-ai-2.webp" alt="User Reviews and Ratings"></a>
-            </div>
-        </div>
 
 
         <footer class="aixploria-footer">
