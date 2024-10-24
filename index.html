@@ -83,7 +83,7 @@
 
         img.bookmark,
         .translate,
-        .navopt {
+        .navopt .mode {
           margin-left: 15px;
         }
 
@@ -101,9 +101,10 @@
       }
 
       @media (max-width: 480px) {
-        img.bookmark,
+        .bookmark,
         .translate,
-        .navopt {
+        div.navopt a,
+        .mode {
           display: none;
         }
 
@@ -184,7 +185,7 @@
       .box {
         width: 80%;
         height: auto;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
         border-radius: 50px;
         padding: 50px;
         display: flex;
@@ -280,13 +281,16 @@
       }
 
       /* Responsive Styling */
-      @media (max-width: 900px) {
+      @media (max-width: 1200px) {
         .img-container1,
         .img-container2,
         .img-container3,
         .img-container4,
         .img-container5,
         .img-container6 {
+          width: 100%;
+        }
+        .boxes {
           width: 100%;
         }
 
@@ -305,7 +309,7 @@
       }
 
       /* Additional responsiveness for screens smaller than 500px */
-      @media (max-width: 500px) {
+      @media (max-width: 480px) {
         .box {
           padding: 20px;
         }
@@ -942,7 +946,18 @@
         padding-bottom: 5px;
         margin-left: 30px;
       }
-
+      .cc:hover {
+        background-color: rgb(254, 229, 254);
+      }
+      .ch:hover,
+      .va:hover {
+        background-color: rgb(255, 243, 213);
+      }
+      .aq:hover,
+      .pa:hover,
+      .ap:hover {
+        background-color: rgba(220, 255, 214, 0.998);
+      }
       .load-more {
         text-align: center;
         margin-top: 25px;
@@ -1115,6 +1130,12 @@
       .dropdown:hover .dropdown-menu {
         display: block;
       }
+      .link-sitia {
+        opacity: 0.3;
+      }
+      .link-sitia:hover {
+        opacity: 1;
+      }
     </style>
   </head>
 
@@ -1136,18 +1157,18 @@
           height="22px"
         />
       </a>
-      <span class="navopt" style="display: flex; margin-left: -8px">
-        <div class="dropdown">
+      <div class="navopt" style="display: flex; margin-left: -8px">
+        <span class="dropdown">
           <a href="#" class="nav-link" style="margin-left: 27px">Full List</a>
-          <div class="dropdown-menu">
+          <span class="dropdown-menu">
             <a href="#">AI Xploria demo</a>
             <a href="./aliprint.html">Ali Printpack demo</a>
-          </div>
-        </div>
+          </span>
+        </span>
         <a href="#">AI Categories</a>
         <a href="#">AI Tutorials</a>
         <a href="#">+ More</a>
-      </span>
+      </div>
       <a href="#" style="text-decoration: none">
         <img
           class="translate"
@@ -1507,8 +1528,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  ContractCrab
+                  /><span class="cc"> ContractCrab</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
@@ -1527,8 +1547,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Vadoo AI
+                  /><span class="va"> Vadoo AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -1548,8 +1567,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Anthropic Quickstarts
+                  /><span class="aq"> Anthropic Quickstarts</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1568,8 +1586,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Paradigm AI
+                  /><span class="pa"> Paradigm AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1588,8 +1605,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Altera PlayLabs
+                  /><span class="ap"> Altera PlayLabs</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1608,8 +1624,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Course Hero
+                  /><span class="ch"> Course Hero</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -1628,8 +1643,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  ContractCrab
+                  /><span class="cc"> ContractCrab</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
@@ -1648,8 +1662,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Vadoo AI
+                  /><span class="va"> Vadoo AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -1669,8 +1682,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Anthropic Quickstarts
+                  /><span class="aq"> Anthropic Quickstarts</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1689,8 +1701,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Paradigm AI
+                  /><span class="pa"> Paradigm AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1709,8 +1720,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Altera PlayLabs
+                  /><span class="ap"> Altera PlayLabs</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1729,8 +1739,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Course Hero
+                  /><span class="ch"> Course Hero</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -1799,8 +1808,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  ContractCrab
+                  /><span class="cc"> ContractCrab</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
@@ -1819,8 +1827,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Vadoo AI
+                  /><span class="va"> Vadoo AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -1840,8 +1847,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Anthropic Quickstarts
+                  /><span class="aq"> Anthropic Quickstarts</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1860,8 +1866,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Paradigm AI
+                  /><span class="pa"> Paradigm AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1880,8 +1885,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Altera PlayLabs
+                  /><span class="ap"> Altera PlayLabs</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1900,8 +1904,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Course Hero
+                  /><span class="ch"> Course Hero</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -1920,8 +1923,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  ContractCrab
+                  /><span class="cc"> ContractCrab</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
@@ -1940,8 +1942,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Vadoo AI
+                  /><span class="va"> Vadoo AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -1961,8 +1962,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Anthropic Quickstarts
+                  /><span class="aq"> Anthropic Quickstarts</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -1981,8 +1981,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Paradigm AI
+                  /><span class="pa"> Paradigm AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2001,8 +2000,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Altera PlayLabs
+                  /><span class="ap"> Altera PlayLabs</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2021,8 +2019,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Course Hero
+                  /><span class="ch"> Course Hero</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -2084,8 +2081,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  ContractCrab
+                  /><span class="cc"> ContractCrab</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
@@ -2104,8 +2100,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Vadoo AI
+                  /><span class="va"> Vadoo AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -2125,8 +2120,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Anthropic Quickstarts
+                  /><span class="aq"> Anthropic Quickstarts</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2145,8 +2139,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Paradigm AI
+                  /><span class="pa"> Paradigm AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2165,8 +2158,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Altera PlayLabs
+                  /><span class="ap"> Altera PlayLabs</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2185,8 +2177,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Course Hero
+                  /><span class="ch"> Course Hero</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -2205,8 +2196,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  ContractCrab
+                  /><span class="cc"> ContractCrab</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
@@ -2225,8 +2215,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Vadoo AI
+                  /><span class="va"> Vadoo AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -2246,8 +2235,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Anthropic Quickstarts
+                  /><span class="aq"> Anthropic Quickstarts</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2266,8 +2254,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Paradigm AI
+                  /><span class="pa"> Paradigm AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2286,8 +2273,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Altera PlayLabs
+                  /><span class="ap"> Altera PlayLabs</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2306,8 +2292,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Course Hero
+                  /><span class="ch"> Course Hero</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -2366,8 +2351,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  ContractCrab
+                  /><span class="cc"> ContractCrab</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
@@ -2386,8 +2370,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Vadoo AI
+                  /><span class="va"> Vadoo AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -2407,8 +2390,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Anthropic Quickstarts
+                  /><span class="aq"> Anthropic Quickstarts</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2427,8 +2409,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Paradigm AI
+                  /><span class="pa"> Paradigm AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2447,8 +2428,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Altera PlayLabs
+                  /><span class="ap"> Altera PlayLabs</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2467,8 +2447,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Course Hero
+                  /><span class="ch"> Course Hero</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -2487,8 +2466,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  ContractCrab
+                  /><span class="cc"> ContractCrab</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Essai-Gratuit.webp"
@@ -2507,8 +2485,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Vadoo AI
+                  /><span class="va"> Vadoo AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
@@ -2528,8 +2505,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Anthropic Quickstarts
+                  /><span class="aq"> Anthropic Quickstarts</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2548,8 +2524,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Paradigm AI
+                  /><span class="pa"> Paradigm AI</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2568,8 +2543,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Altera PlayLabs
+                  /><span class="ap"> Altera PlayLabs</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Gratuit.webp"
@@ -2588,8 +2562,7 @@
                     alt=""
                     width="17px"
                     height="16px"
-                  />
-                  Course Hero
+                  /><span class="ch"> Course Hero</span>
                   <span class="websites-type-Gratuit">
                     <img
                       src="https://www.aixploria.com/wp-content/uploads/2023/07/links-ai-Freemium.webp"
