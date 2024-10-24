@@ -134,7 +134,7 @@ h1 {width: 200px;
     text-align: center;}
 
 .horizontal-list {
-    width: 1350px;
+    width: 100%;
     display:flex;
     margin-top: 60px;
     align-items: center;
@@ -998,6 +998,7 @@ h2 {
 }
 
 .Bottom-Footer {
+    justify-content: center;
     background: #06223b;
     width: 100%;
     padding-left: 0;
@@ -1012,6 +1013,8 @@ h2 {
 }
 
 .Footer-main-container {
+   
+    text-align: center;
     width: auto;
     padding-top: 0;
     padding-bottom: 0;
