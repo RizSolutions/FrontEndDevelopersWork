@@ -161,6 +161,7 @@ h3 { width: auto;
     padding: 10px; }
 
 .crousal {
+    margin-left: 10px;
     display: block;
     overflow: hidden;
     width: 100%;
@@ -169,25 +170,28 @@ h3 { width: auto;
      }
 .carousal-ul {
     vertical-align: middle;
-    width: 200%;
+    width: 300%;
     overflow: hidden;
     display: flex;
     list-style: none;
     animation:slide 60s ease-in-out infinite;
-    gap: 50px; }
+    gap: 60px; }
 @keyframes slide {
     0% { transform: translateX(0);}
     100% { transform: translateX(calc(-100%));}
 }
 .carousal-li {
-    vertical-align: bottom;
-    height: auto;
+    vertical-align: middle;
+    padding: auto;
+    margin-bottom: 10px;
 }
 .carousal-img {
    width: 230px;
    height: auto;
+   margin-top: 0px;
    margin-right: auto;
    margin-left: auto;
+   margin-bottom: 0%;
 }   
 
 .contact-div {
