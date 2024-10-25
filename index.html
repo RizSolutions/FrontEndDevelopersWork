@@ -677,7 +677,7 @@
         .box {
             width: 82%;
             height: 540px;
-            margin-bottom: 100px;
+            margin-bottom: 40px;
             border-radius: 50px;
             position: relative;
             display: flex;
@@ -848,114 +848,111 @@
         }
 
         .aixploria-footer {
-        background-color: #202125;
+        background-color: #06223b;
         color: #ccc;
         font-family: Arial, sans-serif;
         width: 100%;
+        height: 430px;
         }
 
         .footer-top {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        max-width: 100%;
-        margin: 0 100px;
+            display: flex;
+            width: 80%;
+            margin-left: 145px;
+            gap: 62px;
+            margin-top: 50px;
+            border-bottom: 1px solid #3e5964;
         }
 
-        .footer-column {
-        width: 30%;
-        min-width: 200px;
-        margin-bottom: 20px;
+        .footer-column{
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
         }
 
-        .footer-column h3 {
-        color: #fff;
-        margin-bottom: 15px;
+        .picture  {
+            height: 45px;
+            width: 200px;
+            margin-left: 20px;
         }
 
-        .footer-column p,
-        .footer-column a {
-        color: #ccc;
-        text-decoration: none;
-        font-size: 0.9em;
+        .footer-column p {
+            margin-top: 5px;
         }
 
-        .footer-column a:hover {
-        text-decoration: underline;
+        .picture2 {
+            height: 15px;
+            width: 20px;
+            margin-left: 50px;
+            border-radius: 3px;
         }
 
-        .footer-column ul {
-        list-style: none;
-        padding: 0;
+        .footer-column1,
+        .footer-column2,
+        .footer-column3{
+            justify-content: center;
+            align-items: center;
         }
 
-        .footer-column ul li {
-        margin-bottom: 10px;
+        .footer-column1 li,
+        .footer-column2 li,
+        .footer-column3 li {
+            display: flex;
         }
 
-        .social-icons {
-        display: flex;
-        gap: 15px;
+        .footer-column1 li a,
+        .footer-column2 li a,
+        .footer-column3 li a {
+            color: #adb3c4; /* Set the desired color */
+            text-decoration: none; /* Remove underline */
+            font-size: 14px;
+            display: block;
+            padding: 13px;
         }
 
-        .social-icons img {
-        width: 30px;
-        height: 30px;
-        filter: grayscale(100%);
-        transition: filter 0.3s ease;
-        }
-
-        .social-icons img:hover {
-        filter: grayscale(0%);
+        .footer-column1 h3,
+        .footer-column2 h3,
+        .footer-column3 h3 {
+            margin-left: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 6px;
         }
 
         .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid #333;
-        margin: 40px 100px;
-        }
-
-        .footer-logo img {
-        width: 150px;
+            justify-content: center;
+            align-items: center;
         }
 
         .footer-text {
-        font-size: 0.9em;
+            display: flex;
+            margin-left: 130px;
+            gap: 20px;
+            font-size: 14px;
         }
 
         .footer-text a {
-        color: #fff;
-        text-decoration: none;
+            margin-top: 14px;
+            text-decoration: none;
+            color: #adb3c4;
         }
 
-        .footer-text a:hover {
-        text-decoration: underline;
+        .footer-threads {
+
         }
 
-        @media (max-width: 768px) {
-        .footer-top {
-            flex-direction: column;
-            align-items: center;
-        }
         
-        .footer-column {
-            width: 100%;
-            text-align: center;
-        }
 
-        .footer-bottom {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+        
 
-        .footer-logo img {
-            margin-bottom: 10px;
-        }
-        }
+        
 
+
+
+        
+
+        
 
 
     </style>
@@ -1956,41 +1953,52 @@
 
         <footer class="aixploria-footer">
             <div class="footer-top">
-                <div class="footer-column contact">
-                    <h3>Contact</h3>
-                    <p>Email: <a href="mailto:info@aixploria.com">info@aixploria.com</a></p>
-                    <p>Phone: +123 456 7890</p>
-                    <p>Address: 123 Street Name, City, Country</p>
+                <div class="footer-column">
+                    <img src="https://www.aixploria.com/wp-content/uploads/2023/09/logo-light-aixploria-3.webp" alt="....." class="picture">
+                    <p>Artificial intelligence for everyone</p>
+                    <img src="https://www.aixploria.com//wp-content/uploads/2023/12/icon-lang-english-us.webp" alt="....." class="picture2"><img src="https://www.aixploria.com//wp-content/uploads/2023/12/icon-lang-fr.webp" alt="....." class="picture2">
                 </div>
         
-                <div class="footer-column links">
-                    <h3>Quick Links</h3>
+                <div class="footer-column1">
+                    <h3><u>Resources</u></h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Tutorials, tips and blog</a></li>
+                        <li><a href="#">AI Conferences Agenda</a></li>
+                        <li><a href="#">AI Glossary & Lexicon</a></li>
                     </ul>
                 </div>
-        
-                <div class="footer-column social">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="Facebook"></a>
-                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="Twitter"></a>
-                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="Instagram"></a>
-                        <a href="#"><img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="LinkedIn"></a>
-                    </div>
+                <div class="footer-column2">
+                    <h3><u>Useful Tools</u></h3>
+                    <ul>
+                        <li><a href="#">Best AI Youtube Channels</a></li>
+                        <li><a href="#">Top 100 AI</a></li>
+                        <li><a href="#">GPTs List</a></li>
+                        <li><a href="#">Hubspot AI Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column3">
+                    <h3><u>Company</u></h3>
+                    <ul>
+                        <li><a href="#">Submit an AI Tool</a></li>
+                        <li><a href="#">Add a GPT</a></li>
+                        <li><a href="#">Submit an AI Event</a></li>
+                        <li><a href="#">Update your tool</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Feature your tool ★</a></li>
+                    </ul>
                 </div>
             </div>
-        
+            
             <div class="footer-bottom">
-                <div class="footer-logo">
-                    <img src="https://www.aixploria.com/wp-content/themes/xwp-directory/images/aixploria-logo.svg" alt="Aixploria Logo">
-                </div>
                 <div class="footer-text">
-                    <p>&copy; 2024 Aixploria. All rights reserved. | <a href="#">Privacy Policy</a></p>
+                    <p>© 2024 Aixploria. All rights reserved </p>
+                    <a href="">Cookie Policy</a>
+                    <a href="">Conditions of use</a>
+                    <a href="">Legals informations</a>
+                </div>
+                <div class="footer-threads">
+                    
+                    
                 </div>
             </div>
         </footer>
