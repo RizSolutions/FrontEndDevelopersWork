@@ -8,6 +8,11 @@
       href="https://www.aixploria.com/wp-content/uploads/2023/11/faviconV22.webp"
       type="image/webp"
     />
+    <link
+      rel="stylesheet"
+      href="./responsive.css
+    "
+    />
     <title>
       AI Tools Directory & List of Best Free AI by Category (Top 10) | Aixploria
     </title>
@@ -16,12 +21,14 @@
         padding: 0;
         margin: 0;
       }
-
+      html {
+        overflow-x: hidden;
+        width: 100%;
+      }
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        width: 98.75vw; /* Full width of the viewport */
         box-sizing: border-box;
       }
       header {
@@ -76,59 +83,6 @@
       }
 
       /* Media query for smaller screens */
-      @media (max-width: 1280px) {
-        img.icon {
-          margin-left: 40px;
-        }
-
-        img.bookmark,
-        .translate,
-        .navopt .mode {
-          margin-left: 15px;
-        }
-
-        .navopt a {
-          margin-left: 10px;
-          font-size: 14px;
-        }
-
-        header {
-          padding: 5px 10px;
-        }
-        .boxes p {
-          font-size: 11px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .bookmark,
-        .translate,
-        div.navopt a,
-        .mode {
-          display: none;
-        }
-
-        header {
-          justify-content: center;
-        }
-
-        img.icon {
-          margin-left: 0;
-        }
-      }
-      @media (max-width: 1000px) {
-        main {
-          width: 100%;
-          padding: 5px;
-        }
-      }
-
-      @media (max-width: 300px) {
-        main {
-          width: 100%;
-          padding: 2px;
-        }
-      }
 
       main {
         margin-top: -20px;
@@ -334,11 +288,6 @@
           text-align: center; /* Center the text container on smaller screens */
         }
 
-        img {
-          width: 100%;
-          height: auto;
-        }
-
         .greeting-end {
           font-size: 14px;
         }
@@ -411,10 +360,10 @@
         justify-content: center;
         width: 90%;
         margin-left: 55px;
-        height: 70px;
         align-items: center;
         gap: 55px;
         margin-top: 60px;
+        flex-wrap: wrap;
       }
       .search-box {
         display: flex;
@@ -662,6 +611,7 @@
         padding-top: 35px;
         gap: 25px;
         width: 100%;
+        flex-wrap: wrap;
       }
 
       .new-items {
@@ -828,6 +778,7 @@
         padding-top: 33px;
         gap: 27px;
         width: 100%;
+        flex-wrap: wrap;
       }
 
       .grid-items {
@@ -986,10 +937,8 @@
         position: sticky;
         background: #06223b;
         padding: 5px 0;
-        height: 385px;
         font-size: 16px;
         color: #fff;
-        width: 100%;
         border-top: 2px solid #a9a9a900;
         text-align: center;
         padding-top: 50px;
@@ -999,6 +948,7 @@
       }
       .container {
         margin: 0 80px 0 80px;
+        flex-wrap: wrap;
       }
       .grid-footer {
         padding-bottom: 33px;
