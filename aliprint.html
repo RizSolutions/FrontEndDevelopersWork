@@ -430,9 +430,60 @@
             margin-top: 150px;
         }
 
+        /* Heading Styles */
+        .info h2, .links h2 {
+        font-family: Quicksand;
+        font-size: 20px;
+        color: white;
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        }
+
+        /* Decorative Lines for Headings */
+        .info h2::after, .links h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1.5px;
+        background: #22bdfb; /* Blue line */
+        }
+
+        .info h2::after {
+        width: 15%;
+        }
+
+        .info h2::before {
+        content: "";
+        position: absolute;
+        left: 15%;
+        bottom: 0;
+        height: 1.5px;
+        width: 28%;
+        background: rgb(51, 51, 51); /* Light grey line */
+        }
+
+        .links h2::after {
+        width: 50%;
+        }
+
+        .links h2::before {
+        content: "";
+        position: absolute;
+        left: 30%;
+        bottom: 0;
+        height: 1.5px;
+        width: 110%;
+        background: rgb(51, 51, 51); /* Light grey line */
+        }
 
 
 
+
+
+
+        
 
 
 
@@ -470,32 +521,25 @@
             gap: 10px; /* Optional spacing between buttons */
         }
 
-        .blue-buttons {
-            padding: 40px 60px;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px; /* Optional spacing between buttons */
-        }
-
         .blue-buttons button {
             padding: 18px 25px;
             border-radius: 30px; /* Makes the buttons oval */
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: transform 0.3s ease; /* Smooth transition */
         }
 
         .wp, .f, .t, .in {
-            width: 60px; /* Adjusted width for oval shape */
-            height: 40px; /* Adjusted height for oval shape */
+            width: 60px; /* Width for oval shape */
+            height: 40px; /* Height for oval shape */
             border: none;
             border-radius: 20px; /* Ensures an oval shape */
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 4px;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
         }
 
         .wp {
@@ -503,9 +547,7 @@
         }
 
         .wp:hover {
-            width: 62px; /* Adjusted width for oval shape */
-            height: 41px;
-            background-color: rgba(8, 218, 8, 0.582);
+            transform: scale(1.25); /* Slightly enlarges on hover */
         }
 
         .f {
@@ -513,9 +555,7 @@
         }
 
         .f:hover {
-            width: 62px; /* Adjusted width for oval shape */
-            height: 41px;
-            background-color:  #007bb5;
+            transform: scale(1.25);
         }
 
         .t {
@@ -523,9 +563,7 @@
         }
 
         .t:hover {
-            width: 62px; /* Adjusted width for oval shape */
-            height: 41px;
-            background-color:#0099ff;
+            transform: scale(1.25);
         }
 
         .in {
@@ -533,9 +571,7 @@
         }
 
         .in:hover {
-            width: 62px; /* Adjusted width for oval shape */
-            height: 41px;
-            background-color: #00299bc2;
+            transform: scale(1.25);
         }
 
         .wp svg, .f svg, .t svg, .in svg {
@@ -798,7 +834,14 @@
     </div>
 
     <div class="footer-box">
-        
+        <div class="info">
+            <h2>Contact Info</h2>
+          </div>
+          
+          <div class="links">
+            <h2>Links</h2>
+          </div>          
+          
     </div>
 
 
