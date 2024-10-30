@@ -33,7 +33,6 @@
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
     body,
     html {
@@ -205,7 +204,7 @@
     }
     .Brands-list,
     .Certifications-list {
-      width: 100%;
+      width: 80%;
       overflow: hidden; /* Ensure only 4 logos are visible */
     }
 
@@ -243,13 +242,13 @@
       }
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       .Brands-list,
       .Certifications-list {
         width: calc(
-          (270px * 4) + (50px * 4)
-        ); /* Show 4 logos at a time with appropriate gaps */
-        margin-left: 50px; /* Adds white space on the left */
+          (1200px))
+        ; /* Show 4 logos at a time with appropriate gaps */
+        margin-left: 70px; /* Adds white space on the left */
         /* Alternatively, you could use padding-left for inner spacing */
       }
     }
@@ -362,15 +361,15 @@
         #28ace2 -25%,
         #28ace2 140%
       ) !important;
-      width: 1140px;
+      max-width: 80%;
       justify-content: left;
       margin-left: 105px;
       padding: 30px 20px;
       align-items: center;
       gap: 70px;
       border-radius: 10px;
-      margin-top: 80px;
-      height: 145px;
+      margin-top: 11%;
+      height: 20%;
     }
     .written {
       width: 35%;
@@ -438,9 +437,13 @@
     /* Smooth scrolling */
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
     li {
       list-style: none;
+    }
+    main{
+      width: 100%;
     }
   </style>
   <body>
