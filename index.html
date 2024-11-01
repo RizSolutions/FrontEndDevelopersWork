@@ -56,9 +56,14 @@
         box-shadow: 0px 4px 16px rgba(41, 118, 163, 0.7);
       }
 
-      img.bookmark {
+      .bookmark {
         margin-left: 360px;
         margin-bottom: -5px;
+      }
+      @media (max-width: 1024px) {
+        .bookmark {
+          margin-left: 0px;
+        }
       }
       .translate {
         margin-left: 30px; /* Initial gap */
@@ -120,6 +125,14 @@
         text-align: center;
         margin-bottom: 17px;
         margin-top: 20px;
+      }
+      @media (max-width: 375px) {
+        .title-name {
+          font-size: 25px;
+        }
+        .slogan {
+          font-size: 16px;
+        }
       }
 
       .slogan {
@@ -263,7 +276,7 @@
       }
 
       /* Additional responsiveness for screens smaller than 500px */
-      @media (max-width: 480px) {
+      @media (max-width: 425px) {
         .box {
           padding: 20px;
         }
@@ -275,7 +288,6 @@
 
         p {
           font-size: 16px;
-          margin: 10px 0;
           text-align: center; /* Center the text on smaller screens */
         }
 
@@ -291,8 +303,10 @@
         .greeting-end {
           font-size: 14px;
         }
-        .scroll-platform,
-        .scroll-header-platform span {
+      }
+      @media (max-width: 425px) {
+        .tooltips,
+        .scroll-list-platform li {
           display: none;
         }
       }
@@ -303,7 +317,7 @@
         font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial,
           sans-serif;
         font-size: 16px;
-        margin-top: 189px;
+        margin-top: 10%;
         display: flex;
         align-items: start;
       }
@@ -359,10 +373,10 @@
         display: flex;
         justify-content: center;
         width: 90%;
-        margin-left: 55px;
+        margin-left: 5%;
         align-items: center;
         gap: 55px;
-        margin-top: 60px;
+        margin-top: 70px;
         flex-wrap: wrap;
       }
       .search-box {
@@ -424,6 +438,11 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
           helvetica neue, Arial, sans-serif;
         font-size: 15px;
+      }
+      @media (max-width: 400px) {
+        .selectionbar {
+          display: none;
+        }
       }
       .Option1 {
         text-align: center;
@@ -550,7 +569,7 @@
       .button-full-list {
         font-size: 15px;
         letter-spacing: 2px;
-        width: 350px;
+        width: 25%;
         text-transform: uppercase;
         display: block;
         text-align: center;
@@ -581,7 +600,11 @@
         align-content: center;
         justify-content: space-evenly;
       }
-
+      @media (max-width: 768px) {
+        .button-full-list {
+          display: none;
+        }
+      }
       .button-full-list:before {
         transition: all 0.5s ease;
         position: absolute;
@@ -952,11 +975,14 @@
       }
       .grid-footer {
         padding-bottom: 33px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
         gap: 14px;
         width: 100%;
         font-size: 15px;
+        margin-left: 30px;
+      }
+      .ftr-list {
+        flex-wrap: wrap;
+        gap: 65px;
       }
       .item-foot {
         width: 100%;
@@ -2872,192 +2898,204 @@
     <footer>
       <div class="container">
         <div class="grid-footer">
-          <div class="item-foot">
-            <div class="site-brand">
-              <img
-                decoding="async"
-                loading="lazy"
-                src="https://www.aixploria.com/wp-content/uploads/2023/09/logo-light-aixploria-3.webp"
-                alt="Aixploria"
-                title="Aixploria"
-                width="200"
-                height="45"
-                class="logo24"
-              />
-            </div>
-            <p
-              data-title="Artificial intelligence for everyone"
-              style="margin-top: -20px"
-            >
-              Artificial intelligence for everyone
-            </p>
-            <ul class="footflag">
-              <li class="lang-foot">
-                <a href="/" style="height: 48px; width: 48px"
-                  ><img
+          <ul class="ftr-list" style="list-style: none; display: flex">
+            <li>
+              <div class="item-foot">
+                <div class="site-brand">
+                  <img
                     decoding="async"
                     loading="lazy"
-                    src="https://www.aixploria.com//wp-content/uploads/2023/12/icon-lang-english-us.webp"
-                    class="im-footflag"
-                    width="20"
-                    height="13"
-                    alt="English"
-                /></a>
-              </li>
-              <li class="lang-foot">
-                <a href="/" style="height: 48px; width: 48px"
-                  ><img
-                    decoding="async"
-                    loading="lazy"
-                    src="https://www.aixploria.com//wp-content/uploads/2023/12/icon-lang-fr.webp"
-                    class="im-footflag"
-                    width="20"
-                    height="13"
-                    alt="Français"
-                /></a>
-              </li>
-            </ul>
-          </div>
-          <div class="grid-item-foot">
-            <ul class="ulfoot">
-              <li class="footer-col-title" data-title="Resources">Resources</li>
-              <li>
-                <a
-                  href="https://www.aixploria.com/en/ai-news-and-tutorials/"
-                  title="Tutorials, tips and blog"
-                  class="footer-col-txt"
-                  data-title="Tutorials, tips and blog"
-                  >Tutorials, tips and blog</a
+                    src="https://www.aixploria.com/wp-content/uploads/2023/09/logo-light-aixploria-3.webp"
+                    alt="Aixploria"
+                    title="Aixploria"
+                    width="200"
+                    height="45"
+                    class="logo24"
+                  />
+                </div>
+                <p
+                  data-title="Artificial intelligence for everyone"
+                  style="margin-top: -20px"
                 >
-              </li>
-              <li>
-                <a
-                  href="https://www.aixploria.com/en/worldwide-top-ai-conferences-agenda/"
-                  title="AI Conferences Agenda"
-                  class="footer-col-txt"
-                  data-title="AI Conferences Agenda"
-                  >AI Conferences Agenda</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.aixploria.com/en/glossary-lexicon-ai/"
-                  title="AI Glossary &amp; Lexicon"
-                  class="footer-col-txt"
-                  data-title="AI Glossary &amp; Lexicon"
-                  >AI Glossary &amp; Lexicon</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="grid-item-foot">
-            <ul class="ulfoot">
-              <li class="footer-col-title" data-title="Useful Tools">
-                Useful Tools
-              </li>
-              <li>
-                <a
-                  href="https://www.aixploria.com/en/best-youtube-videos-about-ai/"
-                  title="Best AI Youtube Channels"
-                  class="footer-col-txt"
-                  data-title="Best AI Youtube Channels"
-                  >Best AI Youtube Channels</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.aixploria.com/en/top-100-ai/"
-                  title="Top 100 AI"
-                  class="footer-col-txt"
-                  data-title="Top 100 AI"
-                  >Top 100 AI</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.aixploria.com/en/gpts-list-ai-directory/"
-                  title="GPTs List"
-                  class="footer-col-txt"
-                  data-title="GPTs List"
-                  >GPTs List</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.aixploria.com/en/hubspot-ai-tools-enterprises/"
-                  title="Hubspot AI Tools"
-                  class="footer-col-txt"
-                  data-title="Hubspot AI Tools"
-                  >Hubspot AI Tools</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="grid-item-foot">
-            <ul class="ulfoot">
-              <li class="footer-col-title" data-title="Company">Company</li>
-              <li>
-                <a
-                  rel="nofollow noopener"
-                  href="https://www.aixploria.com/en/add-ai/"
-                  title="Submit an AI Tool"
-                  class="footer-col-txt"
-                  data-title="Submit an AI Tool"
-                  >Submit an AI Tool</a
-                >
-              </li>
-              <li>
-                <a
-                  rel="nofollow noopener"
-                  href="https://www.aixploria.com/en/add-gpts/"
-                  title="Submit a GPTs"
-                  class="footer-col-txt"
-                  data-title="Submit a GPTs"
-                  >Add a GPT</a
-                >
-              </li>
-              <li>
-                <a
-                  rel="nofollow noopener"
-                  href="https://www.aixploria.com/en/form-add-event-ai/"
-                  title="Submit an AI Event"
-                  class="footer-col-txt"
-                  data-title="Submit an AI Event"
-                  >Submit an AI Event</a
-                >
-              </li>
-              <li>
-                <a
-                  rel="nofollow noopener"
-                  href="https://www.aixploria.com/en/add-gpts/"
-                  title="Submit a GPTs"
-                  class="footer-col-txt"
-                  data-title="Submit a GPTs"
-                  >Update your Tool</a
-                >
-              </li>
-              <li>
-                <a
-                  rel="nofollow noopener"
-                  href="https://www.aixploria.com/en/contact/"
-                  title="Contact us"
-                  class="footer-col-txt"
-                  data-title="Contact Us"
-                  >Contact Us</a
-                >
-              </li>
-              <li>
-                <a
-                  rel="nofollow noopener"
-                  href="https://www.aixploria.com/en/featured-on-aixploria/"
-                  title="Feature your tool on AIxploria"
-                  class="footer-col-txt"
-                  data-title="Feature your tool"
-                  >Feature your tool ★</a
-                >
-              </li>
-            </ul>
-          </div>
+                  Artificial intelligence for everyone
+                </p>
+                <ul class="footflag">
+                  <li class="lang-foot">
+                    <a href="/" style="height: 48px; width: 48px"
+                      ><img
+                        decoding="async"
+                        loading="lazy"
+                        src="https://www.aixploria.com//wp-content/uploads/2023/12/icon-lang-english-us.webp"
+                        class="im-footflag"
+                        width="20"
+                        height="13"
+                        alt="English"
+                    /></a>
+                  </li>
+                  <li class="lang-foot">
+                    <a href="/" style="height: 48px; width: 48px"
+                      ><img
+                        decoding="async"
+                        loading="lazy"
+                        src="https://www.aixploria.com//wp-content/uploads/2023/12/icon-lang-fr.webp"
+                        class="im-footflag"
+                        width="20"
+                        height="13"
+                        alt="Français"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="grid-item-foot">
+                <ul class="ulfoot">
+                  <li class="footer-col-title" data-title="Resources">
+                    Resources
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.aixploria.com/en/ai-news-and-tutorials/"
+                      title="Tutorials, tips and blog"
+                      class="footer-col-txt"
+                      data-title="Tutorials, tips and blog"
+                      >Tutorials, tips and blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.aixploria.com/en/worldwide-top-ai-conferences-agenda/"
+                      title="AI Conferences Agenda"
+                      class="footer-col-txt"
+                      data-title="AI Conferences Agenda"
+                      >AI Conferences Agenda</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.aixploria.com/en/glossary-lexicon-ai/"
+                      title="AI Glossary &amp; Lexicon"
+                      class="footer-col-txt"
+                      data-title="AI Glossary &amp; Lexicon"
+                      >AI Glossary &amp; Lexicon</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="grid-item-foot">
+                <ul class="ulfoot">
+                  <li class="footer-col-title" data-title="Useful Tools">
+                    Useful Tools
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.aixploria.com/en/best-youtube-videos-about-ai/"
+                      title="Best AI Youtube Channels"
+                      class="footer-col-txt"
+                      data-title="Best AI Youtube Channels"
+                      >Best AI Youtube Channels</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.aixploria.com/en/top-100-ai/"
+                      title="Top 100 AI"
+                      class="footer-col-txt"
+                      data-title="Top 100 AI"
+                      >Top 100 AI</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.aixploria.com/en/gpts-list-ai-directory/"
+                      title="GPTs List"
+                      class="footer-col-txt"
+                      data-title="GPTs List"
+                      >GPTs List</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.aixploria.com/en/hubspot-ai-tools-enterprises/"
+                      title="Hubspot AI Tools"
+                      class="footer-col-txt"
+                      data-title="Hubspot AI Tools"
+                      >Hubspot AI Tools</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="grid-item-foot">
+                <ul class="ulfoot">
+                  <li class="footer-col-title" data-title="Company">Company</li>
+                  <li>
+                    <a
+                      rel="nofollow noopener"
+                      href="https://www.aixploria.com/en/add-ai/"
+                      title="Submit an AI Tool"
+                      class="footer-col-txt"
+                      data-title="Submit an AI Tool"
+                      >Submit an AI Tool</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      rel="nofollow noopener"
+                      href="https://www.aixploria.com/en/add-gpts/"
+                      title="Submit a GPTs"
+                      class="footer-col-txt"
+                      data-title="Submit a GPTs"
+                      >Add a GPT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      rel="nofollow noopener"
+                      href="https://www.aixploria.com/en/form-add-event-ai/"
+                      title="Submit an AI Event"
+                      class="footer-col-txt"
+                      data-title="Submit an AI Event"
+                      >Submit an AI Event</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      rel="nofollow noopener"
+                      href="https://www.aixploria.com/en/add-gpts/"
+                      title="Submit a GPTs"
+                      class="footer-col-txt"
+                      data-title="Submit a GPTs"
+                      >Update your Tool</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      rel="nofollow noopener"
+                      href="https://www.aixploria.com/en/contact/"
+                      title="Contact us"
+                      class="footer-col-txt"
+                      data-title="Contact Us"
+                      >Contact Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      rel="nofollow noopener"
+                      href="https://www.aixploria.com/en/featured-on-aixploria/"
+                      title="Feature your tool on AIxploria"
+                      class="footer-col-txt"
+                      data-title="Feature your tool"
+                      >Feature your tool ★</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="sepa-foot"></div>
         <div class="double-foot">
