@@ -14,16 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <script>
     window.addEventListener("scroll", function () {
       const header = document.querySelector("header");
       if (window.scrollY > 50) {
-        header.style.backgroundColor = "rgba(255, 255, 245, 0.8)"; // Slight transparency
+        header.style.backgroundColor = "rgba(255, 255, 255, 0.9)"; // Slight transparency
       } else {
         header.style.backgroundColor = "white"; // Back to solid white at the top
       }
@@ -33,6 +29,7 @@
     * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
     body,
     html {
@@ -56,13 +53,14 @@
       padding: 5px;
       padding-bottom: 15px;
       align-self: center;
-      margin-top: 10px;
+      margin-top: 5px;
     }
     .home {
-      margin-top: 27px;
-      margin-left: 135px;
+      margin-top: 24px;
+      margin-left: 120px;
     }
     .navbar a {
+      margin-left: 30px;
       text-decoration: none;
       color: #000000;
       font-family: Quicksand;
@@ -80,7 +78,7 @@
       font-family: Quicksand;
       font-weight: bolder;
       align-self: center;
-      margin-left: 75px;
+      margin-left: 70px;
     }
     .navbar a:hover {
       color: red;
@@ -93,27 +91,27 @@
     }
     .main-hdng {
       position: absolute;
-      top: 37%;
-      left: 49%;
+      top: 280px;
+      left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      font-size: 66px;
       font-family: Impact, Charcoal, "sans-serif";
       color: #ffffff; /* White text to stand out on video */
       z-index: 10;
-      line-height: 1;
     }
     .bg-video {
-      position: absolute;
+      position: sticky;
       top: 0;
       left: 0;
       width: 100%;
-      height: 140%;
+      height: 800px;
       object-fit: cover;
       z-index: 1;
     }
     .tagline {
       position: absolute;
-      top: 60%;
+      top: 440px;
       left: 53%;
       transform: translate(-50%, -50%);
       font-size: 35px;
@@ -127,7 +125,7 @@
     }
     .fctry-btn {
       position: absolute;
-      top: 70%;
+      top: 500px;
       transform: translate(-50%, -50%);
       font-size: 20px;
       color: black; /* White text to stand out on video */
@@ -141,7 +139,7 @@
     }
     .glry-btn {
       position: absolute;
-      top: 70%;
+      top: 500px;
       transform: translate(-50%, -50%);
       font-size: 20px;
       color: black; /* White text to stand out on video */
@@ -166,6 +164,14 @@
       padding: 10px;
     }
     .hdng-hr {
+      width: 10%;
+      height: 8px;
+      background-color: rgb(230, 230, 1);
+      border: rgb(230, 230, 1);
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    .hdng-hr2 {
       width: 10%;
       height: 8px;
       background-color: rgb(230, 230, 1);
@@ -204,7 +210,7 @@
     }
     .Brands-list,
     .Certifications-list {
-      width: 80%;
+      width: 100%;
       overflow: hidden; /* Ensure only 4 logos are visible */
     }
 
@@ -242,13 +248,13 @@
       }
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 1440px) {
       .Brands-list,
       .Certifications-list {
         width: calc(
-          (1200px))
-        ; /* Show 4 logos at a time with appropriate gaps */
-        margin-left: 70px; /* Adds white space on the left */
+          (270px * 4) + (50px * 4)
+        ); /* Show 4 logos at a time with appropriate gaps */
+        margin-left: 50px; /* Adds white space on the left */
         /* Alternatively, you could use padding-left for inner spacing */
       }
     }
@@ -261,14 +267,14 @@
     }
     .upper-footer {
       color: #d4d4d4;
-      background-color: rgba(11, 10, 10, 0.931);
-      padding-top: 88px;
+      background-color: rgb(23, 23, 24);
+      padding-top: 90px;
       margin-top: 140px;
-      height: 520px;
+      height: 530px;
     }
     .content {
       display: flex;
-      margin-left: 105px;
+      margin-left: 100px;
       line-height: 1.5;
     }
     .info {
@@ -306,7 +312,9 @@
     }
     .content span {
       list-style: none;
-      font-family: "Roboto", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
       font-size: 15px;
     }
     .info a {
@@ -361,23 +369,22 @@
         #28ace2 -25%,
         #28ace2 140%
       ) !important;
-      max-width: 80%;
+      width: 85%;
       justify-content: left;
-      margin-left: 105px;
-      padding: 30px 20px;
+      margin-left: 100px;
+      padding: 20px 30px;
       align-items: center;
       gap: 70px;
       border-radius: 10px;
-      margin-top: 11%;
-      height: 20%;
+      margin-top: 80px;
+      height: 145px;
     }
     .written {
       width: 35%;
       color: #ffffff;
-      font-size: 16px;
-      font-family: "Roboto", sans-serif;
+      font-size: 17px;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
-      padding-left: 15px;
     }
     .orng-line {
       color: orange;
@@ -420,6 +427,21 @@
     .scroll-to-top:hover {
       background-color: #007bb5;
     }
+    .bpt {
+      font-size: 100px;
+    }
+    .life {
+      font-size: 75px;
+    }
+    .lower-footer {
+      margin-top: 80px;
+      margin-left: 100px;
+      margin-right: 120px;
+      height: 15px;
+      height: 50px;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
     /* Glowing pulse animation */
     @keyframes pulse {
@@ -437,13 +459,170 @@
     /* Smooth scrolling */
     html {
       scroll-behavior: smooth;
-      overflow-x: hidden;
     }
     li {
       list-style: none;
     }
-    main{
-      width: 100%;
+    @media screen and (max-width: 1024px) {
+      .quote-btn {
+        margin-left: 10px;
+      }
+      .main-hdng {
+        width: 600px;
+      }
+      .tagline {
+        width: 800px;
+      }
+      .bg-video {
+        width: 105%;
+      }
+      .Brands-list,
+      .Certifications-list {
+        width: calc(
+          (270px * 3) + (50px * 3)
+        ); /* Show 4 logos at a time with appropriate gaps */
+        margin-left: 50px; /* Adds white space on the left */
+        /* Alternatively, you could use padding-left for inner spacing */
+      }
+      .navbar a {
+        margin-left: 10px;
+      }
+      .home {
+        margin-left: 50px;
+      }
+      .first-3,
+      .middle-3,
+      .last-3 {
+        gap: 0px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .Brands-list,
+      .Certifications-list {
+        width: calc(
+          (190px * 3) + (50px * 3)
+        ); /* Show 4 logos at a time with appropriate gaps */
+        margin-left: 20px; /* Adds white space on the left */
+        /* Alternatively, you could use padding-left for inner spacing */
+      }
+      .first-3 img,
+      .middle-3 img,
+      .last-3 img {
+        width: 230px;
+      }
+      .h4-img {
+        width: 600px;
+      }
+      .home,
+      .navbar a {
+        display: none;
+      }
+      .quote-btn {
+        margin-left: 53%;
+      }
+      .icon {
+        margin-left: 30%;
+      }
+      .tagline {
+        font-size: 30px;
+        text-align: center;
+      }
+      span .bpt,
+      span .life {
+        font-size: 40px;
+      }
+      .center-footer {
+        margin-left: 50px;
+      }
+      .written {
+        font-size: 15px;
+        width: 50%;
+      }
+      .media {
+        width: 500px;
+      }
+      .lower-footer p {
+        text-align: center;
+      }
+      .lower-footer span.pink {
+        margin-top: 15px;
+        margin-right: 100px;
+      }
+    }
+    @media screen and (max-width: 425px) {
+      .main-hdng span.bpt {
+        font-size: 60px;
+      }
+      .main-hdng {
+        font-size: 45px;
+      }
+      .main-hdng span.life {
+        font-size: 50px;
+      }
+      .tagline {
+        width: 100%;
+        font-size: 25px;
+      }
+      .fctry-btn {
+        margin-top: 20px;
+        width: 150px;
+      }
+      .glry-btn {
+        margin-top: 20px;
+        margin-left: 290px;
+      }
+      .Brands-list,
+      .Certifications-list {
+        display: none;
+      }
+      .bnc,
+      .hdng-hr2 {
+        display: none;
+      }
+      .h4-img {
+        width: 350px;
+      }
+      .first-3,
+      .middle-3,
+      .last-3 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .quote-btn {
+        margin-left: 30%;
+      }
+      .content {
+        margin-left: 10px;
+      }
+      .info {
+        margin-right: 0;
+      }
+      .center-footer {
+        width: 100%;
+        margin-left: 0;
+      }
+      .written p {
+        font-size: 13px;
+        width: 150px;
+      }
+      .media {
+        width: 175px;
+      }
+      .lower-footer {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+      .lower-footer p {
+        width: 90%;
+      }
+      .lower-footer span.text {
+        margin-right: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .lower-footer span.pink {
+        margin-right: 0;
+      }
     }
   </style>
   <body>
@@ -469,14 +648,14 @@
         </svg>
       </a>
       <div class="navbar">
-        <a href="#" style="margin-left: 23px">About Us</a>
-        <a href="#" style="margin-left: 30px">Our Services</a>
-        <a href="#" style="margin-left: 30px">Products</a>
-        <a href="#" style="margin-left: 27px">Certifications</a>
-        <a href="#" style="margin-left: 27px">Brands</a>
-        <a href="#" style="margin-left: 28px">Quality & Innovation</a>
-        <a href="#" style="margin-left: 28px">Contact Us</a>
-        <a href="#" style="margin-left: 27px">Careers</a>
+        <a href="#">About Us</a>
+        <a href="#">Our Services</a>
+        <a href="#">Products</a>
+        <a href="#">Certifications</a>
+        <a href="#">Brands</a>
+        <a href="#">Quality & Innovation</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Careers</a>
       </div>
       <a href="#" class="quote-btn">Get a Quote</a>
     </header>
@@ -488,19 +667,10 @@
           />
         </video>
         <p class="main-hdng">
-          <span class="We" style="margin-top: 20px; font-size: 66px"> We </span
+          We <br /><span style="color: #28ace2" class="bpt">
+            Bring Print to</span
           ><br />
-          <span style="margin-top: -10px; color: #28ace2; font-size: 105px"
-            >Bring
-          </span>
-          <span
-            class="prntlife"
-            style="color: #28ace2; font-size: 103px; margin-top: 5px"
-          >
-            Print to</span
-          >
-          <br />
-          <span style="font-size: 78px">Life!</span>
+          <span class="life">Life!</span>
         </p>
         <p class="tagline">
           All Solution of labels and Packaging under one Roof
@@ -663,8 +833,8 @@
           </section>
         </div>
         <div class="headings">
-          <h1 style="margin-top: 20px">Brands</h1>
-          <hr class="hdng-hr" />
+          <h1 class="bnc" style="margin-top: 20px">Brands</h1>
+          <hr class="hdng-hr2" />
         </div>
         <div class="Brands-list">
           <ul class="Brands">
@@ -767,8 +937,8 @@
           </ul>
         </div>
         <div class="headings">
-          <h1 style="margin-top: 20px">Certifications</h1>
-          <hr class="hdng-hr" />
+          <h1 class="bnc" style="margin-top: 20px">Certifications</h1>
+          <hr class="hdng-hr2" />
         </div>
         <div class="Certifications-list">
           <ul class="Certifications">
@@ -875,7 +1045,7 @@
           <hr class="hdng-hr" style="margin-bottom: 20px" />
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28924.170929481792!2d67.09359009576836!3d25.016374839003415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394cbdf6c44a50e3%3A0x38d6ac73b30887f9!2sAli%20Printpack%20(Pvt.)%20Ltd!5e0!3m2!1sen!2s!4v1727780360517!5m2!1sen!2s"
-            width="1100"
+            width="80%"
             height="500"
             style="border: 0"
             allowfullscreen=""
@@ -938,7 +1108,7 @@
                   viewBox="0 0 24 24"
                   width="18"
                   height="18"
-                  style="margin-bottom: -5px"
+                  style="margin-bottom: -3px"
                 >
                   <path
                     fill="none"
@@ -955,7 +1125,7 @@
                   viewBox="0 0 24 24"
                   width="18"
                   height="18"
-                  style="margin-bottom: -5px"
+                  style="margin-bottom: -3px"
                 >
                   <path
                     fill="none"
@@ -972,7 +1142,7 @@
                   viewBox="0 0 24 24"
                   width="18"
                   height="18"
-                  style="margin-bottom: -5px"
+                  style="margin-bottom: -3px"
                 >
                   <path
                     fill="none"
@@ -989,7 +1159,7 @@
                   viewBox="0 0 24 24"
                   width="18"
                   height="18"
-                  style="margin-bottom: -5px"
+                  style="margin-bottom: -3px"
                 >
                   <path
                     fill="none"
@@ -1036,7 +1206,7 @@
             </a>
             <a
               href="https://www.facebook.com/aliprintpack/"
-              style="margin-left: 7px"
+              style="margin-left: 10px"
             >
               <svg
                 width="57"
@@ -1059,7 +1229,7 @@
                 ></path>
               </svg>
             </a>
-            <a href="https://twitter.com/?lang=en" style="margin-left: 7px">
+            <a href="https://twitter.com/?lang=en" style="margin-left: 10px">
               <svg
                 width="60"
                 height="35"
@@ -1082,7 +1252,7 @@
               </svg>
             </a>
             <a
-              style="margin-left: 7px"
+              style="margin-left: 10px"
               href="https://pk.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"
             >
               <svg
@@ -1109,18 +1279,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="lower-footer"
-        style="
-          margin-top: 78px;
-          margin-left: 105px;
-          margin-right: 105px;
-          height: 15px;
-          height: 55px;
-          font-size: 18px;
-          font-family: Arial, Helvetica, sans-serif;
-        "
-      >
+      <div class="lower-footer">
         <p style="font-size: 16px; margin-bottom: -30px">
           Copyrights © 2023
           <span class="orng-line"> Ali PrintPack (PVT) Ltd.</span>
