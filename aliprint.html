@@ -257,6 +257,9 @@
         margin-left: 50px; /* Adds white space on the left */
         /* Alternatively, you could use padding-left for inner spacing */
       }
+      .menu {
+        display: none;
+      }
     }
 
     .Brands:hover {
@@ -488,12 +491,20 @@
         margin-left: 10px;
       }
       .home {
-        margin-left: 50px;
+        margin-left: 15px;
       }
       .first-3,
       .middle-3,
       .last-3 {
         gap: 0px;
+      }
+      .first-3 img,
+      .middle-3 img,
+      .last-3 img {
+        width: 320px;
+      }
+      .menu {
+        display: none;
       }
     }
     @media screen and (max-width: 768px) {
@@ -518,10 +529,7 @@
         display: none;
       }
       .quote-btn {
-        margin-left: 53%;
-      }
-      .icon {
-        margin-left: 30%;
+        margin-left: 45%;
       }
       .tagline {
         font-size: 30px;
@@ -547,6 +555,15 @@
       .lower-footer span.pink {
         margin-top: 15px;
         margin-right: 100px;
+      }
+      .menu {
+        display: block;
+        align-content: center;
+        margin-left: 20px;
+      }
+      .scroll-to-top {
+        right: 15px;
+        bottom: 20px;
       }
     }
     @media screen and (max-width: 425px) {
@@ -589,7 +606,7 @@
         justify-content: center;
       }
       .quote-btn {
-        margin-left: 30%;
+        margin-left: 10%;
       }
       .content {
         margin-left: 10px;
@@ -623,6 +640,110 @@
       .lower-footer span.pink {
         margin-right: 0;
       }
+      .menu {
+        display: block;
+        float: left;
+      }
+    }
+    @media screen and (max-width: 375px) {
+      .quote-btn {
+        display: none;
+      }
+      .menu {
+        margin-left: 30%;
+      }
+      .info {
+        width: 60%;
+      }
+      .links {
+        margin-left: 15px;
+      }
+      .center-footer {
+        display: block;
+      }
+      .center-footer p {
+        width: 340px;
+      }
+      .media {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: relative;
+    }
+    @media screen and (max-width: 320px) {
+      .h4-img {
+        width: 290px;
+      }
+      .center-footer p {
+        width: 290px;
+      }
+      .links {
+        margin-left: 0;
+      }
+      .menu {
+        margin-left: 25%;
+      }
+      .fctry-btn,
+      .glry-btn {
+        padding: 8px;
+        font-size: 14px;
+      }
+      .glry-btn {
+        margin-left: 280px;
+        width: 125px;
+      }
+      .map {
+        height: 300px;
+        width: 300px;
+      }
+      .media {
+        width: 150px;
+        height: 50px;
+      }
+      .center-footer {
+        padding: 10px;
+      }
+      .lower-footer span.text {
+        margin-right: 0;
+      }
+    }
+    .menu-toggle {
+      display: none; /* Hide the checkbox */
+    }
+
+    .menu-icn {
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position the dropdown directly below the icon */
+      right: 0; /* Align the dropdown menu to the left of the icon */
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 160px;
+      padding: 0;
+      z-index: 10;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      text-decoration: none;
+      padding: 10px;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show dropdown when checkbox is checked */
+    .menu-toggle:checked ~ .dropdown-menu {
+      display: block;
     }
   </style>
   <body>
@@ -658,6 +779,22 @@
         <a href="#">Careers</a>
       </div>
       <a href="#" class="quote-btn">Get a Quote</a>
+      <div class="menu">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icn">
+          <i class="fa-solid fa-bars" style="font-size: 30px; color: black"></i>
+        </label>
+        <span class="dropdown-menu">
+          <a href="#">About Us</a>
+          <a href="#">Our Services</a>
+          <a href="#">Products</a>
+          <a href="#">Certifications</a>
+          <a href="#">Brands</a>
+          <a href="#">Quality & Innovation</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Careers</a>
+        </span>
+      </div>
     </header>
     <main>
       <div class="ambience">
@@ -1050,6 +1187,7 @@
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
+            class="map"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
